@@ -78,7 +78,7 @@
             this.txtTinhTrang.Location = new System.Drawing.Point(160, 271);
             this.txtTinhTrang.Name = "txtTinhTrang";
             this.txtTinhTrang.ReadOnly = true;
-            this.txtTinhTrang.Size = new System.Drawing.Size(230, 28);
+            this.txtTinhTrang.Size = new System.Drawing.Size(230, 27);
             this.txtTinhTrang.TabIndex = 11;
             // 
             // pnlThemBan
@@ -101,7 +101,7 @@
             this.txtTenBanThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtTenBanThem.Location = new System.Drawing.Point(160, 233);
             this.txtTenBanThem.Name = "txtTenBanThem";
-            this.txtTenBanThem.Size = new System.Drawing.Size(230, 28);
+            this.txtTenBanThem.Size = new System.Drawing.Size(230, 27);
             this.txtTenBanThem.TabIndex = 11;
             // 
             // txtIDBanThem
@@ -109,7 +109,7 @@
             this.txtIDBanThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtIDBanThem.Location = new System.Drawing.Point(160, 200);
             this.txtIDBanThem.Name = "txtIDBanThem";
-            this.txtIDBanThem.Size = new System.Drawing.Size(230, 28);
+            this.txtIDBanThem.Size = new System.Drawing.Size(230, 27);
             this.txtIDBanThem.TabIndex = 11;
             this.txtIDBanThem.Leave += new System.EventHandler(this.txtIDBanThem_Leave);
             // 
@@ -186,7 +186,7 @@
             this.txtTenBan.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtTenBan.Location = new System.Drawing.Point(160, 233);
             this.txtTenBan.Name = "txtTenBan";
-            this.txtTenBan.Size = new System.Drawing.Size(230, 28);
+            this.txtTenBan.Size = new System.Drawing.Size(230, 27);
             this.txtTenBan.TabIndex = 11;
             // 
             // txtIDBan
@@ -195,7 +195,7 @@
             this.txtIDBan.Location = new System.Drawing.Point(160, 200);
             this.txtIDBan.Name = "txtIDBan";
             this.txtIDBan.ReadOnly = true;
-            this.txtIDBan.Size = new System.Drawing.Size(230, 28);
+            this.txtIDBan.Size = new System.Drawing.Size(230, 27);
             this.txtIDBan.TabIndex = 11;
             // 
             // picHienThiBan
@@ -499,9 +499,10 @@
             this.materialTabSelector1.Name = "materialTabSelector1";
             this.materialTabSelector1.SelectorHideTabName = new string[0];
             this.materialTabSelector1.SelectorNonClickTabPage = new System.Windows.Forms.TabPage[0];
-            this.materialTabSelector1.Size = new System.Drawing.Size(1063, 47);
+            this.materialTabSelector1.Size = new System.Drawing.Size(1068, 47);
             this.materialTabSelector1.TabIndex = 27;
             this.materialTabSelector1.Text = "materialTabSelector1";
+            this.materialTabSelector1.Click += new System.EventHandler(this.materialTabSelector1_Click_1);
             // 
             // pnlForm
             // 
@@ -514,7 +515,7 @@
             // ChinhSuaBanForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1069, 752);
+            this.ClientSize = new System.Drawing.Size(1074, 752);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.materialTabSelector1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

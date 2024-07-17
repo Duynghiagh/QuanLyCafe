@@ -14,7 +14,7 @@
     <DataSet Name="dsLichSuOrder">
       <Query>
         <DataSourceName>dsLichSuOrder</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
+        <CommandText>/* Local Query */</CommandText>x   
       </Query>
       <Fields>
         <Field Name="ID">

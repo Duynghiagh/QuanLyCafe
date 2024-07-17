@@ -194,6 +194,7 @@ namespace QuanLyCafe.DAL
             int idHoaDon,
             int idDatBan,
             string idSanPham
+          
         )
         {
             try

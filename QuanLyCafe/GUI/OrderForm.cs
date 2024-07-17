@@ -35,6 +35,12 @@ namespace QuanLyCafe.GUI
         public OrderForm()
         {
             InitializeComponent();
+            this.txtSoLuongSanPham.Leave += new System.EventHandler(this.txtSoLuongSanPham_Leave);
+            this.txtSoLuongSanPham.TextChanged += new System.EventHandler(this.txtSoLuongSanPham_TextChanged);
+            this.cbb_KichThuoc.SelectedIndexChanged += new System.EventHandler(this.cmbKichCo_SelectedIndexChanged);
+
+
+
         }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -66,6 +72,10 @@ namespace QuanLyCafe.GUI
                 UpdateLichSuOrder();
 
                 lblThongTinBanDat.Text = $"Mã đặt bàn: {ControlForm.BanDatDangChon.ID}";
+                //Tạo size
+                cbb_KichThuoc.Items.AddRange(new string[] { "S", "M", "L" });
+                cbb_KichThuoc.SelectedIndex = 0;
+
             }
             catch (Exception err)
             {
@@ -144,7 +154,7 @@ namespace QuanLyCafe.GUI
                 btnXacNhanOrder.Visible = true;
                 _idDonHangCapNhat = null;
                 lblTitle.Text = "Thêm món";
-          
+
                 string ID = row.Cells["ID"].Value.ToString();
                 _sanPhamChon = sanPhamBLL.TimKiemSanPhamByID(ID);
                 if (_sanPhamChon == null)
@@ -308,7 +318,7 @@ namespace QuanLyCafe.GUI
                     && _orderDangChon != null
                 )
                 {
-               
+
                     string IDSanPham = _sanPhamChon.ID;
                     int donGia = _sanPhamChon.GiaTien;
                     int soLuong = int.Parse(txtSoLuongSanPham.Text);
@@ -317,7 +327,7 @@ namespace QuanLyCafe.GUI
                     // Cập nhật lại thông tin order
                     lichSuOrderBLL.CapNhatThongTinOrder(soLuong, donGia, _giaTienSauGiamGia, thanhTien, _orderDangChon.IDHoaDon, _orderDangChon.IDDatBan, _orderDangChon.IDSanPham);
 
-              
+
                     UpdateLichSuOrder();
                     if (ControlForm.FormChiTietBan != null)
                     {
@@ -385,11 +395,24 @@ namespace QuanLyCafe.GUI
             lblTenSanPham.Text = $"{_sanPhamChon.TenSanPham}";
             lblGiaTien.Text = $"{_sanPhamChon.GiaTien}";
 
-            _giaTienSauGiamGia = _sanPhamChon.GiaTien;
+            // Get selected size and adjust price accordingly
+            string selectedSize = cbb_KichThuoc.SelectedItem.ToString();
+            switch (selectedSize)
+            {
+                case "S":
+                    _giaTienSauGiamGia = _sanPhamChon.GiaTien;
+                    break;
+                case "M":
+                    _giaTienSauGiamGia = _sanPhamChon.GiaTien + 5000; // Example: 5,000 VND more for size M
+                    break;
+                case "L":
+                    _giaTienSauGiamGia = _sanPhamChon.GiaTien + 10000; // Example: 10,000 VND more for size L
+                    break;
+            }
+
             if (_sanPhamChon.Event != -1)
             {
                 SuKien suKien = suKienBLL.LayThongTinSuKien(_sanPhamChon.Event);
-
                 _giaTienSauGiamGia = _giaTienSauGiamGia - _giaTienSauGiamGia * suKien.GiamGia / 100;
                 lblGiamGia.Text = $"Giảm giá: {suKien.GiamGia}% ";
                 lblGiamGia.Visible = true;
@@ -407,11 +430,101 @@ namespace QuanLyCafe.GUI
 
             int tongTien = int.Parse(txtSoLuongSanPham.Text) * _giaTienSauGiamGia;
             lblTongTien.Text = tongTien.ToString();
-            lblGiaTien.Text = string.Format("{0:#,##0} VNĐ", double.Parse(lblGiaTien.Text));
+            lblGiaTien.Text = string.Format("{0:#,##0} VNĐ", double.Parse(lblGiaTien.Text));    
 
             lblSauGiamGia.Text = string.Format("{0:#,##0} VNĐ", double.Parse(lblSauGiamGia.Text));
             lblTongTien.Text = string.Format("{0:#,##0} VNĐ", double.Parse(lblTongTien.Text));
         }
+
         #endregion
+
+        private void pnlChiTietSanPham_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblGiaTien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbKichCo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            HienThiThongTin();
+            CapNhatGiaTien();
+        }
+
+        private void txtSoLuongSanPham_TextChanged(object sender, EventArgs e)
+        {
+            CapNhatGiaTien();
+        }
+        private void CapNhatGiaTien()
+        {
+            if (_sanPhamChon == null)
+            {
+                return;
+            }
+
+            try
+            {
+                int soLuong;
+                if (!int.TryParse(txtSoLuongSanPham.Text, out soLuong) || soLuong <= 0)
+                {
+                    soLuong = 1;
+                    txtSoLuongSanPham.Text = "1";
+                }
+
+                int giaTien = _sanPhamChon.GiaTien;
+                int giaTienGoc = giaTien; // Lưu lại giá tiền gốc để hiển thị
+
+                // Cập nhật giá tiền dựa trên kích cỡ
+              
+
+                // Kiểm tra sự kiện giảm giá
+                if (_sanPhamChon.Event != -1)
+                {
+                    SuKien suKien = suKienBLL.LayThongTinSuKien(_sanPhamChon.Event);
+                    _giaTienSauGiamGia = _giaTienSauGiamGia - _giaTienSauGiamGia * suKien.GiamGia / 100;
+                }
+
+                // Cập nhật nhãn hiển thị giá tiền
+                lblGiaTien.Text = string.Format("{0:#,##0} VNĐ", double.Parse(giaTienGoc.ToString()));
+                lblSauGiamGia.Text = string.Format("{0:#,##0} VNĐ", double.Parse(_giaTienSauGiamGia.ToString()));
+
+                // Cập nhật tổng tiền
+                int tongTien = soLuong * _giaTienSauGiamGia;
+                lblTongTien.Text = string.Format("{0:#,##0} VNĐ", double.Parse(tongTien.ToString()));
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+
+        private void dgvLichSuOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblGiamGia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvDanhSachSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cbb_KichThuoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            HienThiThongTin();
+        }
     }
 }

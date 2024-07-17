@@ -367,5 +367,10 @@ namespace QuanLyCafe.GUI
         #endregion
 
         private void materialTabSelector1_Click(object sender, EventArgs e) { }
+
+        private void materialTabSelector1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

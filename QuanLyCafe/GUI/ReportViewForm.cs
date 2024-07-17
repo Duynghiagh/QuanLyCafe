@@ -297,5 +297,10 @@ namespace QuanLyCafe.GUI
         {
             ControlForm.BaoCaoHienTai = null;
         }
+
+        private void rpvBaoCao_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

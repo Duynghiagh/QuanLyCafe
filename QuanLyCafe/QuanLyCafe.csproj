@@ -181,7 +181,6 @@
     <Compile Include="DTO\SuKien.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\TaiKhoanHienTai.cs" />
-    <Compile Include="DTO\KhuonMat.cs" />
     <Compile Include="DTO\Voucher.cs" />
     <Compile Include="GUI\ChinhSuaBanForm.cs">
       <SubType>Form</SubType>

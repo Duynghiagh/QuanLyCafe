@@ -605,5 +605,10 @@ namespace QuanLyCafe.GUI
         {
 
         }
+
+        private void cboSuKien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -71,6 +71,8 @@
             this.THOIGIAN_LS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblThongTinBanDat = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbb_KichThuoc = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachSanPham)).BeginInit();
             this.pnlChiTietSanPham.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHienThiSanPham)).BeginInit();
@@ -108,6 +110,7 @@
             this.dgvDanhSachSanPham.Size = new System.Drawing.Size(590, 223);
             this.dgvDanhSachSanPham.TabIndex = 3;
             this.dgvDanhSachSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachSanPham_CellClick);
+            this.dgvDanhSachSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachSanPham_CellContentClick);
             // 
             // ID
             // 
@@ -199,7 +202,7 @@
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label.Location = new System.Drawing.Point(24, 282);
+            this.label.Location = new System.Drawing.Point(24, 313);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(84, 21);
             this.label.TabIndex = 2;
@@ -210,7 +213,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label4.Location = new System.Drawing.Point(24, 319);
+            this.label4.Location = new System.Drawing.Point(24, 350);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(129, 21);
             this.label4.TabIndex = 2;
@@ -230,6 +233,8 @@
             // pnlChiTietSanPham
             // 
             this.pnlChiTietSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.pnlChiTietSanPham.Controls.Add(this.cbb_KichThuoc);
+            this.pnlChiTietSanPham.Controls.Add(this.label1);
             this.pnlChiTietSanPham.Controls.Add(this.picHienThiSanPham);
             this.pnlChiTietSanPham.Controls.Add(this.btnXoaOrder);
             this.pnlChiTietSanPham.Controls.Add(this.btnCapNhatOrder);
@@ -252,6 +257,7 @@
             this.pnlChiTietSanPham.Size = new System.Drawing.Size(414, 564);
             this.pnlChiTietSanPham.TabIndex = 4;
             this.pnlChiTietSanPham.Visible = false;
+            this.pnlChiTietSanPham.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChiTietSanPham_Paint);
             // 
             // picHienThiSanPham
             // 
@@ -341,9 +347,10 @@
             // 
             this.txtSoLuongSanPham.Location = new System.Drawing.Point(182, 238);
             this.txtSoLuongSanPham.Name = "txtSoLuongSanPham";
-            this.txtSoLuongSanPham.Size = new System.Drawing.Size(41, 22);
+            this.txtSoLuongSanPham.Size = new System.Drawing.Size(54, 22);
             this.txtSoLuongSanPham.TabIndex = 3;
             this.txtSoLuongSanPham.Text = "1";
+            this.txtSoLuongSanPham.TextChanged += new System.EventHandler(this.txtSoLuongSanPham_TextChanged);
             this.txtSoLuongSanPham.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuongSanPham_KeyPress);
             this.txtSoLuongSanPham.Leave += new System.EventHandler(this.txtSoLuongSanPham_Leave);
             // 
@@ -363,7 +370,7 @@
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.lblTongTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblTongTien.Location = new System.Drawing.Point(178, 355);
+            this.lblTongTien.Location = new System.Drawing.Point(178, 386);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(58, 21);
             this.lblTongTien.TabIndex = 2;
@@ -374,7 +381,7 @@
             this.lblSuKien.AutoSize = true;
             this.lblSuKien.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.lblSuKien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblSuKien.Location = new System.Drawing.Point(27, 422);
+            this.lblSuKien.Location = new System.Drawing.Point(24, 453);
             this.lblSuKien.Name = "lblSuKien";
             this.lblSuKien.Size = new System.Drawing.Size(89, 21);
             this.lblSuKien.TabIndex = 2;
@@ -386,18 +393,19 @@
             this.lblGiamGia.AutoSize = true;
             this.lblGiamGia.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.lblGiamGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblGiamGia.Location = new System.Drawing.Point(26, 387);
+            this.lblGiamGia.Location = new System.Drawing.Point(24, 418);
             this.lblGiamGia.Name = "lblGiamGia";
             this.lblGiamGia.Size = new System.Drawing.Size(136, 21);
             this.lblGiamGia.TabIndex = 2;
             this.lblGiamGia.Text = "Giảm giá: 10%";
+            this.lblGiamGia.Click += new System.EventHandler(this.lblGiamGia_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label6.Location = new System.Drawing.Point(24, 355);
+            this.label6.Location = new System.Drawing.Point(24, 386);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 21);
             this.label6.TabIndex = 2;
@@ -408,7 +416,7 @@
             this.lblSauGiamGia.AutoSize = true;
             this.lblSauGiamGia.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.lblSauGiamGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblSauGiamGia.Location = new System.Drawing.Point(178, 319);
+            this.lblSauGiamGia.Location = new System.Drawing.Point(178, 350);
             this.lblSauGiamGia.Name = "lblSauGiamGia";
             this.lblSauGiamGia.Size = new System.Drawing.Size(58, 21);
             this.lblSauGiamGia.TabIndex = 2;
@@ -419,11 +427,12 @@
             this.lblGiaTien.AutoSize = true;
             this.lblGiaTien.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.lblGiaTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblGiaTien.Location = new System.Drawing.Point(178, 282);
+            this.lblGiaTien.Location = new System.Drawing.Point(178, 313);
             this.lblGiaTien.Name = "lblGiaTien";
             this.lblGiaTien.Size = new System.Drawing.Size(58, 21);
             this.lblGiaTien.TabIndex = 2;
             this.lblGiaTien.Text = "NULL";
+            this.lblGiaTien.Click += new System.EventHandler(this.lblGiaTien_Click);
             // 
             // btnTimKiemSanPham
             // 
@@ -492,6 +501,7 @@
             this.label2.Size = new System.Drawing.Size(162, 27);
             this.label2.TabIndex = 2;
             this.label2.Text = "Lịch sử order";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dgvLichSuOrder
             // 
@@ -515,6 +525,7 @@
             this.dgvLichSuOrder.Size = new System.Drawing.Size(590, 164);
             this.dgvLichSuOrder.TabIndex = 3;
             this.dgvLichSuOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLichSuOrder_CellClick);
+            this.dgvLichSuOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLichSuOrder_CellContentClick);
             // 
             // ID_DATBAN_LS
             // 
@@ -624,6 +635,26 @@
             this.panel1.Size = new System.Drawing.Size(1063, 612);
             this.panel1.TabIndex = 14;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.label1.Location = new System.Drawing.Point(25, 273);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 21);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Kích Thước:";
+            // 
+            // cbb_KichThuoc
+            // 
+            this.cbb_KichThuoc.FormattingEnabled = true;
+            this.cbb_KichThuoc.Location = new System.Drawing.Point(182, 269);
+            this.cbb_KichThuoc.Name = "cbb_KichThuoc";
+            this.cbb_KichThuoc.Size = new System.Drawing.Size(54, 24);
+            this.cbb_KichThuoc.TabIndex = 12;
+            this.cbb_KichThuoc.SelectedIndexChanged += new System.EventHandler(this.cbb_KichThuoc_SelectedIndexChanged);
+            // 
             // OrderForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -688,5 +719,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG_LS;
         private System.Windows.Forms.DataGridViewTextBoxColumn THANHTIEN_LS;
         private System.Windows.Forms.DataGridViewTextBoxColumn THOIGIAN_LS;
+        private System.Windows.Forms.ComboBox cbb_KichThuoc;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -55,7 +55,7 @@ namespace QuanLyCafe.DAL
                 conn.Close();
                 throw new Exception("Execute query erorr: " + err.Message);
             }
-    
+
         }
 
         public static DataTable SelectQuery(string sql)

@@ -177,7 +177,7 @@
             this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDenNgay.Location = new System.Drawing.Point(250, 88);
             this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(230, 28);
+            this.dtpDenNgay.Size = new System.Drawing.Size(230, 27);
             this.dtpDenNgay.TabIndex = 19;
             // 
             // dtpTuNgay
@@ -186,7 +186,7 @@
             this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpTuNgay.Location = new System.Drawing.Point(250, 40);
             this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(230, 28);
+            this.dtpTuNgay.Size = new System.Drawing.Size(230, 27);
             this.dtpTuNgay.TabIndex = 20;
             // 
             // label24
@@ -356,7 +356,7 @@
             this.cboLoai.FormattingEnabled = true;
             this.cboLoai.Location = new System.Drawing.Point(160, 417);
             this.cboLoai.Name = "cboLoai";
-            this.cboLoai.Size = new System.Drawing.Size(206, 29);
+            this.cboLoai.Size = new System.Drawing.Size(206, 27);
             this.cboLoai.TabIndex = 13;
             // 
             // cboSuKien
@@ -365,8 +365,9 @@
             this.cboSuKien.FormattingEnabled = true;
             this.cboSuKien.Location = new System.Drawing.Point(160, 378);
             this.cboSuKien.Name = "cboSuKien";
-            this.cboSuKien.Size = new System.Drawing.Size(206, 29);
+            this.cboSuKien.Size = new System.Drawing.Size(206, 27);
             this.cboSuKien.TabIndex = 13;
+            this.cboSuKien.SelectedIndexChanged += new System.EventHandler(this.cboSuKien_SelectedIndexChanged);
             // 
             // btnUploadImage
             // 
@@ -385,7 +386,7 @@
             this.txtImagePath.Location = new System.Drawing.Point(160, 345);
             this.txtImagePath.Name = "txtImagePath";
             this.txtImagePath.ReadOnly = true;
-            this.txtImagePath.Size = new System.Drawing.Size(206, 28);
+            this.txtImagePath.Size = new System.Drawing.Size(206, 27);
             this.txtImagePath.TabIndex = 11;
             // 
             // txtMoTa
@@ -393,7 +394,7 @@
             this.txtMoTa.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtMoTa.Location = new System.Drawing.Point(160, 308);
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(206, 28);
+            this.txtMoTa.Size = new System.Drawing.Size(206, 27);
             this.txtMoTa.TabIndex = 11;
             // 
             // txtGiaTien
@@ -401,7 +402,7 @@
             this.txtGiaTien.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtGiaTien.Location = new System.Drawing.Point(160, 271);
             this.txtGiaTien.Name = "txtGiaTien";
-            this.txtGiaTien.Size = new System.Drawing.Size(206, 28);
+            this.txtGiaTien.Size = new System.Drawing.Size(206, 27);
             this.txtGiaTien.TabIndex = 11;
             this.txtGiaTien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaTien_KeyPress);
             // 
@@ -410,7 +411,7 @@
             this.txtTenSanPham.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtTenSanPham.Location = new System.Drawing.Point(160, 233);
             this.txtTenSanPham.Name = "txtTenSanPham";
-            this.txtTenSanPham.Size = new System.Drawing.Size(206, 28);
+            this.txtTenSanPham.Size = new System.Drawing.Size(206, 27);
             this.txtTenSanPham.TabIndex = 11;
             // 
             // txtID
@@ -419,7 +420,7 @@
             this.txtID.Location = new System.Drawing.Point(160, 200);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(206, 28);
+            this.txtID.Size = new System.Drawing.Size(206, 27);
             this.txtID.TabIndex = 11;
             // 
             // picHienThiSanPham
@@ -725,7 +726,7 @@
             this.cboLoaiThem.FormattingEnabled = true;
             this.cboLoaiThem.Location = new System.Drawing.Point(186, 417);
             this.cboLoaiThem.Name = "cboLoaiThem";
-            this.cboLoaiThem.Size = new System.Drawing.Size(204, 29);
+            this.cboLoaiThem.Size = new System.Drawing.Size(204, 27);
             this.cboLoaiThem.TabIndex = 13;
             // 
             // cboSuKienThem
@@ -734,7 +735,7 @@
             this.cboSuKienThem.FormattingEnabled = true;
             this.cboSuKienThem.Location = new System.Drawing.Point(186, 378);
             this.cboSuKienThem.Name = "cboSuKienThem";
-            this.cboSuKienThem.Size = new System.Drawing.Size(204, 29);
+            this.cboSuKienThem.Size = new System.Drawing.Size(204, 27);
             this.cboSuKienThem.TabIndex = 13;
             // 
             // btnUploadImageThem
@@ -754,7 +755,7 @@
             this.txtImagePathThem.Location = new System.Drawing.Point(186, 345);
             this.txtImagePathThem.Name = "txtImagePathThem";
             this.txtImagePathThem.ReadOnly = true;
-            this.txtImagePathThem.Size = new System.Drawing.Size(204, 28);
+            this.txtImagePathThem.Size = new System.Drawing.Size(204, 27);
             this.txtImagePathThem.TabIndex = 11;
             // 
             // txtMoTaThem
@@ -762,7 +763,7 @@
             this.txtMoTaThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtMoTaThem.Location = new System.Drawing.Point(186, 308);
             this.txtMoTaThem.Name = "txtMoTaThem";
-            this.txtMoTaThem.Size = new System.Drawing.Size(204, 28);
+            this.txtMoTaThem.Size = new System.Drawing.Size(204, 27);
             this.txtMoTaThem.TabIndex = 11;
             // 
             // txtGiaTienThem
@@ -770,7 +771,7 @@
             this.txtGiaTienThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtGiaTienThem.Location = new System.Drawing.Point(186, 271);
             this.txtGiaTienThem.Name = "txtGiaTienThem";
-            this.txtGiaTienThem.Size = new System.Drawing.Size(204, 28);
+            this.txtGiaTienThem.Size = new System.Drawing.Size(204, 27);
             this.txtGiaTienThem.TabIndex = 11;
             this.txtGiaTienThem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaTienThem_KeyPress);
             // 
@@ -779,7 +780,7 @@
             this.txtTenSanPhamThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtTenSanPhamThem.Location = new System.Drawing.Point(186, 233);
             this.txtTenSanPhamThem.Name = "txtTenSanPhamThem";
-            this.txtTenSanPhamThem.Size = new System.Drawing.Size(204, 28);
+            this.txtTenSanPhamThem.Size = new System.Drawing.Size(204, 27);
             this.txtTenSanPhamThem.TabIndex = 11;
             // 
             // txtIDThem
@@ -787,7 +788,7 @@
             this.txtIDThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtIDThem.Location = new System.Drawing.Point(186, 200);
             this.txtIDThem.Name = "txtIDThem";
-            this.txtIDThem.Size = new System.Drawing.Size(204, 28);
+            this.txtIDThem.Size = new System.Drawing.Size(204, 27);
             this.txtIDThem.TabIndex = 11;
             this.txtIDThem.Leave += new System.EventHandler(this.txtIDThem_Leave);
             // 

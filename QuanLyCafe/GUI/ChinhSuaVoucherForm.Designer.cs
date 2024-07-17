@@ -95,7 +95,7 @@
             this.materialTabSelector1.Name = "materialTabSelector1";
             this.materialTabSelector1.SelectorHideTabName = new string[0];
             this.materialTabSelector1.SelectorNonClickTabPage = new System.Windows.Forms.TabPage[0];
-            this.materialTabSelector1.Size = new System.Drawing.Size(1334, 47);
+            this.materialTabSelector1.Size = new System.Drawing.Size(1406, 47);
             this.materialTabSelector1.TabIndex = 29;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
@@ -183,7 +183,7 @@
             this.txtMoTa.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtMoTa.Location = new System.Drawing.Point(160, 271);
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(230, 28);
+            this.txtMoTa.Size = new System.Drawing.Size(230, 27);
             this.txtMoTa.TabIndex = 11;
             // 
             // txtLuotNhap
@@ -192,7 +192,7 @@
             this.txtLuotNhap.Location = new System.Drawing.Point(160, 350);
             this.txtLuotNhap.Name = "txtLuotNhap";
             this.txtLuotNhap.ReadOnly = true;
-            this.txtLuotNhap.Size = new System.Drawing.Size(230, 28);
+            this.txtLuotNhap.Size = new System.Drawing.Size(230, 27);
             this.txtLuotNhap.TabIndex = 11;
             // 
             // txtSoLuong
@@ -200,7 +200,7 @@
             this.txtSoLuong.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtSoLuong.Location = new System.Drawing.Point(160, 311);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(230, 28);
+            this.txtSoLuong.Size = new System.Drawing.Size(230, 27);
             this.txtSoLuong.TabIndex = 11;
             this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
             // 
@@ -209,7 +209,7 @@
             this.txtGiamGia.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtGiamGia.Location = new System.Drawing.Point(160, 233);
             this.txtGiamGia.Name = "txtGiamGia";
-            this.txtGiamGia.Size = new System.Drawing.Size(230, 28);
+            this.txtGiamGia.Size = new System.Drawing.Size(230, 27);
             this.txtGiamGia.TabIndex = 11;
             this.txtGiamGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiamGia_KeyPress);
             // 
@@ -219,7 +219,7 @@
             this.txtMa.Location = new System.Drawing.Point(160, 200);
             this.txtMa.Name = "txtMa";
             this.txtMa.ReadOnly = true;
-            this.txtMa.Size = new System.Drawing.Size(230, 28);
+            this.txtMa.Size = new System.Drawing.Size(230, 27);
             this.txtMa.TabIndex = 11;
             // 
             // picVoucher
@@ -499,7 +499,7 @@
             this.txtMoTaThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtMoTaThem.Location = new System.Drawing.Point(159, 277);
             this.txtMoTaThem.Name = "txtMoTaThem";
-            this.txtMoTaThem.Size = new System.Drawing.Size(230, 28);
+            this.txtMoTaThem.Size = new System.Drawing.Size(230, 27);
             this.txtMoTaThem.TabIndex = 17;
             // 
             // txtSoLuongThem
@@ -507,7 +507,7 @@
             this.txtSoLuongThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtSoLuongThem.Location = new System.Drawing.Point(159, 317);
             this.txtSoLuongThem.Name = "txtSoLuongThem";
-            this.txtSoLuongThem.Size = new System.Drawing.Size(230, 28);
+            this.txtSoLuongThem.Size = new System.Drawing.Size(230, 27);
             this.txtSoLuongThem.TabIndex = 18;
             this.txtSoLuongThem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuongThem_KeyPress);
             // 
@@ -516,7 +516,7 @@
             this.txtGiamGiaThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtGiamGiaThem.Location = new System.Drawing.Point(159, 239);
             this.txtGiamGiaThem.Name = "txtGiamGiaThem";
-            this.txtGiamGiaThem.Size = new System.Drawing.Size(230, 28);
+            this.txtGiamGiaThem.Size = new System.Drawing.Size(230, 27);
             this.txtGiamGiaThem.TabIndex = 19;
             this.txtGiamGiaThem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiamGiaThem_KeyPress);
             // 
@@ -525,7 +525,7 @@
             this.txtMaThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtMaThem.Location = new System.Drawing.Point(159, 206);
             this.txtMaThem.Name = "txtMaThem";
-            this.txtMaThem.Size = new System.Drawing.Size(230, 28);
+            this.txtMaThem.Size = new System.Drawing.Size(230, 27);
             this.txtMaThem.TabIndex = 20;
             this.txtMaThem.Leave += new System.EventHandler(this.txtMaThem_Leave);
             // 
@@ -621,7 +621,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1340, 808);
+            this.ClientSize = new System.Drawing.Size(1412, 988);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.materialTabSelector1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

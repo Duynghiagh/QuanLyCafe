@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using QuanLyCafe.DAL;
 using QuanLyCafe.DTO;
-using QuanLyCafe.DAL;
+using System;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace QuanLyCafe.BLL
 {
@@ -24,6 +21,7 @@ namespace QuanLyCafe.BLL
                 throw err;
             }
         }
+
         public DataTable LayThongTinTatCaLichSuOrder(int idHoaDon)
         {
             try
@@ -35,11 +33,8 @@ namespace QuanLyCafe.BLL
                 throw err;
             }
         }
-        public DataTable TimLichSuOrderBySanPham(
-            string getDateBatDau,
-            string getDateKetThuc,
-            string idSanPham
-        )
+
+        public DataTable TimLichSuOrderBySanPham(string getDateBatDau, string getDateKetThuc, string idSanPham)
         {
             try
             {
@@ -50,6 +45,7 @@ namespace QuanLyCafe.BLL
                 throw err;
             }
         }
+
         public DataTable LayThongTinChiTietLichSuOrder(int idBanDat)
         {
             try
@@ -62,27 +58,11 @@ namespace QuanLyCafe.BLL
             }
         }
 
-        public bool CapNhatThongTinOrder(
-            int soLuong,
-            int donGia,
-            int donGiaGiam,
-            int thanhTien,
-            int idHoaDon,
-            int idDatBan,
-            string idSanPham
-        )
+        public bool CapNhatThongTinOrder(int soLuong, int donGia, int donGiaGiam, int thanhTien, int idHoaDon, int idDatBan, string idSanPham)
         {
             try
             {
-                return dal.CapNhatThongTinOrder(
-                    soLuong,
-                    donGia,
-                    donGiaGiam,
-                    thanhTien,
-                    idHoaDon,
-                    idDatBan,
-                    idSanPham
-                );
+                return dal.CapNhatThongTinOrder(soLuong, donGia, donGiaGiam, thanhTien, idHoaDon, idDatBan, idSanPham);
             }
             catch (Exception err)
             {
@@ -101,6 +81,7 @@ namespace QuanLyCafe.BLL
                 throw err;
             }
         }
+
         public bool XoaOrder(int idHoaDon, int idDatBan, string idSanPham)
         {
             try
@@ -112,5 +93,16 @@ namespace QuanLyCafe.BLL
                 throw err;
             }
         }
+
+        private int ExecuteNonQuery(string query, SqlParameter[] parameters)
+        {
+            SqlCommand command = Database.CreateCommand(query);
+            if (parameters != null)
+            {
+                command.Parameters.AddRange(parameters);
+            }
+            return command.ExecuteNonQuery();
+        }
     }
+
 }

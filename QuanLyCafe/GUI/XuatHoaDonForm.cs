@@ -65,263 +65,144 @@ namespace QuanLyCafe.GUI
             }
         }
 
-        private void pdcHoaDon_PrintPage(
-            object sender,
-            System.Drawing.Printing.PrintPageEventArgs e
-        )
+        private void pdcHoaDon_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             try
             {
-                // Create rectangle for drawing.
-                float x = 239;
-                float y = 10f;
-                float width = 310f;
-                float height = 60f;
-                RectangleF drawRect = new RectangleF(x, y, width, height);
+                // Kích thước trang in
+                float pageWidth = e.PageSettings.PrintableArea.Width;
+                float pageHeight = e.PageSettings.PrintableArea.Height;
+
+                // Kích thước và vị trí ban đầu của nội dung
+                float contentWidth = 500f; // Chiều rộng nội dung
+                float contentHeight = 30f; // Chiều cao mỗi dòng
+                float x = (pageWidth - contentWidth) / 2; // Tính x để căn giữa theo chiều ngang
+                float y = 10f; // Vị trí y ban đầu
 
                 StringFormat sf = new StringFormat();
                 sf.LineAlignment = StringAlignment.Center;
                 sf.Alignment = StringAlignment.Center;
-                e.Graphics.DrawString(
-                    $"{HeThong.TenCuaHang}",
-                    new Font("Arial", 20, FontStyle.Bold),
-                    Brushes.Black,
-                    drawRect,
-                    sf
-                );
 
-                RectangleF drawRectDiaChi = new RectangleF(x - 15f, y + 20f, 350f, height);
-                e.Graphics.DrawString(
-                    $"{HeThong.DiaChiCuaHang}",
-                    new Font("Arial", 12, FontStyle.Bold),
-                    Brushes.Black,
-                    drawRectDiaChi,
-                    sf
-                );
+                // Header
+                RectangleF drawRect = new RectangleF(x, y, contentWidth, contentHeight);
+                e.Graphics.DrawString($"{HeThong.TenCuaHang}", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, drawRect, sf);
 
-                RectangleF drawRectHoaDonID = new RectangleF(
-                    x - 15f,
-                    drawRectDiaChi.Top + 20f,
-                    350f,
-                    height
-                );
-                e.Graphics.DrawString(
-                    $"Receipt No: {_hoaDonHienTai.ID}",
-                    new Font("Arial", 12, FontStyle.Regular),
-                    Brushes.Black,
-                    drawRectHoaDonID,
-                    sf
-                );
+                y += contentHeight;
+                drawRect = new RectangleF(x, y, contentWidth, contentHeight);
+                e.Graphics.DrawString($"{HeThong.DiaChiCuaHang}", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, drawRect, sf);
 
-                RectangleF drawRectHoaDonDate = new RectangleF(
-                    x - 15f,
-                    drawRectHoaDonID.Top + 20f,
-                    350f,
-                    height
-                );
-                e.Graphics.DrawString(
-                    $"Date: {_hoaDonHienTai.ThoiGianTao}",
-                    new Font("Arial", 12, FontStyle.Regular),
-                    Brushes.Black,
-                    drawRectHoaDonDate,
-                    sf
-                );
+                y += contentHeight;
+                drawRect = new RectangleF(x, y, contentWidth, contentHeight);
+                e.Graphics.DrawString($"Mã Hóa Đơn: {_hoaDonHienTai.ID}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, drawRect, sf);
 
-                RectangleF drawRectHoaDonCashier = new RectangleF(
-                    x - 15f,
-                    drawRectHoaDonDate.Top + 20f,
-                    350f,
-                    height
-                );
+                y += contentHeight;
+                drawRect = new RectangleF(x, y, contentWidth, contentHeight);
+                e.Graphics.DrawString($"Ngày tạo hóa đơn: {_hoaDonHienTai.ThoiGianTao}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, drawRect, sf);
+
+                y += contentHeight;
                 TaiKhoan getNhanVien = taiKhoanBLL.LayThongTinCaNhan(_hoaDonHienTai.NhanVienHoaDon);
                 string fullNameNhanVien = $"{getNhanVien.FirstName} {getNhanVien.LastName}";
-                e.Graphics.DrawString(
-                    $"Cashier: @{getNhanVien.UserName}",
-                    new Font("Arial", 12, FontStyle.Regular),
-                    Brushes.Black,
-                    drawRectHoaDonCashier,
-                    sf
-                );
+                drawRect = new RectangleF(x, y, contentWidth, contentHeight);
+                e.Graphics.DrawString($"Người tạo hóa đơn: {fullNameNhanVien}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, drawRect, sf);
 
-                RectangleF drawRectHoaDonDescription = new RectangleF(
-                    x - 15f,
-                    drawRectHoaDonCashier.Top + 20f,
-                    350f,
-                    height
-                );
-                e.Graphics.DrawString(
-                    $"Description:",
-                    new Font("Arial", 12, FontStyle.Regular),
-                    Brushes.Black,
-                    drawRectHoaDonDescription,
-                    sf
-                );
+                y += 40;
 
-                string gachNgang = "================================";
-                RectangleF drawRectHoaDonGachNgang = new RectangleF(
-                    x - 15f,
-                    drawRectHoaDonDescription.Top + 20f,
-                    350f,
-                    height
-                );
-                e.Graphics.DrawString(
-                    gachNgang,
-                    new Font("Arial", 12, FontStyle.Regular),
-                    Brushes.Black,
-                    drawRectHoaDonGachNgang,
-                    sf
-                );
+                // Khởi tạo và vẽ bảng chi tiết đơn hàng
+                float[] columnWidths = { 50f, 100f, 200f, 150f, 100f, 100f }; // Chiều rộng từng cột
+                string[] headers = { "STT", "Số lượng", "Tên sản phẩm", "Đơn giá", "Giảm giá", "Thành tiền" };
 
-                DataTable dt;
-                dt = lichSuOrderBLL.LayThongTinChiTietLichSuOrder(_banDatHienTai.ID);
+                // Vẽ tiêu đề bảng
+                float headerHeight = contentHeight + 10f; // Tăng chiều cao tiêu đề để dễ đọc hơn
+                float tableWidth = columnWidths.Sum();
+                float headerX = x + (contentWidth - tableWidth) / 2; // X cho tiêu đề bảng để căn giữa
 
-                string sanPham;
-                float positionY = drawRectHoaDonGachNgang.Top + 40f;
+                for (int i = 0; i < headers.Length; i++)
+                {
+                    drawRect = new RectangleF(headerX, y, columnWidths[i], headerHeight);
+                    e.Graphics.DrawString(headers[i], new Font("Arial", 12, FontStyle.Bold), Brushes.Black, drawRect, sf);
+                    e.Graphics.DrawRectangle(Pens.Black, Rectangle.Round(drawRect)); // Vẽ kẻ ngang và kẻ dọc
+                    headerX += columnWidths[i];
+                }
+
+                y += headerHeight;
+
+                // Vẽ các dòng chi tiết đơn hàng
+                DataTable dt = lichSuOrderBLL.LayThongTinChiTietLichSuOrder(_banDatHienTai.ID);
                 int tongTien = 0;
+                int stt = 0; // Biến đếm STT
                 foreach (DataRow dr in dt.Rows)
                 {
-                    sanPham =
-                        $"{dr["SOLUONG_LS"]} - {dr["TEN_SANPHAM_LS"]} - DONGIA: {string.Format("{0:#,##0}", double.Parse(dr["DONGIA_LS"].ToString()))} - GIAM: {string.Format("{0:#,##0}", double.Parse(dr["DONGIAGIAM_LS"].ToString()))} - THANHTIEN: {string.Format("{0:#,##0}", double.Parse(dr["THANHTIEN_LS"].ToString()))}";
-                    e.Graphics.DrawString(
-                        sanPham,
-                        new Font("Arial", 12, FontStyle.Regular),
-                        Brushes.Black,
-                        new PointF(10f, positionY)
-                    );
-                    positionY = positionY + 20f;
+                    stt++;
+                    float rowDataX = x + (contentWidth - tableWidth) / 2; // X cho dữ liệu hàng để căn giữa
+
+                    string[] rowData = {
+                stt.ToString(),
+                dr["SOLUONG_LS"].ToString(),
+                dr["TEN_SANPHAM_LS"].ToString(),
+                string.Format("{0:#,##0}", double.Parse(dr["DONGIA_LS"].ToString())),
+                string.Format("{0:#,##0}", double.Parse(dr["DONGIAGIAM_LS"].ToString())),
+                string.Format("{0:#,##0}", double.Parse(dr["THANHTIEN_LS"].ToString()))
+            };
+
+                    for (int i = 0; i < rowData.Length; i++)
+                    {
+                        drawRect = new RectangleF(rowDataX, y, columnWidths[i], contentHeight);
+                        e.Graphics.DrawString(rowData[i], new Font("Arial", 12, FontStyle.Regular), Brushes.Black, drawRect, sf);
+                        e.Graphics.DrawRectangle(Pens.Black, Rectangle.Round(drawRect)); // Vẽ kẻ ngang và kẻ dọc
+                        rowDataX += columnWidths[i];
+                    }
+
+                    y += contentHeight;
                     tongTien += (int)dr["THANHTIEN_LS"];
                 }
-                drawRectHoaDonGachNgang = new RectangleF(x - 15f, positionY, 350f, height);
+
+                // Tóm tắt
+                y += contentHeight;
+                float middleX = pageWidth / 2; // Vị trí giữa theo chiều ngang của trang in
+                e.Graphics.DrawString($"Tổng cộng: {string.Format("{0:#,##0}", tongTien)}", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new PointF(middleX, y), sf);
+
+                y += contentHeight;
+                string dateIn = $"Giờ vào: {_banDatHienTai.ThoiGianVaoBan}";
                 e.Graphics.DrawString(
-                    gachNgang,
+                    dateIn,
                     new Font("Arial", 12, FontStyle.Regular),
                     Brushes.Black,
-                    drawRectHoaDonGachNgang,
+                    new RectangleF(x, y, contentWidth, contentHeight),
                     sf
                 );
 
-                RectangleF drawRectHoaDonOverview = new RectangleF(
-                    x - 15f,
-                    drawRectHoaDonGachNgang.Top + 20f,
-                    350f,
-                    height
-                );
-                string tongQuan =
-                    $"{dt.Rows.Count} Item(s) (VAT included) {string.Format("{0:#,##0}", double.Parse(tongTien.ToString()))}";
+                y += contentHeight;
+
+                // Date Out
+                string dateOut = $"Giờ ra: {_banDatHienTai.ThoiGianRaBan}";
                 e.Graphics.DrawString(
-                    tongQuan,
+                    dateOut,
                     new Font("Arial", 12, FontStyle.Regular),
                     Brushes.Black,
-                    drawRectHoaDonOverview,
+                    new RectangleF(x, y, contentWidth, contentHeight),
                     sf
                 );
-                drawRectHoaDonOverview = new RectangleF(
-                    x - 100f,
-                    drawRectHoaDonOverview.Top + 20f,
-                    550f,
-                    height
-                );
-                tongQuan = $"DATE IN: {_banDatHienTai.ThoiGianVaoBan}";
-                e.Graphics.DrawString(
-                    tongQuan,
-                    new Font("Arial", 12, FontStyle.Regular),
-                    Brushes.Black,
-                    drawRectHoaDonOverview,
-                    sf
-                );
-                drawRectHoaDonOverview = new RectangleF(
-                    x - 100f,
-                    drawRectHoaDonOverview.Top + 20f,
-                    550f,
-                    height
-                );
-                tongQuan = $"DATE OUT: {_banDatHienTai.ThoiGianRaBan}";
-                e.Graphics.DrawString(
-                    tongQuan,
-                    new Font("Arial", 12, FontStyle.Regular),
-                    Brushes.Black,
-                    drawRectHoaDonOverview,
-                    sf
-                );
+
+                y += 40;
+
                 if (!string.IsNullOrEmpty(_hoaDonHienTai.VoucherHoaDon))
                 {
-                    Voucher getVoucher = voucherBLL.LayThongTinVoucher(
-                        _hoaDonHienTai.VoucherHoaDon
-                    );
-                    drawRectHoaDonOverview = new RectangleF(
-                        x - 100f,
-                        drawRectHoaDonOverview.Top + 20f,
-                        550f,
-                        height
-                    );
-                    tongQuan =
-                        $"VOUCHER: {_hoaDonHienTai.VoucherHoaDon} (DISCOUNT {getVoucher.GiamGia}%) {string.Format("{0:#,##0}", double.Parse((tongTien - tongTien * getVoucher.GiamGia / 100).ToString()))}";
-                    e.Graphics.DrawString(
-                        tongQuan,
-                        new Font("Arial", 12, FontStyle.Regular),
-                        Brushes.Black,
-                        drawRectHoaDonOverview,
-                        sf
-                    );
+                    Voucher getVoucher = voucherBLL.LayThongTinVoucher(_hoaDonHienTai.VoucherHoaDon);
+                    float discountAmount = tongTien * getVoucher.GiamGia / 100;
+                    e.Graphics.DrawString($"Voucher: {_hoaDonHienTai.VoucherHoaDon} - Giảm giá: {getVoucher.GiamGia}% - Số tiền giảm: {string.Format("{0:#,##0}", discountAmount)}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(x, y));
+                    tongTien -= (int)discountAmount;
                 }
-                drawRectHoaDonOverview = new RectangleF(
-                    x - 15f,
-                    drawRectHoaDonOverview.Top + 20f,
-                    350f,
-                    height
-                );
-                tongQuan =
-                    $"CASH: {string.Format("{0:#,##0}", double.Parse(_hoaDonHienTai.TienKhachTra.ToString()))}";
-                e.Graphics.DrawString(
-                    tongQuan,
-                    new Font("Arial", 12, FontStyle.Regular),
-                    Brushes.Black,
-                    drawRectHoaDonOverview,
-                    sf
-                );
-                drawRectHoaDonOverview = new RectangleF(
-                    x - 15f,
-                    drawRectHoaDonOverview.Top + 20f,
-                    350f,
-                    height
-                );
-                tongQuan =
-                    $"CHANGE: {string.Format("{0:#,##0}", double.Parse(_hoaDonHienTai.TienThua.ToString()))}";
-                e.Graphics.DrawString(
-                    tongQuan,
-                    new Font("Arial", 12, FontStyle.Regular),
-                    Brushes.Black,
-                    drawRectHoaDonOverview,
-                    sf
-                );
-                drawRectHoaDonOverview = new RectangleF(
-                    x - 15f,
-                    drawRectHoaDonOverview.Top + 20f,
-                    350f,
-                    height
-                );
-                tongQuan = $"Chi xuat hoa don trong ngay";
-                e.Graphics.DrawString(
-                    tongQuan,
-                    new Font("Arial", 12, FontStyle.Regular),
-                    Brushes.Black,
-                    drawRectHoaDonOverview,
-                    sf
-                );
-                drawRectHoaDonOverview = new RectangleF(
-                    x - 15f,
-                    drawRectHoaDonOverview.Top + 20f,
-                    350f,
-                    height
-                );
-                tongQuan = $"Xin cam on quy khach!";
-                e.Graphics.DrawString(
-                    tongQuan,
-                    new Font("Arial", 12, FontStyle.Regular),
-                    Brushes.Black,
-                    drawRectHoaDonOverview,
-                    sf
-                );
+
+                y += contentHeight;
+                e.Graphics.DrawString($"Khách trả: {string.Format("{0:#,##0}", _hoaDonHienTai.TienKhachTra)}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(middleX, y), sf);
+
+                y += contentHeight;
+                e.Graphics.DrawString($"Tiền thừa: {string.Format("{0:#,##0}", _hoaDonHienTai.TienThua)}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(middleX, y), sf);
+
+                y += 40;
+                e.Graphics.DrawString("Xin cảm ơn quý khách!", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(middleX, y), sf);
+
+                // Đóng form sau khi in
                 this.Close();
             }
             catch (Exception err)
@@ -329,5 +210,8 @@ namespace QuanLyCafe.GUI
                 MessageBox.Show(err.Message);
             }
         }
+
+
     }
 }
+

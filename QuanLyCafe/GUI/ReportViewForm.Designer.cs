@@ -43,6 +43,7 @@
             this.rpvBaoCao.ServerReport.BearerToken = null;
             this.rpvBaoCao.Size = new System.Drawing.Size(794, 281);
             this.rpvBaoCao.TabIndex = 0;
+            this.rpvBaoCao.Load += new System.EventHandler(this.rpvBaoCao_Load);
             // 
             // btnTaoBaoCao
             // 

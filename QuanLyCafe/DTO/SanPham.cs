@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QuanLyCafe.DTO
+﻿namespace QuanLyCafe.DTO
 {
     public class SanPham
     {
@@ -48,6 +42,7 @@ namespace QuanLyCafe.DTO
             int giaTien,
             int suKien,
             string imagePath
+
         )
         {
             LoaiSanPham = loaiSanPham;
