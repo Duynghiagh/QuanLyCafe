@@ -84,9 +84,7 @@
             this.lblKetQuaTimThay = new System.Windows.Forms.Label();
             this.flpDanhSachSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.btnTimKiemSanPham = new ReaLTaiizor.Controls.MaterialButton();
-            this.picBtnKhacLoc = new System.Windows.Forms.PictureBox();
             this.picBtnNuocLoc = new System.Windows.Forms.PictureBox();
-            this.picBtnThucAnLoc = new System.Windows.Forms.PictureBox();
             this.txtTimKiemSanPham = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -163,9 +161,7 @@
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.tpSanPham.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBtnKhacLoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBtnNuocLoc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBtnThucAnLoc)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tpBanDat.SuspendLayout();
@@ -215,9 +211,9 @@
             this.pnlCaNhan.Controls.Add(this.label7);
             this.pnlCaNhan.Controls.Add(this.panel1);
             this.pnlCaNhan.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlCaNhan.Location = new System.Drawing.Point(1148, 64);
+            this.pnlCaNhan.Location = new System.Drawing.Point(1121, 64);
             this.pnlCaNhan.Name = "pnlCaNhan";
-            this.pnlCaNhan.Size = new System.Drawing.Size(284, 683);
+            this.pnlCaNhan.Size = new System.Drawing.Size(311, 683);
             this.pnlCaNhan.TabIndex = 1;
             // 
             // btnTimKiemHoaDon
@@ -232,12 +228,12 @@
             this.btnTimKiemHoaDon.HighEmphasis = false;
             this.btnTimKiemHoaDon.Icon = global::QuanLyCafe.Properties.Resources.search;
             this.btnTimKiemHoaDon.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnTimKiemHoaDon.Location = new System.Drawing.Point(108, 585);
+            this.btnTimKiemHoaDon.Location = new System.Drawing.Point(193, 535);
             this.btnTimKiemHoaDon.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnTimKiemHoaDon.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnTimKiemHoaDon.Name = "btnTimKiemHoaDon";
             this.btnTimKiemHoaDon.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnTimKiemHoaDon.Size = new System.Drawing.Size(105, 48);
+            this.btnTimKiemHoaDon.Size = new System.Drawing.Size(88, 46);
             this.btnTimKiemHoaDon.TabIndex = 35;
             this.btnTimKiemHoaDon.Text = "Tìm kiếm";
             this.btnTimKiemHoaDon.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -374,7 +370,7 @@
             this.txtTimKiemMaHoaDon.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtTimKiemMaHoaDon.HideSelection = true;
             this.txtTimKiemMaHoaDon.LeadingIcon = null;
-            this.txtTimKiemMaHoaDon.Location = new System.Drawing.Point(25, 526);
+            this.txtTimKiemMaHoaDon.Location = new System.Drawing.Point(25, 535);
             this.txtTimKiemMaHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiemMaHoaDon.MaxLength = 50;
             this.txtTimKiemMaHoaDon.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
@@ -387,7 +383,7 @@
             this.txtTimKiemMaHoaDon.SelectionLength = 0;
             this.txtTimKiemMaHoaDon.SelectionStart = 0;
             this.txtTimKiemMaHoaDon.ShortcutsEnabled = true;
-            this.txtTimKiemMaHoaDon.Size = new System.Drawing.Size(256, 48);
+            this.txtTimKiemMaHoaDon.Size = new System.Drawing.Size(159, 48);
             this.txtTimKiemMaHoaDon.TabIndex = 34;
             this.txtTimKiemMaHoaDon.TabStop = false;
             this.txtTimKiemMaHoaDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -411,7 +407,7 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.pictureBox6);
-            this.panel5.Location = new System.Drawing.Point(13, 440);
+            this.panel5.Location = new System.Drawing.Point(25, 440);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(268, 48);
             this.panel5.TabIndex = 3;
@@ -451,7 +447,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.pictureBox14);
-            this.panel1.Location = new System.Drawing.Point(13, 38);
+            this.panel1.Location = new System.Drawing.Point(56, 41);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(187, 48);
             this.panel1.TabIndex = 3;
@@ -593,7 +589,7 @@
             // flpDanhSachVoucher
             // 
             this.flpDanhSachVoucher.AutoScroll = true;
-            this.flpDanhSachVoucher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(242)))));
+            this.flpDanhSachVoucher.BackColor = System.Drawing.Color.White;
             this.flpDanhSachVoucher.Controls.Add(this.materialCard2);
             this.flpDanhSachVoucher.Location = new System.Drawing.Point(25, 73);
             this.flpDanhSachVoucher.Name = "flpDanhSachVoucher";
@@ -899,9 +895,7 @@
             this.tpSanPham.Controls.Add(this.lblKetQuaTimThay);
             this.tpSanPham.Controls.Add(this.flpDanhSachSanPham);
             this.tpSanPham.Controls.Add(this.btnTimKiemSanPham);
-            this.tpSanPham.Controls.Add(this.picBtnKhacLoc);
             this.tpSanPham.Controls.Add(this.picBtnNuocLoc);
-            this.tpSanPham.Controls.Add(this.picBtnThucAnLoc);
             this.tpSanPham.Controls.Add(this.txtTimKiemSanPham);
             this.tpSanPham.Controls.Add(this.panel2);
             this.tpSanPham.ImageKey = "fast-food (1).png";
@@ -991,41 +985,17 @@
             this.btnTimKiemSanPham.UseVisualStyleBackColor = true;
             this.btnTimKiemSanPham.Click += new System.EventHandler(this.btnTimKiemSanPham_Click);
             // 
-            // picBtnKhacLoc
-            // 
-            this.picBtnKhacLoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBtnKhacLoc.Image = global::QuanLyCafe.Properties.Resources.khac_filter;
-            this.picBtnKhacLoc.Location = new System.Drawing.Point(281, 69);
-            this.picBtnKhacLoc.Name = "picBtnKhacLoc";
-            this.picBtnKhacLoc.Size = new System.Drawing.Size(114, 89);
-            this.picBtnKhacLoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBtnKhacLoc.TabIndex = 7;
-            this.picBtnKhacLoc.TabStop = false;
-            this.picBtnKhacLoc.Click += new System.EventHandler(this.picBtnKhacLoc_Click);
-            // 
             // picBtnNuocLoc
             // 
             this.picBtnNuocLoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBtnNuocLoc.Image = global::QuanLyCafe.Properties.Resources.Xoai;
-            this.picBtnNuocLoc.Location = new System.Drawing.Point(151, 68);
+            this.picBtnNuocLoc.Location = new System.Drawing.Point(30, 76);
             this.picBtnNuocLoc.Name = "picBtnNuocLoc";
             this.picBtnNuocLoc.Size = new System.Drawing.Size(114, 89);
             this.picBtnNuocLoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBtnNuocLoc.TabIndex = 7;
             this.picBtnNuocLoc.TabStop = false;
             this.picBtnNuocLoc.Click += new System.EventHandler(this.picBtnNuocLoc_Click);
-            // 
-            // picBtnThucAnLoc
-            // 
-            this.picBtnThucAnLoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBtnThucAnLoc.Image = global::QuanLyCafe.Properties.Resources.DA00011;
-            this.picBtnThucAnLoc.Location = new System.Drawing.Point(18, 69);
-            this.picBtnThucAnLoc.Name = "picBtnThucAnLoc";
-            this.picBtnThucAnLoc.Size = new System.Drawing.Size(114, 89);
-            this.picBtnThucAnLoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBtnThucAnLoc.TabIndex = 7;
-            this.picBtnThucAnLoc.TabStop = false;
-            this.picBtnThucAnLoc.Click += new System.EventHandler(this.picBtnThucAnLoc_Click);
             // 
             // txtTimKiemSanPham
             // 
@@ -1420,7 +1390,7 @@
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
             this.panel12.Controls.Add(this.pictureBox5);
-            this.panel12.Location = new System.Drawing.Point(7, 6);
+            this.panel12.Location = new System.Drawing.Point(0, 3);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(290, 168);
             this.panel12.TabIndex = 0;
@@ -1717,7 +1687,7 @@
             this.pnlForm.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlForm.Location = new System.Drawing.Point(3, 64);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(1102, 683);
+            this.pnlForm.Size = new System.Drawing.Size(1112, 683);
             this.pnlForm.TabIndex = 3;
             // 
             // MainForm
@@ -1767,9 +1737,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.tpSanPham.ResumeLayout(false);
             this.tpSanPham.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBtnKhacLoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBtnNuocLoc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBtnThucAnLoc)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1831,11 +1799,7 @@
         private System.Windows.Forms.Panel panel7;
         private ReaLTaiizor.Controls.MaterialButton btnEditThongTin;
         private ReaLTaiizor.Controls.MaterialTabControl tabMainForm;
-        private System.Windows.Forms.TabPage tpTrangChu;
         private System.Windows.Forms.TabPage tpSanPham;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.ImageList menuIconList;
         private System.Windows.Forms.TabPage tpBanDat;
         private System.Windows.Forms.TabPage tpQuanLy;
@@ -1844,7 +1808,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtTimKiemSanPham;
-        private System.Windows.Forms.PictureBox picBtnThucAnLoc;
         private System.Windows.Forms.PictureBox picBtnNuocLoc;
         private ReaLTaiizor.Controls.MaterialButton btnTimKiemSanPham;
         private System.Windows.Forms.Panel panel4;
@@ -1860,7 +1823,6 @@
         private System.Windows.Forms.Label lblKetQuaTimThay;
         private ReaLTaiizor.Controls.MaterialComboBox cboDanhSachSuKien;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox picBtnKhacLoc;
         private System.Windows.Forms.FlowLayoutPanel flpDanhSachBan;
         private System.Windows.Forms.Label lblKetQuaTimThayBan;
         private ReaLTaiizor.Controls.MaterialButton btnKetThucCa;
@@ -1897,34 +1859,9 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.Panel pnlWelcomeBack;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Panel pnlDanhSachVoucher;
-        private System.Windows.Forms.FlowLayoutPanel flpDanhSachVoucher;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Panel pnlDanhSachSuKien;
-        private System.Windows.Forms.FlowLayoutPanel flpDanhSachSuKien;
-        private System.Windows.Forms.Label label18;
-        private ReaLTaiizor.Controls.MaterialCard materialCard1;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private ReaLTaiizor.Controls.MaterialButton btnTimKiemVoucher;
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtTimKiemVoucher;
-        private ReaLTaiizor.Controls.MaterialButton btnTimKiemSuKien;
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtTimKiemSuKien;
-        private ReaLTaiizor.Controls.MaterialCard materialCard2;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.Label lblThoiGianHienTai;
         private System.Windows.Forms.Panel pnlQuanLyTaiKhoan;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
@@ -1935,5 +1872,34 @@
         private ReaLTaiizor.Controls.MaterialButton btnTimKiemHoaDon;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtTimKiemMaHoaDon;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TabPage tpTrangChu;
+        private System.Windows.Forms.Label lblThoiGianHienTai;
+        private System.Windows.Forms.Panel pnlDanhSachVoucher;
+        private ReaLTaiizor.Controls.MaterialButton btnTimKiemVoucher;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtTimKiemVoucher;
+        private System.Windows.Forms.FlowLayoutPanel flpDanhSachVoucher;
+        private ReaLTaiizor.Controls.MaterialCard materialCard2;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel pnlDanhSachSuKien;
+        private ReaLTaiizor.Controls.MaterialButton btnTimKiemSuKien;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtTimKiemSuKien;
+        private System.Windows.Forms.FlowLayoutPanel flpDanhSachSuKien;
+        private ReaLTaiizor.Controls.MaterialCard materialCard1;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel pnlWelcomeBack;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

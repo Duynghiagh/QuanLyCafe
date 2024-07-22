@@ -65,6 +65,7 @@
             this.btnTimKiemTaiKhoan = new ReaLTaiizor.Controls.MaterialButton();
             this.txtTimKiemTaiKhoan = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.pnlTongQuan = new System.Windows.Forms.Panel();
+            this.btnAn = new ReaLTaiizor.Controls.MaterialButton();
             this.cboQuyenHan = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -77,7 +78,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.picTaiKhoan = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnXoa = new ReaLTaiizor.Controls.MaterialButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -116,7 +116,7 @@
             this.cboQuyenHanThem.FormattingEnabled = true;
             this.cboQuyenHanThem.Location = new System.Drawing.Point(186, 447);
             this.cboQuyenHanThem.Name = "cboQuyenHanThem";
-            this.cboQuyenHanThem.Size = new System.Drawing.Size(204, 29);
+            this.cboQuyenHanThem.Size = new System.Drawing.Size(204, 27);
             this.cboQuyenHanThem.TabIndex = 13;
             // 
             // txtPhoneThem
@@ -124,7 +124,7 @@
             this.txtPhoneThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtPhoneThem.Location = new System.Drawing.Point(186, 345);
             this.txtPhoneThem.Name = "txtPhoneThem";
-            this.txtPhoneThem.Size = new System.Drawing.Size(204, 28);
+            this.txtPhoneThem.Size = new System.Drawing.Size(204, 27);
             this.txtPhoneThem.TabIndex = 11;
             // 
             // txtLastNameThem
@@ -132,7 +132,7 @@
             this.txtLastNameThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtLastNameThem.Location = new System.Drawing.Point(186, 308);
             this.txtLastNameThem.Name = "txtLastNameThem";
-            this.txtLastNameThem.Size = new System.Drawing.Size(204, 28);
+            this.txtLastNameThem.Size = new System.Drawing.Size(204, 27);
             this.txtLastNameThem.TabIndex = 11;
             // 
             // txtFirstNameThem
@@ -140,7 +140,7 @@
             this.txtFirstNameThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtFirstNameThem.Location = new System.Drawing.Point(186, 271);
             this.txtFirstNameThem.Name = "txtFirstNameThem";
-            this.txtFirstNameThem.Size = new System.Drawing.Size(204, 28);
+            this.txtFirstNameThem.Size = new System.Drawing.Size(204, 27);
             this.txtFirstNameThem.TabIndex = 11;
             // 
             // txtPasswordThem
@@ -148,7 +148,7 @@
             this.txtPasswordThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtPasswordThem.Location = new System.Drawing.Point(186, 233);
             this.txtPasswordThem.Name = "txtPasswordThem";
-            this.txtPasswordThem.Size = new System.Drawing.Size(204, 28);
+            this.txtPasswordThem.Size = new System.Drawing.Size(204, 27);
             this.txtPasswordThem.TabIndex = 11;
             // 
             // txtUsernameThem
@@ -156,7 +156,7 @@
             this.txtUsernameThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtUsernameThem.Location = new System.Drawing.Point(186, 200);
             this.txtUsernameThem.Name = "txtUsernameThem";
-            this.txtUsernameThem.Size = new System.Drawing.Size(204, 28);
+            this.txtUsernameThem.Size = new System.Drawing.Size(204, 27);
             this.txtUsernameThem.TabIndex = 11;
             // 
             // picTaiKhoanThem
@@ -315,7 +315,7 @@
             this.txtAddressThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtAddressThem.Location = new System.Drawing.Point(186, 413);
             this.txtAddressThem.Name = "txtAddressThem";
-            this.txtAddressThem.Size = new System.Drawing.Size(204, 28);
+            this.txtAddressThem.Size = new System.Drawing.Size(204, 27);
             this.txtAddressThem.TabIndex = 11;
             // 
             // txtCCCDThem
@@ -323,7 +323,7 @@
             this.txtCCCDThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtCCCDThem.Location = new System.Drawing.Point(186, 379);
             this.txtCCCDThem.Name = "txtCCCDThem";
-            this.txtCCCDThem.Size = new System.Drawing.Size(204, 28);
+            this.txtCCCDThem.Size = new System.Drawing.Size(204, 27);
             this.txtCCCDThem.TabIndex = 11;
             // 
             // label16
@@ -421,7 +421,7 @@
             this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDenNgay.Location = new System.Drawing.Point(249, 107);
             this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(230, 28);
+            this.dtpDenNgay.Size = new System.Drawing.Size(230, 27);
             this.dtpDenNgay.TabIndex = 19;
             // 
             // dtpTuNgay
@@ -430,7 +430,7 @@
             this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpTuNgay.Location = new System.Drawing.Point(249, 59);
             this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(230, 28);
+            this.dtpTuNgay.Size = new System.Drawing.Size(230, 27);
             this.dtpTuNgay.TabIndex = 20;
             // 
             // label24
@@ -574,6 +574,7 @@
             // pnlTongQuan
             // 
             this.pnlTongQuan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.pnlTongQuan.Controls.Add(this.btnAn);
             this.pnlTongQuan.Controls.Add(this.cboQuyenHan);
             this.pnlTongQuan.Controls.Add(this.label1);
             this.pnlTongQuan.Controls.Add(this.txtPassword);
@@ -586,7 +587,6 @@
             this.pnlTongQuan.Controls.Add(this.label17);
             this.pnlTongQuan.Controls.Add(this.picTaiKhoan);
             this.pnlTongQuan.Controls.Add(this.label6);
-            this.pnlTongQuan.Controls.Add(this.btnXoa);
             this.pnlTongQuan.Controls.Add(this.label5);
             this.pnlTongQuan.Controls.Add(this.label4);
             this.pnlTongQuan.Controls.Add(this.label3);
@@ -601,6 +601,31 @@
             this.pnlTongQuan.Size = new System.Drawing.Size(385, 658);
             this.pnlTongQuan.TabIndex = 6;
             this.pnlTongQuan.Visible = false;
+            this.pnlTongQuan.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTongQuan_Paint);
+            // 
+            // btnAn
+            // 
+            this.btnAn.AutoSize = false;
+            this.btnAn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAn.CharacterCasing = ReaLTaiizor.Controls.MaterialButton.CharacterCasingEnum.Title;
+            this.btnAn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAn.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAn.Depth = 0;
+            this.btnAn.HighEmphasis = true;
+            this.btnAn.Icon = null;
+            this.btnAn.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            this.btnAn.Location = new System.Drawing.Point(265, 449);
+            this.btnAn.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnAn.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.btnAn.Name = "btnAn";
+            this.btnAn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnAn.Size = new System.Drawing.Size(56, 44);
+            this.btnAn.TabIndex = 16;
+            this.btnAn.Text = "Ẩn";
+            this.btnAn.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAn.UseAccentColor = false;
+            this.btnAn.UseVisualStyleBackColor = true;
+            this.btnAn.Click += new System.EventHandler(this.btnAn_Click);
             // 
             // cboQuyenHan
             // 
@@ -608,7 +633,7 @@
             this.cboQuyenHan.FormattingEnabled = true;
             this.cboQuyenHan.Location = new System.Drawing.Point(156, 395);
             this.cboQuyenHan.Name = "cboQuyenHan";
-            this.cboQuyenHan.Size = new System.Drawing.Size(204, 29);
+            this.cboQuyenHan.Size = new System.Drawing.Size(204, 27);
             this.cboQuyenHan.TabIndex = 15;
             // 
             // label1
@@ -627,7 +652,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtPassword.Location = new System.Drawing.Point(158, 549);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(206, 28);
+            this.txtPassword.Size = new System.Drawing.Size(206, 27);
             this.txtPassword.TabIndex = 11;
             // 
             // txtAddress
@@ -635,7 +660,7 @@
             this.txtAddress.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtAddress.Location = new System.Drawing.Point(154, 352);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(206, 28);
+            this.txtAddress.Size = new System.Drawing.Size(206, 27);
             this.txtAddress.TabIndex = 11;
             // 
             // txtCCCD
@@ -643,7 +668,7 @@
             this.txtCCCD.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtCCCD.Location = new System.Drawing.Point(154, 317);
             this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Size = new System.Drawing.Size(206, 28);
+            this.txtCCCD.Size = new System.Drawing.Size(206, 27);
             this.txtCCCD.TabIndex = 11;
             // 
             // txtPhone
@@ -651,7 +676,7 @@
             this.txtPhone.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtPhone.Location = new System.Drawing.Point(156, 283);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(206, 28);
+            this.txtPhone.Size = new System.Drawing.Size(206, 27);
             this.txtPhone.TabIndex = 11;
             // 
             // txtLastName
@@ -659,7 +684,7 @@
             this.txtLastName.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtLastName.Location = new System.Drawing.Point(156, 246);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(206, 28);
+            this.txtLastName.Size = new System.Drawing.Size(206, 27);
             this.txtLastName.TabIndex = 11;
             // 
             // txtFirstName
@@ -667,7 +692,7 @@
             this.txtFirstName.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtFirstName.Location = new System.Drawing.Point(156, 209);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(206, 28);
+            this.txtFirstName.Size = new System.Drawing.Size(206, 27);
             this.txtFirstName.TabIndex = 11;
             // 
             // txtUserName
@@ -676,7 +701,7 @@
             this.txtUserName.Location = new System.Drawing.Point(158, 170);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.ReadOnly = true;
-            this.txtUserName.Size = new System.Drawing.Size(206, 28);
+            this.txtUserName.Size = new System.Drawing.Size(206, 27);
             this.txtUserName.TabIndex = 11;
             // 
             // label17
@@ -712,30 +737,6 @@
             this.label6.Size = new System.Drawing.Size(90, 21);
             this.label6.TabIndex = 2;
             this.label6.Text = "Address:";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.AutoSize = false;
-            this.btnXoa.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnXoa.CharacterCasing = ReaLTaiizor.Controls.MaterialButton.CharacterCasingEnum.Title;
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnXoa.Depth = 0;
-            this.btnXoa.HighEmphasis = true;
-            this.btnXoa.Icon = null;
-            this.btnXoa.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnXoa.Location = new System.Drawing.Point(202, 452);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.btnXoa.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnXoa.Size = new System.Drawing.Size(162, 44);
-            this.btnXoa.TabIndex = 9;
-            this.btnXoa.Text = "Xóa ";
-            this.btnXoa.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnXoa.UseAccentColor = false;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // label5
             // 
@@ -805,12 +806,12 @@
             this.btnLuu.HighEmphasis = true;
             this.btnLuu.Icon = null;
             this.btnLuu.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnLuu.Location = new System.Drawing.Point(26, 452);
+            this.btnLuu.Location = new System.Drawing.Point(193, 449);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnLuu.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnLuu.Size = new System.Drawing.Size(162, 44);
+            this.btnLuu.Size = new System.Drawing.Size(53, 44);
             this.btnLuu.TabIndex = 9;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -1042,7 +1043,6 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.PictureBox picTaiKhoan;
         private System.Windows.Forms.Label label6;
-        private ReaLTaiizor.Controls.MaterialButton btnXoa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -1081,5 +1081,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ADDRESS;
         private System.Windows.Forms.DataGridViewTextBoxColumn QUYENHAN;
         private System.Windows.Forms.DataGridViewTextBoxColumn THOIGIAN_TAO;
+        private ReaLTaiizor.Controls.MaterialButton btnAn;
     }
 }

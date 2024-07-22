@@ -95,7 +95,7 @@
             this.materialTabSelector1.Name = "materialTabSelector1";
             this.materialTabSelector1.SelectorHideTabName = new string[0];
             this.materialTabSelector1.SelectorNonClickTabPage = new System.Windows.Forms.TabPage[0];
-            this.materialTabSelector1.Size = new System.Drawing.Size(1406, 47);
+            this.materialTabSelector1.Size = new System.Drawing.Size(1442, 47);
             this.materialTabSelector1.TabIndex = 29;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
@@ -621,7 +621,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1412, 988);
+            this.ClientSize = new System.Drawing.Size(1448, 1078);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.materialTabSelector1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

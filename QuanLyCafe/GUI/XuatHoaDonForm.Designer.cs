@@ -41,7 +41,7 @@
             this.lblXuatHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(189)))), ((int)(((byte)(166)))));
             this.lblXuatHoaDon.Location = new System.Drawing.Point(277, 90);
             this.lblXuatHoaDon.Name = "lblXuatHoaDon";
-            this.lblXuatHoaDon.Size = new System.Drawing.Size(206, 35);
+            this.lblXuatHoaDon.Size = new System.Drawing.Size(203, 34);
             this.lblXuatHoaDon.TabIndex = 75;
             this.lblXuatHoaDon.Text = "Xuất hóa đơn";
             // 
@@ -68,6 +68,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "XuatHoaDonForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.XuatHoaDonForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

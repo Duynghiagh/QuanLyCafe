@@ -19,6 +19,7 @@ using System.IO;
 using BC = BCrypt.Net.BCrypt;
 using QuanLyCafe.DTO;
 using QuanLyCafe.BLL;
+using QuanLyCafe.DAL;
 
 namespace QuanLyCafe.GUI
 {
@@ -263,59 +264,7 @@ namespace QuanLyCafe.GUI
             }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (_taiKhoanChon == null)
-                {
-                    return;
-                }
-                if (
-                    TaiKhoanHienTai.TaiKhoanHienHanh.UserName != _taiKhoanChon.UserName
-                    && TaiKhoanHienTai.TaiKhoanHienHanh.QuyenHan <= _taiKhoanChon.QuyenHan
-                )
-                {
-                    throw new Exception("Bạn không có quyền chỉnh sửa tài khoản này");
-                }
-                if (
-                    ControlForm.ConfirmForm(
-                        "Bạn có muốn xóa không? Hành động này sẽ xóa mọi thứ liên quan đến tài khoản này"
-                    )
-                )
-                {
-
-                    // Kiểm tra xem tài khoản có đang trong ca làm hay không (đang order cho khách)
-                   
-
-
-                    // Kiểm tra xem tài khoản đã được thanh toán tiền chưa
-                   
-         
-                    // xóa tài khoản
-                    TaiKhoan taiKhoan = _taiKhoanChon;
-                    if (taiKhoanBLL.CapNhatHienThiTaiKhoan(taiKhoan.UserName, 0))
-                    {
-                        if (_taiKhoanChon.UserName == TaiKhoanHienTai.TaiKhoanHienHanh.UserName)
-                        {
-                            Environment.Exit(1);
-                        }
-
-                        ReloadTabPageChinhSua();
-
-                        MessageBox.Show("Thành công");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thất bại");
-                    }
-                }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-        }
+      
 
         private void btnCapNhatMatKhau_Click(object sender, EventArgs e)
         {
@@ -363,7 +312,7 @@ namespace QuanLyCafe.GUI
                 MessageBox.Show(err.Message);
             }
         }
-
+            
         private void btnBaoCaoDoanhThu_Click(object sender, EventArgs e)
         {
             try
@@ -529,11 +478,21 @@ namespace QuanLyCafe.GUI
                 txtPhone.Text = _taiKhoanChon.Phone;
                 txtAddress.Text = _taiKhoanChon.Address;
                 cboQuyenHan.SelectedValue = (_taiKhoanChon.QuyenHan).ToString();
+                if (_taiKhoanChon.HienThi == 1)
+                {
+                    btnAn.Text = "Ẩn";
+                }
+                else
+                {
+                    btnAn.Text = "Hủy ẩn";
+                }
             } else
             {
+
                 pnlBaoCao.Visible = false;
                 pnlTongQuan.Visible = false;
             }
+           
         }
 
         void ReloadTabPageChinhSua()
@@ -560,5 +519,66 @@ namespace QuanLyCafe.GUI
             txtPasswordThem.Text = null;
         }
         #endregion
+
+        private void btnAn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_taiKhoanChon == null)
+                {
+                    return;
+                }
+
+                if (_taiKhoanChon.HienThi == 1)
+                {
+                    if (ControlForm.ConfirmForm("Bạn có muốn ẩn tài khoản không?"))
+                    {
+                        // Ẩn tài khoản
+                        TaiKhoan taiKhoan = _taiKhoanChon;
+                        if (taiKhoanBLL.CapNhatHienThiTaiKhoan(taiKhoan.UserName, 0))
+                        {
+                            _taiKhoanChon = null;
+                            HienThiThongTinTaiKhoan();
+                            LoadDanhSachTaiKhoan();
+
+                            MessageBox.Show("Ẩn tài khoản thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ẩn tài khoản thất bại");
+                        }
+                    }
+                }
+                else
+                {
+                    if (ControlForm.ConfirmForm("Bạn có muốn hủy ẩn tài khoản không?"))
+                    {
+                        // Hủy ẩn tài khoản
+                        TaiKhoan taiKhoan = _taiKhoanChon;
+                        if (taiKhoanBLL.CapNhatHienThiTaiKhoan(taiKhoan.UserName, 1))
+                        {
+                            _taiKhoanChon = null;
+                            HienThiThongTinTaiKhoan();
+                            LoadDanhSachTaiKhoan();
+
+                            MessageBox.Show("Hủy ẩn tài khoản thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hủy ẩn tài khoản thất bại");
+                        }
+                    }
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void pnlTongQuan_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

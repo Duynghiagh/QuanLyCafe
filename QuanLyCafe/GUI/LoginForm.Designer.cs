@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.pnlForm = new System.Windows.Forms.Panel();
+            this.chkHienThiMatKhau = new ReaLTaiizor.Controls.MaterialCheckBox();
             this.btnLogin = new ReaLTaiizor.Controls.MaterialButton();
             this.materialLabel2 = new ReaLTaiizor.Controls.MaterialLabel();
             this.txtPassword = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
@@ -39,7 +40,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new ReaLTaiizor.Controls.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.chkHienThiMatKhau = new ReaLTaiizor.Controls.MaterialCheckBox();
             this.pnlForm.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -60,8 +60,27 @@
             this.pnlForm.Controls.Add(this.panel2);
             this.pnlForm.Location = new System.Drawing.Point(118, 104);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(786, 450);
+            this.pnlForm.Size = new System.Drawing.Size(808, 450);
             this.pnlForm.TabIndex = 2;
+            // 
+            // chkHienThiMatKhau
+            // 
+            this.chkHienThiMatKhau.AutoSize = true;
+            this.chkHienThiMatKhau.Depth = 0;
+            this.chkHienThiMatKhau.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.chkHienThiMatKhau.Location = new System.Drawing.Point(398, 314);
+            this.chkHienThiMatKhau.Margin = new System.Windows.Forms.Padding(0);
+            this.chkHienThiMatKhau.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkHienThiMatKhau.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.chkHienThiMatKhau.Name = "chkHienThiMatKhau";
+            this.chkHienThiMatKhau.ReadOnly = false;
+            this.chkHienThiMatKhau.Ripple = true;
+            this.chkHienThiMatKhau.Size = new System.Drawing.Size(160, 37);
+            this.chkHienThiMatKhau.TabIndex = 15;
+            this.chkHienThiMatKhau.Text = "Hiển thị mật khẩu";
+            this.chkHienThiMatKhau.UseAccentColor = false;
+            this.chkHienThiMatKhau.UseVisualStyleBackColor = true;
+            this.chkHienThiMatKhau.CheckedChanged += new System.EventHandler(this.chkHienThiMatKhau_CheckedChanged);
             // 
             // btnLogin
             // 
@@ -172,6 +191,7 @@
             this.txtUsername.TrailingIcon = global::QuanLyCafe.Properties.Resources.name_24px;
             this.txtUsername.UseSystemPasswordChar = false;
             this.txtUsername.UseTallSize = false;
+            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             // 
             // panel3
             // 
@@ -182,7 +202,7 @@
             this.panel3.Location = new System.Drawing.Point(375, 0);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(5);
-            this.panel3.Size = new System.Drawing.Size(411, 102);
+            this.panel3.Size = new System.Drawing.Size(433, 102);
             this.panel3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.panel3.TabIndex = 1;
             this.panel3.Text = "panel3";
@@ -214,36 +234,18 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QuanLyCafe.Properties.Resources.e8349cbaee4a18d613941c2cc7f70129;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(36, 56);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(306, 295);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // chkHienThiMatKhau
-            // 
-            this.chkHienThiMatKhau.AutoSize = true;
-            this.chkHienThiMatKhau.Depth = 0;
-            this.chkHienThiMatKhau.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.chkHienThiMatKhau.Location = new System.Drawing.Point(398, 314);
-            this.chkHienThiMatKhau.Margin = new System.Windows.Forms.Padding(0);
-            this.chkHienThiMatKhau.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.chkHienThiMatKhau.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.chkHienThiMatKhau.Name = "chkHienThiMatKhau";
-            this.chkHienThiMatKhau.ReadOnly = false;
-            this.chkHienThiMatKhau.Ripple = true;
-            this.chkHienThiMatKhau.Size = new System.Drawing.Size(160, 37);
-            this.chkHienThiMatKhau.TabIndex = 15;
-            this.chkHienThiMatKhau.Text = "Hiển thị mật khẩu";
-            this.chkHienThiMatKhau.UseAccentColor = false;
-            this.chkHienThiMatKhau.UseVisualStyleBackColor = true;
-            this.chkHienThiMatKhau.CheckedChanged += new System.EventHandler(this.chkHienThiMatKhau_CheckedChanged);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1023, 618);
             this.Controls.Add(this.pnlForm);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

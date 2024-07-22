@@ -98,5 +98,10 @@ namespace QuanLyCafe.GUI
                 txtPassword.UseSystemPasswordChar = true;
             }
         }
+
+        private void txtUsername_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

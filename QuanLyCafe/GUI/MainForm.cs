@@ -1055,12 +1055,12 @@ namespace QuanLyCafe.GUI
             _isClickLocThucAn = !_isClickLocThucAn;
             if (_isClickLocThucAn)
             {
-                picBtnKhacLoc.Visible = false;
+                //picBtnKhacLoc.Visible = false;
                 picBtnNuocLoc.Visible = false;
             }
             else
             {
-                picBtnKhacLoc.Visible = true;
+                //picBtnKhacLoc.Visible = true;
                 picBtnNuocLoc.Visible = true;
             }
         }
@@ -1079,12 +1079,12 @@ namespace QuanLyCafe.GUI
             _isClickLocKhac = !_isClickLocKhac;
             if (_isClickLocKhac)
             {
-                picBtnThucAnLoc.Visible = false;
+                //picBtnThucAnLoc.Visible = false;
                 picBtnNuocLoc.Visible = false;
             }
             else
             {
-                picBtnThucAnLoc.Visible = true;
+                //picBtnThucAnLoc.Visible = true;
                 picBtnNuocLoc.Visible = true;
             }
         }
@@ -1103,13 +1103,13 @@ namespace QuanLyCafe.GUI
             _isClickLocNuoc = !_isClickLocNuoc;
             if (_isClickLocNuoc)
             {
-                picBtnThucAnLoc.Visible = false;
-                picBtnKhacLoc.Visible = false;
+                //picBtnThucAnLoc.Visible = false;
+                //picBtnKhacLoc.Visible = false;
             }
             else
             {
-                picBtnThucAnLoc.Visible = true;
-                picBtnKhacLoc.Visible = true;
+                //picBtnThucAnLoc.Visible = true;
+                //picBtnKhacLoc.Visible = true;
             }
         }
 
@@ -1122,8 +1122,8 @@ namespace QuanLyCafe.GUI
                 _isClickLocKhac = false;
                 _isClickLocThucAn = false;
                 _isClickLocNuoc = false;
-                picBtnKhacLoc.Visible = true;
-                picBtnThucAnLoc.Visible = true;
+                //picBtnKhacLoc.Visible = true;
+                //picBtnThucAnLoc.Visible = true;
                 picBtnNuocLoc.Visible = true;
 
                 List<string> danhSachSanPhamTimKiem = new List<string>();
@@ -1236,8 +1236,8 @@ namespace QuanLyCafe.GUI
                         _isClickLocKhac = false;
                         _isClickLocNuoc = false;
                         _isClickLocThucAn = false;
-                        picBtnThucAnLoc.Visible = true;
-                        picBtnKhacLoc.Visible = true;
+                        //picBtnThucAnLoc.Visible = true;
+                        //picBtnKhacLoc.Visible = true;
                         picBtnNuocLoc.Visible = true;
                         LoadFlowPanelLocSanPhamTheoSuKien(
                             int.Parse(cboDanhSachSuKien.SelectedValue.ToString())
@@ -1514,8 +1514,8 @@ namespace QuanLyCafe.GUI
             _isClickLocKhac = false;
             _isClickLocNuoc = false;
             _isClickLocThucAn = false;
-            picBtnThucAnLoc.Visible = true;
-            picBtnKhacLoc.Visible = true;
+            //picBtnThucAnLoc.Visible = true;
+            //picBtnKhacLoc.Visible = true;
             picBtnNuocLoc.Visible = true;
         }
 

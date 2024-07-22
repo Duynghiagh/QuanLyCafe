@@ -211,7 +211,10 @@ namespace QuanLyCafe.GUI
             }
         }
 
+        private void XuatHoaDonForm_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 
