@@ -358,6 +358,7 @@
             this.cboLoai.Name = "cboLoai";
             this.cboLoai.Size = new System.Drawing.Size(206, 27);
             this.cboLoai.TabIndex = 13;
+            this.cboLoai.SelectedIndexChanged += new System.EventHandler(this.cboLoai_SelectedIndexChanged);
             // 
             // cboSuKien
             // 

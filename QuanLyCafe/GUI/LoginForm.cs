@@ -103,5 +103,10 @@ namespace QuanLyCafe.GUI
         {
 
         }
+
+        private void pnlForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

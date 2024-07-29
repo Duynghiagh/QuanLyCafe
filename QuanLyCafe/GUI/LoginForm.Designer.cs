@@ -62,6 +62,7 @@
             this.pnlForm.Name = "pnlForm";
             this.pnlForm.Size = new System.Drawing.Size(808, 450);
             this.pnlForm.TabIndex = 2;
+            this.pnlForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlForm_Paint);
             // 
             // chkHienThiMatKhau
             // 

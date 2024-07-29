@@ -84,7 +84,6 @@
             this.lblKetQuaTimThay = new System.Windows.Forms.Label();
             this.flpDanhSachSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.btnTimKiemSanPham = new ReaLTaiizor.Controls.MaterialButton();
-            this.picBtnNuocLoc = new System.Windows.Forms.PictureBox();
             this.txtTimKiemSanPham = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -140,6 +139,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuIconList = new System.Windows.Forms.ImageList(this.components);
             this.pnlForm = new System.Windows.Forms.Panel();
+            this.picBtnThucAnLoc = new System.Windows.Forms.PictureBox();
             this.pnlCaNhan.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -161,7 +161,6 @@
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.tpSanPham.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBtnNuocLoc)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tpBanDat.SuspendLayout();
@@ -198,6 +197,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBtnThucAnLoc)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCaNhan
@@ -890,12 +890,12 @@
             // tpSanPham
             // 
             this.tpSanPham.BackColor = System.Drawing.Color.White;
+            this.tpSanPham.Controls.Add(this.picBtnThucAnLoc);
             this.tpSanPham.Controls.Add(this.cboDanhSachSuKien);
             this.tpSanPham.Controls.Add(this.label4);
             this.tpSanPham.Controls.Add(this.lblKetQuaTimThay);
             this.tpSanPham.Controls.Add(this.flpDanhSachSanPham);
             this.tpSanPham.Controls.Add(this.btnTimKiemSanPham);
-            this.tpSanPham.Controls.Add(this.picBtnNuocLoc);
             this.tpSanPham.Controls.Add(this.txtTimKiemSanPham);
             this.tpSanPham.Controls.Add(this.panel2);
             this.tpSanPham.ImageKey = "fast-food (1).png";
@@ -923,7 +923,7 @@
             this.cboDanhSachSuKien.ItemHeight = 43;
             this.cboDanhSachSuKien.Items.AddRange(new object[] {
             "Tất cả"});
-            this.cboDanhSachSuKien.Location = new System.Drawing.Point(457, 108);
+            this.cboDanhSachSuKien.Location = new System.Drawing.Point(795, 100);
             this.cboDanhSachSuKien.MaxDropDownItems = 4;
             this.cboDanhSachSuKien.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.cboDanhSachSuKien.Name = "cboDanhSachSuKien";
@@ -936,7 +936,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(452, 68);
+            this.label4.Location = new System.Drawing.Point(790, 58);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 27);
             this.label4.TabIndex = 1;
@@ -946,7 +946,7 @@
             // 
             this.lblKetQuaTimThay.AutoSize = true;
             this.lblKetQuaTimThay.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKetQuaTimThay.Location = new System.Drawing.Point(772, 108);
+            this.lblKetQuaTimThay.Location = new System.Drawing.Point(772, 152);
             this.lblKetQuaTimThay.Name = "lblKetQuaTimThay";
             this.lblKetQuaTimThay.Size = new System.Drawing.Size(242, 27);
             this.lblKetQuaTimThay.TabIndex = 1;
@@ -984,18 +984,6 @@
             this.btnTimKiemSanPham.UseAccentColor = false;
             this.btnTimKiemSanPham.UseVisualStyleBackColor = true;
             this.btnTimKiemSanPham.Click += new System.EventHandler(this.btnTimKiemSanPham_Click);
-            // 
-            // picBtnNuocLoc
-            // 
-            this.picBtnNuocLoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBtnNuocLoc.Image = global::QuanLyCafe.Properties.Resources.Xoai;
-            this.picBtnNuocLoc.Location = new System.Drawing.Point(30, 76);
-            this.picBtnNuocLoc.Name = "picBtnNuocLoc";
-            this.picBtnNuocLoc.Size = new System.Drawing.Size(114, 89);
-            this.picBtnNuocLoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBtnNuocLoc.TabIndex = 7;
-            this.picBtnNuocLoc.TabStop = false;
-            this.picBtnNuocLoc.Click += new System.EventHandler(this.picBtnNuocLoc_Click);
             // 
             // txtTimKiemSanPham
             // 
@@ -1690,6 +1678,15 @@
             this.pnlForm.Size = new System.Drawing.Size(1112, 683);
             this.pnlForm.TabIndex = 3;
             // 
+            // picBtnThucAnLoc
+            // 
+            this.picBtnThucAnLoc.Location = new System.Drawing.Point(30, 76);
+            this.picBtnThucAnLoc.Name = "picBtnThucAnLoc";
+            this.picBtnThucAnLoc.Size = new System.Drawing.Size(100, 50);
+            this.picBtnThucAnLoc.TabIndex = 12;
+            this.picBtnThucAnLoc.TabStop = false;
+            this.picBtnThucAnLoc.Click += new System.EventHandler(this.picBtnThucAnLoc_Click_1);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -1737,7 +1734,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.tpSanPham.ResumeLayout(false);
             this.tpSanPham.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBtnNuocLoc)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1786,6 +1782,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBtnThucAnLoc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1808,7 +1805,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtTimKiemSanPham;
-        private System.Windows.Forms.PictureBox picBtnNuocLoc;
         private ReaLTaiizor.Controls.MaterialButton btnTimKiemSanPham;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
@@ -1901,5 +1897,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox picBtnThucAnLoc;
     }
 }

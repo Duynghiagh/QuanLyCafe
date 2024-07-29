@@ -73,7 +73,7 @@ namespace QuanLyCafe.GUI
 
                 lblThongTinBanDat.Text = $"Mã đặt bàn: {ControlForm.BanDatDangChon.ID}";
                 //Tạo size
-                cbb_KichThuoc.Items.AddRange(new string[] { "S", "M", "L" });
+                cbb_KichThuoc.Items.AddRange(new string[] {"M", "L" });
                 cbb_KichThuoc.SelectedIndex = 0;
 
             }
@@ -399,14 +399,11 @@ namespace QuanLyCafe.GUI
             string selectedSize = cbb_KichThuoc.SelectedItem.ToString();
             switch (selectedSize)
             {
-                case "S":
+                case "M":
                     _giaTienSauGiamGia = _sanPhamChon.GiaTien;
                     break;
-                case "M":
-                    _giaTienSauGiamGia = _sanPhamChon.GiaTien + 5000; // Example: 5,000 VND more for size M
-                    break;
                 case "L":
-                    _giaTienSauGiamGia = _sanPhamChon.GiaTien + 10000; // Example: 10,000 VND more for size L
+                    _giaTienSauGiamGia = _sanPhamChon.GiaTien + 5000;
                     break;
             }
 
@@ -422,6 +419,7 @@ namespace QuanLyCafe.GUI
             }
             else
             {
+
                 lblSuKien.Visible = false;
                 lblGiamGia.Visible = false;
                 lblGiaTien.Font = new Font(lblGiaTien.Font, FontStyle.Bold);
