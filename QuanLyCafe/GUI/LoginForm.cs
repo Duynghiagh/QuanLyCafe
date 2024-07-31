@@ -87,16 +87,7 @@ namespace QuanLyCafe.GUI
 
         private void chkHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkHienThiMatKhau.Checked)
-            {
-                txtPassword.PasswordChar = '\0';
-                txtPassword.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtPassword.PasswordChar = '*';
-                txtPassword.UseSystemPasswordChar = true;
-            }
+          
         }
 
         private void txtUsername_Click(object sender, EventArgs e)
@@ -107,6 +98,20 @@ namespace QuanLyCafe.GUI
         private void pnlForm_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                txtPassword.PasswordChar = '\0';
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+                txtPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }

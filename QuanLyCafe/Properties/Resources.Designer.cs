@@ -93,6 +93,16 @@ namespace QuanLyCafe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5_Myths_Misconceptions_About_Coffee_Gear_1125088778 {
+            get {
+                object obj = ResourceManager.GetObject("5-Myths-Misconceptions-About-Coffee-Gear-1125088778", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _event {
             get {
                 object obj = ResourceManager.GetObject("event", resourceCulture);

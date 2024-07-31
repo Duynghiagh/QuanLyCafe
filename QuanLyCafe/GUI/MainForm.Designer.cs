@@ -71,14 +71,11 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.pnlWelcomeBack = new System.Windows.Forms.Panel();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.tpSanPham = new System.Windows.Forms.TabPage();
+            this.picBtnThucAnLoc = new System.Windows.Forms.PictureBox();
             this.cboDanhSachSuKien = new ReaLTaiizor.Controls.MaterialComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblKetQuaTimThay = new System.Windows.Forms.Label();
@@ -139,7 +136,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuIconList = new System.Windows.Forms.ImageList(this.components);
             this.pnlForm = new System.Windows.Forms.Panel();
-            this.picBtnThucAnLoc = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.pnlWelcomeBack = new System.Windows.Forms.Panel();
             this.pnlCaNhan.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -156,11 +155,10 @@
             this.pnlDanhSachSuKien.SuspendLayout();
             this.flpDanhSachSuKien.SuspendLayout();
             this.materialCard1.SuspendLayout();
-            this.pnlWelcomeBack.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.tpSanPham.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBtnThucAnLoc)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tpBanDat.SuspendLayout();
@@ -197,7 +195,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBtnThucAnLoc)).BeginInit();
+            this.pnlWelcomeBack.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCaNhan
@@ -510,7 +508,7 @@
             this.lblThoiGianHienTai.AutoSize = true;
             this.lblThoiGianHienTai.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblThoiGianHienTai.ForeColor = System.Drawing.Color.Black;
-            this.lblThoiGianHienTai.Location = new System.Drawing.Point(816, 16);
+            this.lblThoiGianHienTai.Location = new System.Drawing.Point(649, 20);
             this.lblThoiGianHienTai.Name = "lblThoiGianHienTai";
             this.lblThoiGianHienTai.Size = new System.Drawing.Size(210, 27);
             this.lblThoiGianHienTai.TabIndex = 1;
@@ -812,51 +810,6 @@
             this.label18.TabIndex = 2;
             this.label18.Text = "Danh sách sự kiện";
             // 
-            // pnlWelcomeBack
-            // 
-            this.pnlWelcomeBack.BackColor = System.Drawing.Color.White;
-            this.pnlWelcomeBack.Controls.Add(this.pictureBox13);
-            this.pnlWelcomeBack.Controls.Add(this.label17);
-            this.pnlWelcomeBack.Controls.Add(this.label3);
-            this.pnlWelcomeBack.Location = new System.Drawing.Point(30, 101);
-            this.pnlWelcomeBack.Name = "pnlWelcomeBack";
-            this.pnlWelcomeBack.Size = new System.Drawing.Size(996, 250);
-            this.pnlWelcomeBack.TabIndex = 4;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::QuanLyCafe.Properties.Resources.customer;
-            this.pictureBox13.Location = new System.Drawing.Point(623, 3);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(338, 244);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 2;
-            this.pictureBox13.TabStop = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
-            this.label17.Location = new System.Drawing.Point(55, 79);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(478, 108);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Đây là phần mềm quản lý quán cafe\r\nVới nhiều chức năng quản lý đặc biệt. \r\nChúc b" +
-    "ạn có một ngày làm việc thật vui vẻ\r\nvà tràn đầy năng lượng!";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(169)))), ((int)(((byte)(137)))));
-            this.label3.Location = new System.Drawing.Point(55, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 30);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Welcome back";
-            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Transparent;
@@ -871,7 +824,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(58, 10);
+            this.label8.Location = new System.Drawing.Point(75, 10);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(126, 27);
             this.label8.TabIndex = 1;
@@ -906,6 +859,15 @@
             this.tpSanPham.TabIndex = 1;
             this.tpSanPham.Text = "Sản phẩm";
             this.tpSanPham.Click += new System.EventHandler(this.tpSanPham_Click);
+            // 
+            // picBtnThucAnLoc
+            // 
+            this.picBtnThucAnLoc.Location = new System.Drawing.Point(30, 76);
+            this.picBtnThucAnLoc.Name = "picBtnThucAnLoc";
+            this.picBtnThucAnLoc.Size = new System.Drawing.Size(100, 50);
+            this.picBtnThucAnLoc.TabIndex = 12;
+            this.picBtnThucAnLoc.TabStop = false;
+            this.picBtnThucAnLoc.Click += new System.EventHandler(this.picBtnThucAnLoc_Click_1);
             // 
             // cboDanhSachSuKien
             // 
@@ -1678,14 +1640,39 @@
             this.pnlForm.Size = new System.Drawing.Size(1112, 683);
             this.pnlForm.TabIndex = 3;
             // 
-            // picBtnThucAnLoc
+            // label3
             // 
-            this.picBtnThucAnLoc.Location = new System.Drawing.Point(30, 76);
-            this.picBtnThucAnLoc.Name = "picBtnThucAnLoc";
-            this.picBtnThucAnLoc.Size = new System.Drawing.Size(100, 50);
-            this.picBtnThucAnLoc.TabIndex = 12;
-            this.picBtnThucAnLoc.TabStop = false;
-            this.picBtnThucAnLoc.Click += new System.EventHandler(this.picBtnThucAnLoc_Click_1);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(169)))), ((int)(((byte)(137)))));
+            this.label3.Location = new System.Drawing.Point(55, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(213, 33);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Welcome back";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
+            this.label17.Location = new System.Drawing.Point(18, 75);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(478, 108);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Đây là phần mềm quản lý quán cafe\r\nVới nhiều chức năng quản lý đặc biệt. \r\nChúc b" +
+    "ạn có một ngày làm việc thật vui vẻ\r\nvà tràn đầy năng lượng!";
+            // 
+            // pnlWelcomeBack
+            // 
+            this.pnlWelcomeBack.BackColor = System.Drawing.Color.White;
+            this.pnlWelcomeBack.Controls.Add(this.label17);
+            this.pnlWelcomeBack.Controls.Add(this.label3);
+            this.pnlWelcomeBack.Location = new System.Drawing.Point(20, 93);
+            this.pnlWelcomeBack.Name = "pnlWelcomeBack";
+            this.pnlWelcomeBack.Size = new System.Drawing.Size(517, 250);
+            this.pnlWelcomeBack.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -1726,14 +1713,12 @@
             this.flpDanhSachSuKien.ResumeLayout(false);
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
-            this.pnlWelcomeBack.ResumeLayout(false);
-            this.pnlWelcomeBack.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.tpSanPham.ResumeLayout(false);
             this.tpSanPham.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBtnThucAnLoc)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1782,7 +1767,8 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picBtnThucAnLoc)).EndInit();
+            this.pnlWelcomeBack.ResumeLayout(false);
+            this.pnlWelcomeBack.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1890,13 +1876,12 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel pnlWelcomeBack;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox picBtnThucAnLoc;
+        private System.Windows.Forms.Panel pnlWelcomeBack;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label3;
     }
 }
