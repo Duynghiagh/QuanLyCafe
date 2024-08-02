@@ -53,10 +53,10 @@
             this.pnlForm.Controls.Add(this.btnLogin);
             this.pnlForm.Controls.Add(this.txtPassword);
             this.pnlForm.Controls.Add(this.txtUsername);
-            this.pnlForm.Location = new System.Drawing.Point(4, 64);
+            this.pnlForm.Location = new System.Drawing.Point(-31, 54);
             this.pnlForm.Margin = new System.Windows.Forms.Padding(2);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(759, 434);
+            this.pnlForm.Size = new System.Drawing.Size(830, 493);
             this.pnlForm.TabIndex = 2;
             this.pnlForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlForm_Paint);
             // 
@@ -64,7 +64,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::QuanLyCafe.Properties.Resources._272456;
-            this.pictureBox2.Location = new System.Drawing.Point(354, 41);
+            this.pictureBox2.Location = new System.Drawing.Point(379, 40);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(62, 60);
@@ -83,7 +83,7 @@
             this.btnLogin.HighEmphasis = true;
             this.btnLogin.Icon = null;
             this.btnLogin.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnLogin.Location = new System.Drawing.Point(259, 324);
+            this.btnLogin.Location = new System.Drawing.Point(284, 323);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnLogin.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnLogin.Name = "btnLogin";
@@ -107,7 +107,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtPassword.HideSelection = true;
             this.txtPassword.LeadingIcon = null;
-            this.txtPassword.Location = new System.Drawing.Point(260, 236);
+            this.txtPassword.Location = new System.Drawing.Point(285, 235);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
@@ -139,7 +139,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtUsername.HideSelection = true;
             this.txtUsername.LeadingIcon = null;
-            this.txtUsername.Location = new System.Drawing.Point(260, 155);
+            this.txtUsername.Location = new System.Drawing.Point(285, 154);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
@@ -166,7 +166,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.checkBox1.Location = new System.Drawing.Point(259, 291);
+            this.checkBox1.Location = new System.Drawing.Point(284, 290);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(171, 25);
             this.checkBox1.TabIndex = 16;
@@ -179,7 +179,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label1.Location = new System.Drawing.Point(257, 123);
+            this.label1.Location = new System.Drawing.Point(282, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 18);
             this.label1.TabIndex = 17;
@@ -190,7 +190,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label2.Location = new System.Drawing.Point(259, 205);
+            this.label2.Location = new System.Drawing.Point(284, 204);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 18);
             this.label2.TabIndex = 17;

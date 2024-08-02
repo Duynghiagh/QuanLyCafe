@@ -1487,7 +1487,9 @@ namespace QuanLyCafe.GUI
 
         private void picLogOut_Click(object sender, EventArgs e)
         {
+          
             this.Close();
+           
         }
 
         #endregion

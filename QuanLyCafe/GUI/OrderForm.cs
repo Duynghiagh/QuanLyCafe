@@ -73,7 +73,7 @@ namespace QuanLyCafe.GUI
 
                 lblThongTinBanDat.Text = $"Mã đặt bàn: {ControlForm.BanDatDangChon.ID}";
                 //Tạo size
-                cbb_KichThuoc.Items.AddRange(new string[] {"M", "L" });
+                cbb_KichThuoc.Items.AddRange(new string[] { "M", "L" });
                 cbb_KichThuoc.SelectedIndex = 0;
 
             }
@@ -184,9 +184,27 @@ namespace QuanLyCafe.GUI
 
         private void txtSoLuongSanPham_Leave(object sender, EventArgs e)
         {
-            int tongTien = int.Parse(txtSoLuongSanPham.Text) * (_giaTienSauGiamGia);
-            lblTongTien.Text = tongTien.ToString();
-            lblTongTien.Text = string.Format("{0:#,##0} VNĐ", double.Parse(lblTongTien.Text));
+            //int tongTien = int.Parse(txtSoLuongSanPham.Text) * (_giaTienSauGiamGia);
+            //lblTongTien.Text = tongTien.ToString();
+            try
+            {
+                int soLuong = int.Parse(txtSoLuongSanPham.Text);
+                if (soLuong <= 0 || soLuong >= 100)
+                {
+                    MessageBox.Show("Số lượng sản phẩm phải lớn hơn 0 và nhỏ hơn 100.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtSoLuongSanPham.Text = "1";
+                    soLuong = 1;
+                }
+
+                int tongTien = soLuong * _giaTienSauGiamGia;
+                lblTongTien.Text = tongTien.ToString();
+                lblTongTien.Text = string.Format("{0:#,##0} VNĐ", double.Parse(lblTongTien.Text));
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Vui lòng nhập số lượng hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSoLuongSanPham.Text = "1";
+            }
         }
 
         private void btnXacNhanOrder_Click(object sender, EventArgs e)
@@ -354,7 +372,7 @@ namespace QuanLyCafe.GUI
                 {
                     // Xóa order
                     lichSuOrderBLL.XoaOrder(ControlForm.HoaDonHienTai.ID, ControlForm.BanDatDangChon.ID, _sanPhamChon.ID);
-                   
+
                     UpdateLichSuOrder();
                     if (ControlForm.FormChiTietBan != null)
                     {
@@ -428,7 +446,7 @@ namespace QuanLyCafe.GUI
 
             int tongTien = int.Parse(txtSoLuongSanPham.Text) * _giaTienSauGiamGia;
             lblTongTien.Text = tongTien.ToString();
-            lblGiaTien.Text = string.Format("{0:#,##0} VNĐ", double.Parse(lblGiaTien.Text));    
+            lblGiaTien.Text = string.Format("{0:#,##0} VNĐ", double.Parse(lblGiaTien.Text));
 
             lblSauGiamGia.Text = string.Format("{0:#,##0} VNĐ", double.Parse(lblSauGiamGia.Text));
             lblTongTien.Text = string.Format("{0:#,##0} VNĐ", double.Parse(lblTongTien.Text));
@@ -466,7 +484,7 @@ namespace QuanLyCafe.GUI
             try
             {
                 int soLuong;
-                if (!int.TryParse(txtSoLuongSanPham.Text, out soLuong) || soLuong <= 0)
+                if (!int.TryParse(txtSoLuongSanPham.Text, out soLuong) || soLuong <= 0 || soLuong >= 100)
                 {
                     soLuong = 1;
                     txtSoLuongSanPham.Text = "1";
@@ -476,7 +494,16 @@ namespace QuanLyCafe.GUI
                 int giaTienGoc = giaTien; // Lưu lại giá tiền gốc để hiển thị
 
                 // Cập nhật giá tiền dựa trên kích cỡ
-              
+                string selectedSize = cbb_KichThuoc.SelectedItem.ToString();
+                switch (selectedSize)
+                {
+                    case "M":
+                        _giaTienSauGiamGia = giaTien;
+                        break;
+                    case "L":
+                        _giaTienSauGiamGia = giaTien + 5000;
+                        break;
+                }
 
                 // Kiểm tra sự kiện giảm giá
                 if (_sanPhamChon.Event != -1)
