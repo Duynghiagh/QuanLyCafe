@@ -138,7 +138,7 @@ namespace QuanLyCafe.DAL
             {
                 string sqlCommand;
                 SqlCommand cmd;
-                sqlCommand = $"delete from TAIKHOAN where USERNAME = '{taiKhoan.UserName}'";
+                sqlCommand = $"update TAIKHOAN set HIENTHI = 0 where USERNAME = '{taiKhoan.UserName}'";
 
                 cmd = CreateCommand(sqlCommand);
                 cmd.ExecuteNonQuery();
@@ -189,6 +189,7 @@ namespace QuanLyCafe.DAL
                     taiKhoan.QuyenHan = (int)rd["QUYENHAN"];
                     taiKhoan.Address = (string)rd["ADDRESS"];
                     taiKhoan.Password = (string)rd["PASSWORD"];
+                    taiKhoan.HienThi = (int)rd["HIENTHI"];
                 }
                 rd.Close();
                 if (check)

@@ -189,8 +189,13 @@ namespace QuanLyCafe.BLL
                 {
                     return false;
                 }
+                if (getTaiKhoan != null && getTaiKhoan.HienThi == 0)
+                {
+                    return false;
+                }
                 bool passwordCheck = BC.Verify(password, getTaiKhoan.Password);
                 return passwordCheck;
+                
             }
             catch (Exception err)
             {
