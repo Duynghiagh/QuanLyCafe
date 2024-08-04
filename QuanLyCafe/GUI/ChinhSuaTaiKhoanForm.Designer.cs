@@ -116,7 +116,7 @@
             this.cboQuyenHanThem.FormattingEnabled = true;
             this.cboQuyenHanThem.Location = new System.Drawing.Point(186, 447);
             this.cboQuyenHanThem.Name = "cboQuyenHanThem";
-            this.cboQuyenHanThem.Size = new System.Drawing.Size(204, 27);
+            this.cboQuyenHanThem.Size = new System.Drawing.Size(204, 24);
             this.cboQuyenHanThem.TabIndex = 13;
             // 
             // txtPhoneThem
@@ -124,7 +124,7 @@
             this.txtPhoneThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtPhoneThem.Location = new System.Drawing.Point(186, 345);
             this.txtPhoneThem.Name = "txtPhoneThem";
-            this.txtPhoneThem.Size = new System.Drawing.Size(204, 27);
+            this.txtPhoneThem.Size = new System.Drawing.Size(204, 24);
             this.txtPhoneThem.TabIndex = 11;
             // 
             // txtLastNameThem
@@ -132,7 +132,7 @@
             this.txtLastNameThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtLastNameThem.Location = new System.Drawing.Point(186, 308);
             this.txtLastNameThem.Name = "txtLastNameThem";
-            this.txtLastNameThem.Size = new System.Drawing.Size(204, 27);
+            this.txtLastNameThem.Size = new System.Drawing.Size(204, 24);
             this.txtLastNameThem.TabIndex = 11;
             // 
             // txtFirstNameThem
@@ -140,7 +140,7 @@
             this.txtFirstNameThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtFirstNameThem.Location = new System.Drawing.Point(186, 271);
             this.txtFirstNameThem.Name = "txtFirstNameThem";
-            this.txtFirstNameThem.Size = new System.Drawing.Size(204, 27);
+            this.txtFirstNameThem.Size = new System.Drawing.Size(204, 24);
             this.txtFirstNameThem.TabIndex = 11;
             // 
             // txtPasswordThem
@@ -148,7 +148,7 @@
             this.txtPasswordThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtPasswordThem.Location = new System.Drawing.Point(186, 233);
             this.txtPasswordThem.Name = "txtPasswordThem";
-            this.txtPasswordThem.Size = new System.Drawing.Size(204, 27);
+            this.txtPasswordThem.Size = new System.Drawing.Size(204, 24);
             this.txtPasswordThem.TabIndex = 11;
             // 
             // txtUsernameThem
@@ -156,7 +156,7 @@
             this.txtUsernameThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtUsernameThem.Location = new System.Drawing.Point(186, 200);
             this.txtUsernameThem.Name = "txtUsernameThem";
-            this.txtUsernameThem.Size = new System.Drawing.Size(204, 27);
+            this.txtUsernameThem.Size = new System.Drawing.Size(204, 24);
             this.txtUsernameThem.TabIndex = 11;
             // 
             // picTaiKhoanThem
@@ -178,7 +178,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label8.Location = new System.Drawing.Point(24, 447);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 21);
+            this.label8.Size = new System.Drawing.Size(88, 18);
             this.label8.TabIndex = 2;
             this.label8.Text = "Quyền hạn:";
             // 
@@ -189,7 +189,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label9.Location = new System.Drawing.Point(24, 345);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 21);
+            this.label9.Size = new System.Drawing.Size(58, 18);
             this.label9.TabIndex = 2;
             this.label9.Text = "Phone:";
             // 
@@ -200,7 +200,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label10.Location = new System.Drawing.Point(24, 308);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 21);
+            this.label10.Size = new System.Drawing.Size(80, 18);
             this.label10.TabIndex = 2;
             this.label10.Text = "Lastname:";
             // 
@@ -235,7 +235,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label11.Location = new System.Drawing.Point(24, 271);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 21);
+            this.label11.Size = new System.Drawing.Size(82, 18);
             this.label11.TabIndex = 2;
             this.label11.Text = "Firstname:";
             // 
@@ -245,7 +245,7 @@
             this.label12.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.label12.Location = new System.Drawing.Point(24, 9);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(195, 27);
+            this.label12.Size = new System.Drawing.Size(163, 22);
             this.label12.TabIndex = 2;
             this.label12.Text = "Thêm Tài Khoản";
             // 
@@ -256,7 +256,7 @@
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label13.Location = new System.Drawing.Point(24, 233);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(103, 21);
+            this.label13.Size = new System.Drawing.Size(81, 18);
             this.label13.TabIndex = 2;
             this.label13.Text = "Password:";
             // 
@@ -267,7 +267,7 @@
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label14.Location = new System.Drawing.Point(24, 200);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(107, 21);
+            this.label14.Size = new System.Drawing.Size(84, 18);
             this.label14.TabIndex = 2;
             this.label14.Text = "Username:";
             // 
@@ -315,7 +315,7 @@
             this.txtAddressThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtAddressThem.Location = new System.Drawing.Point(186, 413);
             this.txtAddressThem.Name = "txtAddressThem";
-            this.txtAddressThem.Size = new System.Drawing.Size(204, 27);
+            this.txtAddressThem.Size = new System.Drawing.Size(204, 24);
             this.txtAddressThem.TabIndex = 11;
             // 
             // txtCCCDThem
@@ -323,7 +323,7 @@
             this.txtCCCDThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtCCCDThem.Location = new System.Drawing.Point(186, 379);
             this.txtCCCDThem.Name = "txtCCCDThem";
-            this.txtCCCDThem.Size = new System.Drawing.Size(204, 27);
+            this.txtCCCDThem.Size = new System.Drawing.Size(204, 24);
             this.txtCCCDThem.TabIndex = 11;
             // 
             // label16
@@ -333,7 +333,7 @@
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label16.Location = new System.Drawing.Point(24, 413);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(90, 21);
+            this.label16.Size = new System.Drawing.Size(70, 18);
             this.label16.TabIndex = 2;
             this.label16.Text = "Address:";
             // 
@@ -344,7 +344,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label7.Location = new System.Drawing.Point(24, 379);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 21);
+            this.label7.Size = new System.Drawing.Size(56, 18);
             this.label7.TabIndex = 2;
             this.label7.Text = "CCCD:";
             // 
@@ -354,7 +354,7 @@
             this.label15.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.label15.Location = new System.Drawing.Point(7, 24);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(255, 27);
+            this.label15.Size = new System.Drawing.Size(211, 22);
             this.label15.TabIndex = 2;
             this.label15.Text = "Danh Sách Tài Khoản";
             // 
@@ -421,7 +421,7 @@
             this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDenNgay.Location = new System.Drawing.Point(249, 107);
             this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(230, 27);
+            this.dtpDenNgay.Size = new System.Drawing.Size(230, 24);
             this.dtpDenNgay.TabIndex = 19;
             // 
             // dtpTuNgay
@@ -430,7 +430,7 @@
             this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpTuNgay.Location = new System.Drawing.Point(249, 59);
             this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(230, 27);
+            this.dtpTuNgay.Size = new System.Drawing.Size(230, 24);
             this.dtpTuNgay.TabIndex = 20;
             // 
             // label24
@@ -440,7 +440,7 @@
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label24.Location = new System.Drawing.Point(113, 107);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(100, 21);
+            this.label24.Size = new System.Drawing.Size(78, 18);
             this.label24.TabIndex = 17;
             this.label24.Text = "Đến ngày:";
             // 
@@ -451,7 +451,7 @@
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label25.Location = new System.Drawing.Point(113, 59);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(89, 21);
+            this.label25.Size = new System.Drawing.Size(70, 18);
             this.label25.TabIndex = 18;
             this.label25.Text = "Từ ngày:";
             // 
@@ -509,7 +509,7 @@
             this.label27.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.label27.Location = new System.Drawing.Point(21, 11);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(106, 27);
+            this.label27.Size = new System.Drawing.Size(89, 22);
             this.label27.TabIndex = 2;
             this.label27.Text = "Báo Cáo";
             // 
@@ -621,7 +621,7 @@
             this.btnAn.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAn.Size = new System.Drawing.Size(56, 44);
             this.btnAn.TabIndex = 16;
-            this.btnAn.Text = "Ẩn";
+            this.btnAn.Text = "Khóa";
             this.btnAn.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAn.UseAccentColor = false;
             this.btnAn.UseVisualStyleBackColor = true;
@@ -633,7 +633,7 @@
             this.cboQuyenHan.FormattingEnabled = true;
             this.cboQuyenHan.Location = new System.Drawing.Point(156, 395);
             this.cboQuyenHan.Name = "cboQuyenHan";
-            this.cboQuyenHan.Size = new System.Drawing.Size(204, 27);
+            this.cboQuyenHan.Size = new System.Drawing.Size(204, 24);
             this.cboQuyenHan.TabIndex = 15;
             // 
             // label1
@@ -643,7 +643,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label1.Location = new System.Drawing.Point(22, 395);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 21);
+            this.label1.Size = new System.Drawing.Size(88, 18);
             this.label1.TabIndex = 14;
             this.label1.Text = "Quyền hạn:";
             // 
@@ -652,7 +652,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtPassword.Location = new System.Drawing.Point(158, 549);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(206, 27);
+            this.txtPassword.Size = new System.Drawing.Size(206, 24);
             this.txtPassword.TabIndex = 11;
             // 
             // txtAddress
@@ -660,7 +660,7 @@
             this.txtAddress.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtAddress.Location = new System.Drawing.Point(154, 352);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(206, 27);
+            this.txtAddress.Size = new System.Drawing.Size(206, 24);
             this.txtAddress.TabIndex = 11;
             // 
             // txtCCCD
@@ -668,7 +668,7 @@
             this.txtCCCD.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtCCCD.Location = new System.Drawing.Point(154, 317);
             this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Size = new System.Drawing.Size(206, 27);
+            this.txtCCCD.Size = new System.Drawing.Size(206, 24);
             this.txtCCCD.TabIndex = 11;
             // 
             // txtPhone
@@ -676,7 +676,7 @@
             this.txtPhone.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtPhone.Location = new System.Drawing.Point(156, 283);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(206, 27);
+            this.txtPhone.Size = new System.Drawing.Size(206, 24);
             this.txtPhone.TabIndex = 11;
             // 
             // txtLastName
@@ -684,7 +684,7 @@
             this.txtLastName.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtLastName.Location = new System.Drawing.Point(156, 246);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(206, 27);
+            this.txtLastName.Size = new System.Drawing.Size(206, 24);
             this.txtLastName.TabIndex = 11;
             // 
             // txtFirstName
@@ -692,7 +692,7 @@
             this.txtFirstName.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtFirstName.Location = new System.Drawing.Point(156, 209);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(206, 27);
+            this.txtFirstName.Size = new System.Drawing.Size(206, 24);
             this.txtFirstName.TabIndex = 11;
             // 
             // txtUserName
@@ -701,7 +701,7 @@
             this.txtUserName.Location = new System.Drawing.Point(158, 170);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.ReadOnly = true;
-            this.txtUserName.Size = new System.Drawing.Size(206, 27);
+            this.txtUserName.Size = new System.Drawing.Size(206, 24);
             this.txtUserName.TabIndex = 11;
             // 
             // label17
@@ -711,7 +711,7 @@
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label17.Location = new System.Drawing.Point(24, 552);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(103, 21);
+            this.label17.Size = new System.Drawing.Size(81, 18);
             this.label17.TabIndex = 2;
             this.label17.Text = "Password:";
             // 
@@ -734,7 +734,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label6.Location = new System.Drawing.Point(20, 355);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 21);
+            this.label6.Size = new System.Drawing.Size(70, 18);
             this.label6.TabIndex = 2;
             this.label6.Text = "Address:";
             // 
@@ -745,7 +745,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label5.Location = new System.Drawing.Point(20, 316);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 21);
+            this.label5.Size = new System.Drawing.Size(56, 18);
             this.label5.TabIndex = 2;
             this.label5.Text = "CCCD:";
             // 
@@ -756,7 +756,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label4.Location = new System.Drawing.Point(20, 283);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 21);
+            this.label4.Size = new System.Drawing.Size(58, 18);
             this.label4.TabIndex = 2;
             this.label4.Text = "Phone:";
             // 
@@ -767,7 +767,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label3.Location = new System.Drawing.Point(20, 246);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 21);
+            this.label3.Size = new System.Drawing.Size(80, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Lastname:";
             // 
@@ -826,7 +826,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label2.Location = new System.Drawing.Point(20, 209);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 21);
+            this.label2.Size = new System.Drawing.Size(82, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Firstname:";
             // 
@@ -836,7 +836,7 @@
             this.label18.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.label18.Location = new System.Drawing.Point(19, 513);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(227, 27);
+            this.label18.Size = new System.Drawing.Size(187, 22);
             this.label18.TabIndex = 2;
             this.label18.Text = "Cập Nhật Mật Khẩu";
             // 
@@ -846,7 +846,7 @@
             this.lblTitle.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblTitle.Location = new System.Drawing.Point(21, 11);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(137, 27);
+            this.lblTitle.Size = new System.Drawing.Size(114, 22);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Tổng Quan";
             // 
@@ -857,7 +857,7 @@
             this.label233.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label233.Location = new System.Drawing.Point(22, 170);
             this.label233.Name = "label233";
-            this.label233.Size = new System.Drawing.Size(107, 21);
+            this.label233.Size = new System.Drawing.Size(84, 18);
             this.label233.TabIndex = 2;
             this.label233.Text = "Username:";
             // 

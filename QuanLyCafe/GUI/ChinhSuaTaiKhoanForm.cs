@@ -480,11 +480,11 @@ namespace QuanLyCafe.GUI
                 cboQuyenHan.SelectedValue = (_taiKhoanChon.QuyenHan).ToString();
                 if (_taiKhoanChon.HienThi == 1)
                 {
-                    btnAn.Text = "Ẩn";
+                    btnAn.Text = "Khóa";
                 }
                 else
                 {
-                    btnAn.Text = "Hủy ẩn";
+                    btnAn.Text = "Mở\nkhóa";
                 }
             } else
             {
@@ -531,9 +531,9 @@ namespace QuanLyCafe.GUI
 
                 if (_taiKhoanChon.HienThi == 1)
                 {
-                    if (ControlForm.ConfirmForm("Bạn có muốn ẩn tài khoản không?"))
+                    if (ControlForm.ConfirmForm("Bạn có muốn khóa tài khoản không?"))
                     {
-                        // Ẩn tài khoản
+                        // Khóa tài khoản
                         TaiKhoan taiKhoan = _taiKhoanChon;
                         if (taiKhoanBLL.CapNhatHienThiTaiKhoan(taiKhoan.UserName, 0))
                         {
@@ -541,19 +541,19 @@ namespace QuanLyCafe.GUI
                             HienThiThongTinTaiKhoan();
                             LoadDanhSachTaiKhoan();
 
-                            MessageBox.Show("Ẩn tài khoản thành công");
+                            MessageBox.Show("Khóa tài khoản thành công");
                         }
                         else
                         {
-                            MessageBox.Show("Ẩn tài khoản thất bại");
+                            MessageBox.Show("Khóa tài khoản thất bại");
                         }
                     }
                 }
                 else
                 {
-                    if (ControlForm.ConfirmForm("Bạn có muốn hủy ẩn tài khoản không?"))
+                    if (ControlForm.ConfirmForm("Bạn có muốn mở khóa tài khoản không?"))
                     {
-                        // Hủy ẩn tài khoản
+                        // Mở khóa tài khoản
                         TaiKhoan taiKhoan = _taiKhoanChon;
                         if (taiKhoanBLL.CapNhatHienThiTaiKhoan(taiKhoan.UserName, 1))
                         {
@@ -561,11 +561,11 @@ namespace QuanLyCafe.GUI
                             HienThiThongTinTaiKhoan();
                             LoadDanhSachTaiKhoan();
 
-                            MessageBox.Show("Hủy ẩn tài khoản thành công");
+                            MessageBox.Show("Mở khóa tài khoản thành công");
                         }
                         else
                         {
-                            MessageBox.Show("Hủy ẩn tài khoản thất bại");
+                            MessageBox.Show("Mở khóa tài khoản thất bại");
                         }
                     }
                 }
