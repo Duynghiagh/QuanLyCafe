@@ -92,7 +92,7 @@ namespace QuanLyCafe.BLL
 
         public bool KetThucCaLam(
             int tongThoiGianLam,
-            DateTime thoiGianHienTai,
+            string thoiGianHienTai,
             string taiKhoan,
             string getDate
         )

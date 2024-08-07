@@ -10,11 +10,12 @@ namespace QuanLyCafe.BLL
     {
         LichSuOrderDAL dal = new LichSuOrderDAL();
 
-        public LichSuOrder LayThongTinLichSuOrder(int idDatBan, int idHoaDon, string idSanPham)
+        public LichSuOrder LayThongTinLichSuOrder(int idDatBan, int idHoaDon, string idSanPham, string KichCo)
         {
             try
             {
-                return dal.LayThongTinLichSuOrder(idDatBan, idHoaDon, idSanPham);
+                return dal.LayThongTinLichSuOrder(idDatBan, idHoaDon, idSanPham, KichCo);
+                // sjdfsadjkasklgskofjdaskfdsjklfjdslkjsdkalfjsdafhioashfioasogihrifshiofhsdaoifhsadiohas
             }
             catch (Exception err)
             {
@@ -58,11 +59,11 @@ namespace QuanLyCafe.BLL
             }
         }
 
-        public bool CapNhatThongTinOrder(int soLuong, int donGia, int donGiaGiam, int thanhTien, int idHoaDon, int idDatBan, string idSanPham)
+        public bool CapNhatThongTinOrder(int soLuong, string KichCo, int donGia, int donGiaGiam, int thanhTien, int idHoaDon, int idDatBan, string idSanPham)
         {
             try
             {
-                return dal.CapNhatThongTinOrder(soLuong, donGia, donGiaGiam, thanhTien, idHoaDon, idDatBan, idSanPham);
+                return dal.CapNhatThongTinOrder(soLuong, KichCo, donGia, donGiaGiam, thanhTien, idHoaDon, idDatBan, idSanPham);
             }
             catch (Exception err)
             {
@@ -82,11 +83,11 @@ namespace QuanLyCafe.BLL
             }
         }
 
-        public bool XoaOrder(int idHoaDon, int idDatBan, string idSanPham)
+        public bool XoaOrder(int idHoaDon, int idDatBan, string idSanPham, string KichCo)
         {
             try
             {
-                return dal.XoaOrder(idHoaDon, idDatBan, idSanPham);
+                return dal.XoaOrder(idHoaDon, idDatBan, idSanPham, KichCo);
             }
             catch (Exception err)
             {

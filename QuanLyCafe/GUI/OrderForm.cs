@@ -219,14 +219,26 @@ namespace QuanLyCafe.GUI
                 {
                     string sqlCommand;
                     string IDSanPham = _sanPhamChon.ID;
-                    int donGia = _sanPhamChon.GiaTien;
+                    string KichCo = cbb_KichThuoc.Text;
+                    int donGia;
+                    switch (KichCo)
+                    {
+                        case "L":
+                            donGia = _sanPhamChon.GiaTien + 5000;
+                            break;
+                        case "M":
+                        default:
+                            donGia = _sanPhamChon.GiaTien;
+                            break;
+                    }
                     int soLuong = int.Parse(txtSoLuongSanPham.Text);
                     int thanhTien = _giaTienSauGiamGia * soLuong;
                     // Kiểm tra xem đã có đơn món này chưa
                     LichSuOrder checkLichSuOrder = lichSuOrderBLL.LayThongTinLichSuOrder(
                         ControlForm.BanDatDangChon.ID,
                         ControlForm.HoaDonHienTai.ID,
-                        IDSanPham
+                        IDSanPham,
+                        KichCo
                     );
 
                     int soLuongHienTai = 0;
@@ -239,6 +251,7 @@ namespace QuanLyCafe.GUI
                         // cập nhật thêm số lượng sản phẩm thông tin order
                         lichSuOrderBLL.CapNhatThongTinOrder(
                             soLuong,
+                            KichCo,
                             donGia,
                             _giaTienSauGiamGia,
                             thanhTien,
@@ -260,6 +273,7 @@ namespace QuanLyCafe.GUI
                         LichSuOrder newOrder = new LichSuOrder();
                         newOrder.ThanhTien = thanhTien;
                         newOrder.SoLuong = soLuong;
+                        newOrder.KichCo = cbb_KichThuoc.Text;
                         newOrder.DonGia = donGia;
                         newOrder.DonGiaGiam = _giaTienSauGiamGia;
                         newOrder.IDSanPham = IDSanPham;
@@ -307,7 +321,7 @@ namespace QuanLyCafe.GUI
                 btnXacNhanOrder.Visible = false;
 
                 string IDSanPham = row.Cells["ID_SANPHAM_LS"].Value.ToString();
-                _orderDangChon = lichSuOrderBLL.LayThongTinLichSuOrder(int.Parse(row.Cells["ID_DATBAN_LS"].Value.ToString()), int.Parse(row.Cells["ID_HOADON_LS"].Value.ToString()), IDSanPham);
+                _orderDangChon = lichSuOrderBLL.LayThongTinLichSuOrder(int.Parse(row.Cells["ID_DATBAN_LS"].Value.ToString()), int.Parse(row.Cells["ID_HOADON_LS"].Value.ToString()), IDSanPham, row.Cells["KICHCO_LS"].Value.ToString());
                 _sanPhamChon = sanPhamBLL.TimKiemSanPhamByID(IDSanPham);
                 if (_sanPhamChon == null)
                 {
@@ -316,9 +330,13 @@ namespace QuanLyCafe.GUI
                     HienThiThongTin();
                     throw new Exception("Không tìm thấy sản phẩm");
                 }
+                cbb_KichThuoc.Text = row.Cells["KICHCO_LS"].Value.ToString();
                 txtSoLuongSanPham.Text = row.Cells["SOLUONG_LS"].Value.ToString();
                 picHienThiSanPham.Image = sanPhamBLL.GetImageByPath(IDSanPham);
                 HienThiThongTin();
+                //  vvv [ LITERAL SAVING GRACE ] vvv
+                    cbb_KichThuoc.Enabled = false;
+                //  ^^^^^^^^ [ OH MY GOD ] ^^^^^^^^^
             }
             catch (Exception err)
             {
@@ -338,12 +356,23 @@ namespace QuanLyCafe.GUI
                 {
 
                     string IDSanPham = _sanPhamChon.ID;
-                    int donGia = _sanPhamChon.GiaTien;
+                    string KichCo = cbb_KichThuoc.Text;
+                    int donGia;
+                    switch (KichCo)
+                    {
+                        case "L":
+                            donGia = _sanPhamChon.GiaTien + 5000;
+                            break;
+                        case "M":
+                        default:
+                            donGia = _sanPhamChon.GiaTien;
+                            break;
+                    }
                     int soLuong = int.Parse(txtSoLuongSanPham.Text);
                     int thanhTien = _giaTienSauGiamGia * soLuong;
 
                     // Cập nhật lại thông tin order
-                    lichSuOrderBLL.CapNhatThongTinOrder(soLuong, donGia, _giaTienSauGiamGia, thanhTien, _orderDangChon.IDHoaDon, _orderDangChon.IDDatBan, _orderDangChon.IDSanPham);
+                    lichSuOrderBLL.CapNhatThongTinOrder(soLuong, KichCo, donGia, _giaTienSauGiamGia, thanhTien, _orderDangChon.IDHoaDon, _orderDangChon.IDDatBan, _orderDangChon.IDSanPham);
 
 
                     UpdateLichSuOrder();
@@ -371,7 +400,7 @@ namespace QuanLyCafe.GUI
                 )
                 {
                     // Xóa order
-                    lichSuOrderBLL.XoaOrder(ControlForm.HoaDonHienTai.ID, ControlForm.BanDatDangChon.ID, _sanPhamChon.ID);
+                    lichSuOrderBLL.XoaOrder(ControlForm.HoaDonHienTai.ID, ControlForm.BanDatDangChon.ID, _sanPhamChon.ID, cbb_KichThuoc.Text);
 
                     UpdateLichSuOrder();
                     if (ControlForm.FormChiTietBan != null)
@@ -404,6 +433,9 @@ namespace QuanLyCafe.GUI
 
         void HienThiThongTin()
         {
+            // vvvvvvv SAVING GRACE 2 vvvvvvvvv
+                cbb_KichThuoc.Enabled = true;
+            // ^^^^ THIS IS MAJOR EPICNESS ^^^^
             if (_sanPhamChon == null)
             {
                 pnlChiTietSanPham.Visible = false;
@@ -411,7 +443,7 @@ namespace QuanLyCafe.GUI
             }
             pnlChiTietSanPham.Visible = true;
             lblTenSanPham.Text = $"{_sanPhamChon.TenSanPham}";
-            lblGiaTien.Text = $"{_sanPhamChon.GiaTien}";
+            
 
             // Get selected size and adjust price accordingly
             string selectedSize = cbb_KichThuoc.SelectedItem.ToString();
@@ -419,9 +451,11 @@ namespace QuanLyCafe.GUI
             {
                 case "M":
                     _giaTienSauGiamGia = _sanPhamChon.GiaTien;
+                    lblGiaTien.Text = $"{_sanPhamChon.GiaTien}";
                     break;
                 case "L":
                     _giaTienSauGiamGia = _sanPhamChon.GiaTien + 5000;
+                    lblGiaTien.Text = $"{_sanPhamChon.GiaTien + 5000}";
                     break;
             }
 
@@ -498,12 +532,16 @@ namespace QuanLyCafe.GUI
                 switch (selectedSize)
                 {
                     case "M":
-                        _giaTienSauGiamGia = giaTien;
+                        giaTienGoc = giaTien + 0000;
+                        _giaTienSauGiamGia = giaTien + 0000;
                         break;
                     case "L":
+                        giaTienGoc = giaTien + 5000;
                         _giaTienSauGiamGia = giaTien + 5000;
                         break;
                 }
+
+                // DID YOU FORGET TO INCREASE BASE PRICE WHEN YOU CHANGE SIZE OF PRODUCTS OR SUM????????????
 
                 // Kiểm tra sự kiện giảm giá
                 if (_sanPhamChon.Event != -1)

@@ -138,7 +138,7 @@ namespace QuanLyCafe.GUI
                     string[] rowData = {
                 stt.ToString(),
                 dr["SOLUONG_LS"].ToString(),
-                dr["TEN_SANPHAM_LS"].ToString(),
+                (dr["TEN_SANPHAM_LS"] + $" ({dr["KICHCO_LS"]})").ToString(),
                 string.Format("{0:#,##0}", double.Parse(dr["DONGIA_LS"].ToString())),
                 string.Format("{0:#,##0}", double.Parse(dr["DONGIAGIAM_LS"].ToString())),
                 string.Format("{0:#,##0}", double.Parse(dr["THANHTIEN_LS"].ToString()))

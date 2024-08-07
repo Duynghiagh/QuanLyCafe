@@ -11,6 +11,7 @@ namespace QuanLyCafe.DTO
         public int IDHoaDon { get; set; }
         public int IDDatBan { get; set; }
         public string IDSanPham { get; set; }
+        public string KichCo { get; set; }
         public int DonGia { get; set; }
         public int DonGiaGiam { get; set; }
         public int SoLuong { get; set; }

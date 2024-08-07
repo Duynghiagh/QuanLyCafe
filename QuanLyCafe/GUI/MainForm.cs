@@ -1297,7 +1297,7 @@ namespace QuanLyCafe.GUI
                 );
                 lichSuCaBLL.KetThucCaLam(
                     tongThoiGianLam.Hours,
-                    thoiGianHienTai,
+                    thoiGianHienTai.ToString("yyyy-MM-dd H:mm:ss"),
                     TaiKhoanHienTai.TaiKhoanHienHanh.UserName,
                     getDate
                 );

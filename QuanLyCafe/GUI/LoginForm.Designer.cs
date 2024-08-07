@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.pnlForm = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnLogin = new ReaLTaiizor.Controls.MaterialButton();
             this.txtPassword = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.txtUsername = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnlForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,41 @@
             this.pnlForm.Size = new System.Drawing.Size(830, 493);
             this.pnlForm.TabIndex = 2;
             this.pnlForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlForm_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label2.Location = new System.Drawing.Point(284, 204);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Password";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label1.Location = new System.Drawing.Point(282, 122);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 17);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Username";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.checkBox1.Location = new System.Drawing.Point(284, 290);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(139, 21);
+            this.checkBox1.TabIndex = 2;
+            this.checkBox1.Text = "Hiển thị mật khẩu";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // pictureBox2
             // 
@@ -89,7 +124,7 @@
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnLogin.Size = new System.Drawing.Size(270, 36);
-            this.btnLogin.TabIndex = 4;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "login";
             this.btnLogin.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLogin.UseAccentColor = false;
@@ -121,7 +156,7 @@
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
             this.txtPassword.Size = new System.Drawing.Size(269, 36);
-            this.txtPassword.TabIndex = 2;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.TabStop = false;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.TrailingIcon = null;
@@ -153,48 +188,13 @@
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
             this.txtUsername.Size = new System.Drawing.Size(269, 36);
-            this.txtUsername.TabIndex = 2;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.TabStop = false;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsername.TrailingIcon = null;
             this.txtUsername.UseSystemPasswordChar = false;
             this.txtUsername.UseTallSize = false;
             this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.checkBox1.Location = new System.Drawing.Point(284, 290);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(171, 25);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Hiển thị mật khẩu";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label1.Location = new System.Drawing.Point(282, 122);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 18);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Username";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label2.Location = new System.Drawing.Point(284, 204);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 18);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Password";
             // 
             // LoginForm
             // 

@@ -134,7 +134,7 @@ namespace QuanLyCafe.DAL
         }
         public bool KetThucCaLam(
             int tongThoiGianLam,
-            DateTime thoiGianHienTai,
+            string thoiGianHienTai,
             string taiKhoan,
             string getDate
         )

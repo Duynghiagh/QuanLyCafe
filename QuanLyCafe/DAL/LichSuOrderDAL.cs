@@ -39,7 +39,7 @@ namespace QuanLyCafe.DAL
                 DateTime thoiGianHienTai = DateTime.Now;
 
                 string sqlCommand =
-                    $"insert into LICHSUORDER (ID_DATBAN, ID_SANPHAM, ID_HOADON, DONGIA, DONGIAGIAM, SOLUONG, THANHTIEN) values ('{lichSuOrder.IDDatBan}', '{lichSuOrder.IDSanPham}', '{lichSuOrder.IDHoaDon}', '{lichSuOrder.DonGia}', '{lichSuOrder.DonGiaGiam}', '{lichSuOrder.SoLuong}', '{lichSuOrder.ThanhTien}' )";
+                    $"insert into LICHSUORDER (ID_DATBAN, ID_SANPHAM, ID_HOADON, KICHCO, DONGIA, DONGIAGIAM, SOLUONG, THANHTIEN) values ('{lichSuOrder.IDDatBan}', '{lichSuOrder.IDSanPham}', '{lichSuOrder.IDHoaDon}', '{lichSuOrder.KichCo}', '{lichSuOrder.DonGia}', '{lichSuOrder.DonGiaGiam}', '{lichSuOrder.SoLuong}', '{lichSuOrder.ThanhTien}' )";
                 SqlCommand cmd;
                 cmd = CreateCommand(sqlCommand);
                 int ID = Convert.ToInt32(cmd.ExecuteScalar());
@@ -51,14 +51,14 @@ namespace QuanLyCafe.DAL
             }
         }
 
-        public LichSuOrder LayThongTinLichSuOrder(int idDatBan, int idHoaDon, string idSanPham)
+        public LichSuOrder LayThongTinLichSuOrder(int idDatBan, int idHoaDon, string idSanPham, string KichCo)
         {
             try
             {
                 LichSuOrder lichSuOrder = null;
                 SqlDataReader rd;
                 string sqlCommand =
-                    $"select * from LICHSUORDER where ID_HOADON = '{idHoaDon}' and ID_DATBAN = '{idDatBan}' and ID_SANPHAM = '{idSanPham}'";
+                    $"select * from LICHSUORDER where ID_HOADON = '{idHoaDon}' and ID_DATBAN = '{idDatBan}' and ID_SANPHAM = '{idSanPham}' and KICHCO = '{KichCo}'";
                 SqlCommand cmd = CreateCommand(sqlCommand);
                 rd = cmd.ExecuteReader();
                 while (rd.Read())
@@ -67,6 +67,7 @@ namespace QuanLyCafe.DAL
                     lichSuOrder.IDSanPham = (string)rd["ID_SANPHAM"];
                     lichSuOrder.IDDatBan = (int)rd["ID_DATBAN"];
                     lichSuOrder.IDHoaDon = (int)rd["ID_HOADON"];
+                    lichSuOrder.KichCo = (string)rd["KICHCO"];
                     lichSuOrder.DonGia = (int)rd["DONGIA"];
                     lichSuOrder.DonGiaGiam = (int)rd["DONGIAGIAM"];
                     lichSuOrder.SoLuong = (int)rd["SOLUONG"];
@@ -102,7 +103,13 @@ namespace QuanLyCafe.DAL
             try
             {
                 string sqlCommand =
-                    $"select B.TEN as TEN_SANPHAM_LS,A.ID_HOADON as ID_HOADON_LS, A.ID_DATBAN as ID_DATBAN_LS, A.ID_SANPHAM as ID_SANPHAM_LS, A.DONGIA as DONGIA_LS, A.DONGIAGIAM as DONGIAGIAM_LS, A.SOLUONG as SOLUONG_LS, A.THOIGIAN as THOIGIAN_LS, A.THANHTIEN as THANHTIEN_LS from LICHSUORDER A, DANHSACHSANPHAM B where A.ID_SANPHAM = B.ID AND A.ID_DATBAN = '{idBanDat}' order by A.THOIGIAN desc";
+                    $"select B.TEN as TEN_SANPHAM_LS,A.ID_HOADON as ID_HOADON_LS, A.ID_DATBAN as ID_DATBAN_LS," +
+                    $" A.ID_SANPHAM as ID_SANPHAM_LS, A.KICHCO as KICHCO_LS, A.DONGIA as DONGIA_LS, A.DONGIAGIAM as DONGIAGIAM_LS," +
+                    $" A.SOLUONG as SOLUONG_LS, A.THOIGIAN as THOIGIAN_LS, A.THANHTIEN as THANHTIEN_LS" +
+                    $" from LICHSUORDER A, DANHSACHSANPHAM B where A.ID_SANPHAM = B.ID AND" +
+                    $" A.ID_DATBAN = '{idBanDat}' order by A.THOIGIAN desc";
+                // i love how they just use sql commands for everything
+                // that's .net framework 4.8(.1?) for ya
                 DataTable dt;
                 dt = SelectQuery(sqlCommand);
                 return dt;
@@ -188,19 +195,19 @@ namespace QuanLyCafe.DAL
 
         public bool CapNhatThongTinOrder(
             int soLuong,
+            string KichCo,
             int donGia,
             int donGiaGiam,
             int thanhTien,
             int idHoaDon,
             int idDatBan,
             string idSanPham
-          
         )
         {
             try
             {
                 string sqlCommand =
-                    $"update LICHSUORDER set SOLUONG = '{soLuong}', DONGIA = '{donGia}', DONGIAGIAM = '{donGiaGiam}', THANHTIEN = '{thanhTien}', THOIGIAN = '{DateTime.Now}' where ID_HOADON = '{idHoaDon}' and ID_DATBAN = '{idDatBan}' and ID_SANPHAM = '{idSanPham}'";
+                    $"update LICHSUORDER set SOLUONG = '{soLuong}', DONGIA = '{donGia}', DONGIAGIAM = '{donGiaGiam}', THANHTIEN = '{thanhTien}', THOIGIAN = '{DateTime.Now}' where ID_HOADON = '{idHoaDon}' and ID_DATBAN = '{idDatBan}' and ID_SANPHAM = '{idSanPham}' and KICHCO = '{KichCo}'";
 
                 SqlCommand cmd;
                 cmd = CreateCommand(sqlCommand);
@@ -213,12 +220,12 @@ namespace QuanLyCafe.DAL
             }
         }
 
-        public bool XoaOrder(int idHoaDon, int idDatBan, string idSanPham)
+        public bool XoaOrder(int idHoaDon, int idDatBan, string idSanPham, string KichCo)
         {
             try
             {
                 string sqlCommand =
-                    $"delete from LICHSUORDER where ID_DATBAN = '{idDatBan}' and ID_HOADON = '{idHoaDon}' and ID_SANPHAM = '{idSanPham}'";
+                    $"delete from LICHSUORDER where ID_DATBAN = '{idDatBan}' and ID_HOADON = '{idHoaDon}' and ID_SANPHAM = '{idSanPham}' and KICHCO = '{KichCo}'";
 
                 SqlCommand cmd;
                 cmd = CreateCommand(sqlCommand);

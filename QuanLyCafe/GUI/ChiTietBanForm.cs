@@ -290,7 +290,7 @@ namespace QuanLyCafe.GUI
                     Label lblTenSanPham = new Label();
                     lblTenSanPham.AutoSize = false;
                     lblTenSanPham.Width = 400;
-                    lblTenSanPham.Text = (string)dr["TEN_SANPHAM_LS"];
+                    lblTenSanPham.Text = (string)dr["TEN_SANPHAM_LS"] + $" ({(string)dr["KICHCO_LS"]})";
                     lblTenSanPham.Font = new Font("Arial", 11, FontStyle.Bold);
                     lblTenSanPham.ForeColor = Color.FromArgb(80, 80, 80);
                     card.Controls.Add(lblTenSanPham);

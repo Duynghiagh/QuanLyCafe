@@ -44,6 +44,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pnlChiTietSanPham = new System.Windows.Forms.Panel();
+            this.cbb_KichThuoc = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.picHienThiSanPham = new System.Windows.Forms.PictureBox();
             this.btnXoaOrder = new ReaLTaiizor.Controls.MaterialButton();
             this.btnCapNhatOrder = new ReaLTaiizor.Controls.MaterialButton();
@@ -60,19 +62,18 @@
             this.txtTimKiemSanPham = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvLichSuOrder = new System.Windows.Forms.DataGridView();
+            this.lblThongTinBanDat = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.ID_DATBAN_LS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_HOADON_LS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_SANPHAM_LS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TEN_SANPHAM_LS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KICHCO_LS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DONGIA_LS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DONGIAGIAM_LS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SOLUONG_LS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.THANHTIEN_LS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.THOIGIAN_LS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblThongTinBanDat = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbb_KichThuoc = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachSanPham)).BeginInit();
             this.pnlChiTietSanPham.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHienThiSanPham)).BeginInit();
@@ -86,7 +87,7 @@
             this.lblBanChuaDat.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblBanChuaDat.Location = new System.Drawing.Point(12, 27);
             this.lblBanChuaDat.Name = "lblBanChuaDat";
-            this.lblBanChuaDat.Size = new System.Drawing.Size(129, 27);
+            this.lblBanChuaDat.Size = new System.Drawing.Size(110, 22);
             this.lblBanChuaDat.TabIndex = 2;
             this.lblBanChuaDat.Text = "Order Món";
             // 
@@ -182,7 +183,7 @@
             this.lblTitle.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblTitle.Location = new System.Drawing.Point(23, 11);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(133, 27);
+            this.lblTitle.Size = new System.Drawing.Size(111, 22);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Tổng quan";
             // 
@@ -193,7 +194,7 @@
             this.label233.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label233.Location = new System.Drawing.Point(24, 200);
             this.label233.Name = "label233";
-            this.label233.Size = new System.Drawing.Size(139, 21);
+            this.label233.Size = new System.Drawing.Size(111, 18);
             this.label233.TabIndex = 2;
             this.label233.Text = "Tên sản phẩm:";
             // 
@@ -204,7 +205,7 @@
             this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label.Location = new System.Drawing.Point(24, 313);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(84, 21);
+            this.label.Size = new System.Drawing.Size(67, 18);
             this.label.TabIndex = 2;
             this.label.Text = "Giá tiền:";
             // 
@@ -215,7 +216,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label4.Location = new System.Drawing.Point(24, 350);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 21);
+            this.label4.Size = new System.Drawing.Size(101, 18);
             this.label4.TabIndex = 2;
             this.label4.Text = "Sau giảm giá:";
             // 
@@ -226,7 +227,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label5.Location = new System.Drawing.Point(24, 239);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 21);
+            this.label5.Size = new System.Drawing.Size(79, 18);
             this.label5.TabIndex = 2;
             this.label5.Text = "Số lượng:";
             // 
@@ -258,6 +259,27 @@
             this.pnlChiTietSanPham.TabIndex = 4;
             this.pnlChiTietSanPham.Visible = false;
             this.pnlChiTietSanPham.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChiTietSanPham_Paint);
+            // 
+            // cbb_KichThuoc
+            // 
+            this.cbb_KichThuoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_KichThuoc.FormattingEnabled = true;
+            this.cbb_KichThuoc.Location = new System.Drawing.Point(182, 269);
+            this.cbb_KichThuoc.Name = "cbb_KichThuoc";
+            this.cbb_KichThuoc.Size = new System.Drawing.Size(54, 21);
+            this.cbb_KichThuoc.TabIndex = 12;
+            this.cbb_KichThuoc.SelectedIndexChanged += new System.EventHandler(this.cbb_KichThuoc_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.label1.Location = new System.Drawing.Point(25, 273);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 18);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Kích Thước:";
             // 
             // picHienThiSanPham
             // 
@@ -347,7 +369,7 @@
             // 
             this.txtSoLuongSanPham.Location = new System.Drawing.Point(182, 238);
             this.txtSoLuongSanPham.Name = "txtSoLuongSanPham";
-            this.txtSoLuongSanPham.Size = new System.Drawing.Size(54, 22);
+            this.txtSoLuongSanPham.Size = new System.Drawing.Size(54, 20);
             this.txtSoLuongSanPham.TabIndex = 3;
             this.txtSoLuongSanPham.Text = "1";
             this.txtSoLuongSanPham.TextChanged += new System.EventHandler(this.txtSoLuongSanPham_TextChanged);
@@ -361,7 +383,7 @@
             this.lblTenSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblTenSanPham.Location = new System.Drawing.Point(178, 200);
             this.lblTenSanPham.Name = "lblTenSanPham";
-            this.lblTenSanPham.Size = new System.Drawing.Size(58, 21);
+            this.lblTenSanPham.Size = new System.Drawing.Size(48, 18);
             this.lblTenSanPham.TabIndex = 2;
             this.lblTenSanPham.Text = "NULL";
             // 
@@ -372,7 +394,7 @@
             this.lblTongTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblTongTien.Location = new System.Drawing.Point(178, 386);
             this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(58, 21);
+            this.lblTongTien.Size = new System.Drawing.Size(48, 18);
             this.lblTongTien.TabIndex = 2;
             this.lblTongTien.Text = "NULL";
             // 
@@ -383,7 +405,7 @@
             this.lblSuKien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblSuKien.Location = new System.Drawing.Point(24, 453);
             this.lblSuKien.Name = "lblSuKien";
-            this.lblSuKien.Size = new System.Drawing.Size(89, 21);
+            this.lblSuKien.Size = new System.Drawing.Size(71, 18);
             this.lblSuKien.TabIndex = 2;
             this.lblSuKien.Text = "Sự kiện: ";
             this.lblSuKien.Visible = false;
@@ -395,7 +417,7 @@
             this.lblGiamGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblGiamGia.Location = new System.Drawing.Point(24, 418);
             this.lblGiamGia.Name = "lblGiamGia";
-            this.lblGiamGia.Size = new System.Drawing.Size(136, 21);
+            this.lblGiamGia.Size = new System.Drawing.Size(106, 18);
             this.lblGiamGia.TabIndex = 2;
             this.lblGiamGia.Text = "Giảm giá: 10%";
             this.lblGiamGia.Click += new System.EventHandler(this.lblGiamGia_Click);
@@ -407,7 +429,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label6.Location = new System.Drawing.Point(24, 386);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 21);
+            this.label6.Size = new System.Drawing.Size(80, 18);
             this.label6.TabIndex = 2;
             this.label6.Text = "Tổng tiền:";
             // 
@@ -418,7 +440,7 @@
             this.lblSauGiamGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblSauGiamGia.Location = new System.Drawing.Point(178, 350);
             this.lblSauGiamGia.Name = "lblSauGiamGia";
-            this.lblSauGiamGia.Size = new System.Drawing.Size(58, 21);
+            this.lblSauGiamGia.Size = new System.Drawing.Size(48, 18);
             this.lblSauGiamGia.TabIndex = 2;
             this.lblSauGiamGia.Text = "NULL";
             // 
@@ -429,7 +451,7 @@
             this.lblGiaTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblGiaTien.Location = new System.Drawing.Point(178, 313);
             this.lblGiaTien.Name = "lblGiaTien";
-            this.lblGiaTien.Size = new System.Drawing.Size(58, 21);
+            this.lblGiaTien.Size = new System.Drawing.Size(48, 18);
             this.lblGiaTien.TabIndex = 2;
             this.lblGiaTien.Text = "NULL";
             this.lblGiaTien.Click += new System.EventHandler(this.lblGiaTien_Click);
@@ -498,7 +520,7 @@
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(12, 390);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 27);
+            this.label2.Size = new System.Drawing.Size(136, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Lịch sử order";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -511,6 +533,7 @@
             this.ID_HOADON_LS,
             this.ID_SANPHAM_LS,
             this.TEN_SANPHAM_LS,
+            this.KICHCO_LS,
             this.DONGIA_LS,
             this.DONGIAGIAM_LS,
             this.SOLUONG_LS,
@@ -526,6 +549,33 @@
             this.dgvLichSuOrder.TabIndex = 3;
             this.dgvLichSuOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLichSuOrder_CellClick);
             this.dgvLichSuOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLichSuOrder_CellContentClick);
+            // 
+            // lblThongTinBanDat
+            // 
+            this.lblThongTinBanDat.AutoSize = true;
+            this.lblThongTinBanDat.Font = new System.Drawing.Font("Arial", 12F);
+            this.lblThongTinBanDat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(162)))), ((int)(((byte)(162)))));
+            this.lblThongTinBanDat.Location = new System.Drawing.Point(13, 63);
+            this.lblThongTinBanDat.Name = "lblThongTinBanDat";
+            this.lblThongTinBanDat.Size = new System.Drawing.Size(103, 18);
+            this.lblThongTinBanDat.TabIndex = 2;
+            this.lblThongTinBanDat.Text = "Mã bàn đặt: 1";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pnlChiTietSanPham);
+            this.panel1.Controls.Add(this.dgvLichSuOrder);
+            this.panel1.Controls.Add(this.btnTimKiemSanPham);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblBanChuaDat);
+            this.panel1.Controls.Add(this.dgvDanhSachSanPham);
+            this.panel1.Controls.Add(this.txtTimKiemSanPham);
+            this.panel1.Controls.Add(this.lblThongTinBanDat);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1063, 612);
+            this.panel1.TabIndex = 14;
             // 
             // ID_DATBAN_LS
             // 
@@ -562,6 +612,13 @@
             this.TEN_SANPHAM_LS.Name = "TEN_SANPHAM_LS";
             this.TEN_SANPHAM_LS.ReadOnly = true;
             this.TEN_SANPHAM_LS.Width = 125;
+            // 
+            // KICHCO_LS
+            // 
+            this.KICHCO_LS.DataPropertyName = "KICHCO_LS";
+            this.KICHCO_LS.HeaderText = "Kích cỡ";
+            this.KICHCO_LS.Name = "KICHCO_LS";
+            this.KICHCO_LS.ReadOnly = true;
             // 
             // DONGIA_LS
             // 
@@ -607,53 +664,6 @@
             this.THOIGIAN_LS.Name = "THOIGIAN_LS";
             this.THOIGIAN_LS.ReadOnly = true;
             this.THOIGIAN_LS.Width = 125;
-            // 
-            // lblThongTinBanDat
-            // 
-            this.lblThongTinBanDat.AutoSize = true;
-            this.lblThongTinBanDat.Font = new System.Drawing.Font("Arial", 12F);
-            this.lblThongTinBanDat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(162)))), ((int)(((byte)(162)))));
-            this.lblThongTinBanDat.Location = new System.Drawing.Point(13, 63);
-            this.lblThongTinBanDat.Name = "lblThongTinBanDat";
-            this.lblThongTinBanDat.Size = new System.Drawing.Size(133, 23);
-            this.lblThongTinBanDat.TabIndex = 2;
-            this.lblThongTinBanDat.Text = "Mã bàn đặt: 1";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pnlChiTietSanPham);
-            this.panel1.Controls.Add(this.dgvLichSuOrder);
-            this.panel1.Controls.Add(this.btnTimKiemSanPham);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lblBanChuaDat);
-            this.panel1.Controls.Add(this.dgvDanhSachSanPham);
-            this.panel1.Controls.Add(this.txtTimKiemSanPham);
-            this.panel1.Controls.Add(this.lblThongTinBanDat);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 64);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1063, 612);
-            this.panel1.TabIndex = 14;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label1.Location = new System.Drawing.Point(25, 273);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 21);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Kích Thước:";
-            // 
-            // cbb_KichThuoc
-            // 
-            this.cbb_KichThuoc.FormattingEnabled = true;
-            this.cbb_KichThuoc.Location = new System.Drawing.Point(182, 269);
-            this.cbb_KichThuoc.Name = "cbb_KichThuoc";
-            this.cbb_KichThuoc.Size = new System.Drawing.Size(54, 24);
-            this.cbb_KichThuoc.TabIndex = 12;
-            this.cbb_KichThuoc.SelectedIndexChanged += new System.EventHandler(this.cbb_KichThuoc_SelectedIndexChanged);
             // 
             // OrderForm
             // 
@@ -710,16 +720,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MOTA;
         private System.Windows.Forms.DataGridViewTextBoxColumn IMAGE_PATH;
         private System.Windows.Forms.DataGridViewTextBoxColumn EVENT;
+        private System.Windows.Forms.ComboBox cbb_KichThuoc;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_DATBAN_LS;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_HOADON_LS;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_SANPHAM_LS;
         private System.Windows.Forms.DataGridViewTextBoxColumn TEN_SANPHAM_LS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KICHCO_LS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DONGIA_LS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DONGIAGIAM_LS;
         private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG_LS;
         private System.Windows.Forms.DataGridViewTextBoxColumn THANHTIEN_LS;
         private System.Windows.Forms.DataGridViewTextBoxColumn THOIGIAN_LS;
-        private System.Windows.Forms.ComboBox cbb_KichThuoc;
-        private System.Windows.Forms.Label label1;
     }
 }
