@@ -108,7 +108,7 @@ namespace QuanLyCafe.GUI
                 y += 40;
 
                 // Khởi tạo và vẽ bảng chi tiết đơn hàng
-                float[] columnWidths = { 50f, 100f, 200f, 150f, 100f, 100f }; // Chiều rộng từng cột
+                float[] columnWidths = { 50f, 100f, 300f, 150f, 100f, 100f }; // Chiều rộng từng cột
                 string[] headers = { "STT", "Số lượng", "Tên sản phẩm", "Đơn giá", "Giảm giá", "Thành tiền" };
 
                 // Vẽ tiêu đề bảng
@@ -158,8 +158,8 @@ namespace QuanLyCafe.GUI
 
                 // Tóm tắt
                 y += contentHeight;
-                float middleX = pageWidth / 2; // Vị trí giữa theo chiều ngang của trang in
-                e.Graphics.DrawString($"Tổng cộng: {string.Format("{0:#,##0}", tongTien)}", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new PointF(middleX, y), sf);
+                float rightX = pageWidth - 300; // Vị trí căn phải theo chiều ngang của trang in
+                e.Graphics.DrawString($"Tổng cộng: {string.Format("{0:#,##0}", tongTien)}", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new PointF(rightX, y));
 
                 y += contentHeight;
                 string dateIn = $"Giờ vào: {_banDatHienTai.ThoiGianVaoBan}";
@@ -167,8 +167,7 @@ namespace QuanLyCafe.GUI
                     dateIn,
                     new Font("Arial", 12, FontStyle.Regular),
                     Brushes.Black,
-                    new RectangleF(x, y, contentWidth, contentHeight),
-                    sf
+                    new PointF(rightX, y)
                 );
 
                 y += contentHeight;
@@ -179,8 +178,7 @@ namespace QuanLyCafe.GUI
                     dateOut,
                     new Font("Arial", 12, FontStyle.Regular),
                     Brushes.Black,
-                    new RectangleF(x, y, contentWidth, contentHeight),
-                    sf
+                    new PointF(rightX, y)
                 );
 
                 y += 40;
@@ -189,18 +187,23 @@ namespace QuanLyCafe.GUI
                 {
                     Voucher getVoucher = voucherBLL.LayThongTinVoucher(_hoaDonHienTai.VoucherHoaDon);
                     float discountAmount = tongTien * getVoucher.GiamGia / 100;
-                    e.Graphics.DrawString($"Voucher: {_hoaDonHienTai.VoucherHoaDon} - Giảm giá: {getVoucher.GiamGia}% - Số tiền giảm: {string.Format("{0:#,##0}", discountAmount)}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(x, y));
+                    e.Graphics.DrawString($"Voucher: {_hoaDonHienTai.VoucherHoaDon} - Giảm giá: {getVoucher.GiamGia}%", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(rightX, y));
                     tongTien -= (int)discountAmount;
                 }
 
                 y += contentHeight;
-                e.Graphics.DrawString($"Khách trả: {string.Format("{0:#,##0}", _hoaDonHienTai.TienKhachTra)}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(middleX, y), sf);
+                e.Graphics.DrawString($"Khách trả: {string.Format("{0:#,##0}", _hoaDonHienTai.TienKhachTra)}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(rightX, y));
 
                 y += contentHeight;
-                e.Graphics.DrawString($"Tiền thừa: {string.Format("{0:#,##0}", _hoaDonHienTai.TienThua)}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(middleX, y), sf);
+                e.Graphics.DrawString($"Tiền thừa: {string.Format("{0:#,##0}", _hoaDonHienTai.TienThua)}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(rightX, y));
 
-                y += 40;
-                e.Graphics.DrawString("Xin cảm ơn quý khách!", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(middleX, y), sf);
+                y += 50; // Khoảng cách từ dòng trước đó
+                StringFormat sfCenter = new StringFormat();
+                sfCenter.Alignment = StringAlignment.Center; // Căn giữa theo chiều ngang
+                sfCenter.LineAlignment = StringAlignment.Center; // Căn giữa theo chiều dọc
+                float centerX = x + contentWidth / 2;
+                drawRect = new RectangleF(centerX - contentWidth / 2, y, contentWidth, contentHeight);
+                e.Graphics.DrawString("CAFE BÉO TRÂN TRỌNG CẢM ƠN QUÝ KHÁCH", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, drawRect, sfCenter);
 
                 // Đóng form sau khi in
                 this.Close();
