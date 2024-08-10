@@ -261,6 +261,10 @@ namespace QuanLyCafe.GUI
                     {
                         throw new Exception("Vui lòng nhập thông tin hợp lệ");
                     }
+                    if (giaTien < 1000)
+                    {
+                        throw new Exception("Giá tiền phải ít nhất 1000.");
+                    }
                     SuKien getSuKien = suKienBLL.TimKiemSuKienByID(suKien);
                     SanPham sanPham = new SanPham(
                         _sanPhamChon.ID,
@@ -338,6 +342,10 @@ namespace QuanLyCafe.GUI
                     )
                     {
                         throw new Exception("Vui lòng nhập thông tin hợp lệ");
+                    }
+                    if (giaTien < 1000)
+                    {
+                        throw new Exception("Giá tiền phải ít nhất 1000.");
                     }
                     IDSanPham = IDSanPham.ToUpper();
                     SanPham timSanPham = sanPhamBLL.TimKiemSanPhamByID(IDSanPham);

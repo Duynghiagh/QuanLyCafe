@@ -124,6 +124,7 @@
             // 
             this.txtPhoneThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtPhoneThem.Location = new System.Drawing.Point(186, 345);
+            this.txtPhoneThem.MaxLength = 100;
             this.txtPhoneThem.Name = "txtPhoneThem";
             this.txtPhoneThem.Size = new System.Drawing.Size(204, 24);
             this.txtPhoneThem.TabIndex = 105;
@@ -323,6 +324,7 @@
             // 
             this.txtCCCDThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtCCCDThem.Location = new System.Drawing.Point(186, 379);
+            this.txtCCCDThem.MaxLength = 12;
             this.txtCCCDThem.Name = "txtCCCDThem";
             this.txtCCCDThem.Size = new System.Drawing.Size(204, 24);
             this.txtCCCDThem.TabIndex = 106;
@@ -669,6 +671,7 @@
             // 
             this.txtCCCD.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtCCCD.Location = new System.Drawing.Point(154, 317);
+            this.txtCCCD.MaxLength = 12;
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.Size = new System.Drawing.Size(206, 24);
             this.txtCCCD.TabIndex = 15;
@@ -677,6 +680,7 @@
             // 
             this.txtPhone.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtPhone.Location = new System.Drawing.Point(156, 283);
+            this.txtPhone.MaxLength = 100;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(206, 24);
             this.txtPhone.TabIndex = 14;

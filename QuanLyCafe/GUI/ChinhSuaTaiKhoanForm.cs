@@ -225,8 +225,8 @@ namespace QuanLyCafe.GUI
                     {
                         throw new Exception("Vui lòng nhập thông tin hợp lệ");
                     }
-                    if (!CCCD_Chk.IsMatch(cccd)) { throw new Exception("Trường CMND/CCCD chỉ được chứa số!\nMẫu: 009999009999, 3182992347831"); }
-                    if (!CCCD_Chk.IsMatch(phone)) { throw new Exception("Trường SĐT chỉ được chứa số!\nMẫu: 0123456789, 333 555-2384"); }
+                    if (!CCCD_Chk.IsMatch(cccd) || cccd.Length != 12) { throw new Exception("Trường CMND/CCCD chỉ được chứa số, và số ký tự bắt buộc phải có 12 số!\nMẫu: 009999009999, 318299234783"); }
+                    if (!CCCD_Chk.IsMatch(phone) || phone.Length < 10) { throw new Exception("Trường SĐT chỉ được chứa số, và SĐT bắt buộc phải có từ 10 ký tự trở lên!\nMẫu: 0123456789, 333 555-2384"); }
                     if (!Name_Chk.IsMatch(firstName) || !Name_Chk.IsMatch(lastName))
                         { throw new Exception("Các trường tên chỉ được chứa ký tự chữ!"); }
 
@@ -410,8 +410,8 @@ namespace QuanLyCafe.GUI
                         throw new Exception("Vui lòng nhập thông tin hợp lệ");
                     }
                     if (!User_Chk.IsMatch(userName)) { throw new Exception("Trường Username chỉ được bao gồm ký tự chữ không dấu, chữ số từ 0-9 và dấu gạch chân!\nMẫu: Default_User0"); }
-                    if (!CCCD_Chk.IsMatch(cccd)) { throw new Exception("Trường CMND/CCCD chỉ được chứa số!\nMẫu: 009999009999, 3182992347831"); }
-                    if (!CCCD_Chk.IsMatch(phone)) { throw new Exception("Trường SĐT chỉ được chứa số!\nMẫu: 0123456789, 333 555-2384"); }
+                    if (!CCCD_Chk.IsMatch(cccd) || cccd.Length != 12) { throw new Exception("Trường CMND/CCCD chỉ được chứa số, và số ký tự bắt buộc phải có 12 số!\nMẫu: 009999009999, 318299234783"); }
+                    if (!CCCD_Chk.IsMatch(phone) || phone.Length < 10) { throw new Exception("Trường SĐT chỉ được chứa số, và SĐT bắt buộc phải có từ 10 ký tự trở lên!\nMẫu: 0123456789, 333 555-2384"); }
                     if (!Name_Chk.IsMatch(firstName) || !Name_Chk.IsMatch(lastName))
                     { throw new Exception("Các trường tên chỉ được chứa ký tự chữ!"); }
                     if (TaiKhoanHienTai.TaiKhoanHienHanh.QuyenHan < quyenHan)
