@@ -18,6 +18,7 @@ using ReaLTaiizor.Colors;
 using System.IO;
 using QuanLyCafe.BLL;
 using QuanLyCafe.DTO;
+using System.Text.RegularExpressions;
 
 namespace QuanLyCafe.GUI
 {
@@ -25,6 +26,8 @@ namespace QuanLyCafe.GUI
     {
         BanBLL banBLL = new BanBLL();
         Ban _banChon = null;
+
+        Regex Name_Chk = new Regex("^[\\p{L}0-9 ]*$");
 
         public ChinhSuaBanForm()
         {
@@ -168,6 +171,7 @@ namespace QuanLyCafe.GUI
                     {
                         throw new Exception("Vui lòng nhập đầy đủ thông tin");
                     }
+                    if (!Name_Chk.IsMatch(tenBan)) { throw new Exception("Tên bàn chỉ chứa ký tự chữ và số!"); }
                     Ban ban = new Ban();
                     ban.TenBan = tenBan;
                     ban.ID = _banChon.ID;
@@ -267,6 +271,7 @@ namespace QuanLyCafe.GUI
                 {
                     throw new Exception("Vui lòng nhập đầy đủ thông tin");
                 }
+                if (!Name_Chk.IsMatch(tenBan)) { throw new Exception("Tên bàn chỉ chứa ký tự chữ và số!"); }
                 if (ControlForm.ConfirmForm("Bạn có muốn thêm?"))
                 {
                     Ban banMoi = new Ban(IDBan, tenBan, 0);

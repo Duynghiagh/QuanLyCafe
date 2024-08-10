@@ -29,6 +29,7 @@ namespace QuanLyCafe.GUI
         SanPham _sanPhamChon = null;
 
         Regex FileName = new Regex("^[\\w,\\s-]+\\.[A-Za-z]*$");
+        Regex Name_Chk = new Regex("^[\\p{L} ]*$");
 
         public ChinhSuaSanPham()
         {
@@ -261,10 +262,8 @@ namespace QuanLyCafe.GUI
                     {
                         throw new Exception("Vui lòng nhập thông tin hợp lệ");
                     }
-                    if (giaTien < 1000)
-                    {
-                        throw new Exception("Giá tiền phải ít nhất 1000.");
-                    }
+                    if (giaTien < 1000) { throw new Exception("Giá tiền phải ít nhất 1000."); }
+                    if (!Name_Chk.IsMatch(tenSanPham)) { throw new Exception("Tên sản phẩm chỉ được chứa ký tự chữ!"); }
                     SuKien getSuKien = suKienBLL.TimKiemSuKienByID(suKien);
                     SanPham sanPham = new SanPham(
                         _sanPhamChon.ID,
@@ -347,6 +346,7 @@ namespace QuanLyCafe.GUI
                     {
                         throw new Exception("Giá tiền phải ít nhất 1000.");
                     }
+                    if (!Name_Chk.IsMatch(tenSanPham)) { throw new Exception("Tên sản phẩm chỉ được chứa ký tự chữ!"); }
                     IDSanPham = IDSanPham.ToUpper();
                     SanPham timSanPham = sanPhamBLL.TimKiemSanPhamByID(IDSanPham);
                     if (timSanPham != null)
