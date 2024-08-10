@@ -18,6 +18,8 @@ using ReaLTaiizor.Colors;
 using BC = BCrypt.Net.BCrypt;
 using QuanLyCafe.DTO;
 using QuanLyCafe.BLL;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Text.RegularExpressions;
 
 namespace QuanLyCafe.GUI
 {
@@ -27,6 +29,10 @@ namespace QuanLyCafe.GUI
         HoaDonBLL hoaDonBLL = new HoaDonBLL();
         LichSuCaBLL lichSuCaBLL = new LichSuCaBLL();
         LichSuThanhToanCaBLL lichSuThanhToanCaBLL = new LichSuThanhToanCaBLL();
+
+        Regex CCCD_Chk = new Regex("^[\\d -]*$");
+        Regex Name_Chk = new Regex("^[\\p{L} ]*$");
+        Regex User_Chk = new Regex("^[A-Za-z0-9_]*$");
 
         public ChinhSuaThongTinForm()
         {
@@ -170,6 +176,10 @@ namespace QuanLyCafe.GUI
                 {
                     throw new Exception("Vui lòng nhập đầy đủ thông tin");
                 }
+                if (!CCCD_Chk.IsMatch(cccd)) { throw new Exception("Trường CMND/CCCD chỉ được chứa số!\nMẫu: 009999009999, 3182992347831"); }
+                if (!CCCD_Chk.IsMatch(phone)) { throw new Exception("Trường SĐT chỉ được chứa số!\nMẫu: 0123456789, 333 555-2384"); }
+                if (!Name_Chk.IsMatch(firstName) || !Name_Chk.IsMatch(lastName))
+                { throw new Exception("Các trường tên chỉ được chứa ký tự chữ!"); }
                 TaiKhoan taiKhoan = new TaiKhoan(
                     TaiKhoanHienTai.TaiKhoanHienHanh.UserName,
                     TaiKhoanHienTai.TaiKhoanHienHanh.Password,

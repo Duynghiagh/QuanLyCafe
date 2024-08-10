@@ -20,6 +20,7 @@ using BC = BCrypt.Net.BCrypt;
 using QuanLyCafe.DTO;
 using QuanLyCafe.BLL;
 using QuanLyCafe.DAL;
+using System.Text.RegularExpressions;
 
 namespace QuanLyCafe.GUI
 {
@@ -27,6 +28,10 @@ namespace QuanLyCafe.GUI
     {
         TaiKhoanBLL taiKhoanBLL = new TaiKhoanBLL();
         TaiKhoan _taiKhoanChon = null;
+
+        Regex CCCD_Chk = new Regex("^[\\d -]*$");
+        Regex Name_Chk = new Regex("^[\\p{L} ]*$");
+        Regex User_Chk = new Regex("^[A-Za-z0-9_]*$");
 
         public ChinhSuaTaiKhoanForm()
         {
@@ -220,6 +225,10 @@ namespace QuanLyCafe.GUI
                     {
                         throw new Exception("Vui lòng nhập thông tin hợp lệ");
                     }
+                    if (!CCCD_Chk.IsMatch(cccd)) { throw new Exception("Trường CMND/CCCD chỉ được chứa số!\nMẫu: 009999009999, 3182992347831"); }
+                    if (!CCCD_Chk.IsMatch(phone)) { throw new Exception("Trường SĐT chỉ được chứa số!\nMẫu: 0123456789, 333 555-2384"); }
+                    if (!Name_Chk.IsMatch(firstName) || !Name_Chk.IsMatch(lastName))
+                        { throw new Exception("Các trường tên chỉ được chứa ký tự chữ!"); }
 
                     TaiKhoan taiKhoan = new TaiKhoan(
                         _taiKhoanChon.UserName,
@@ -400,6 +409,11 @@ namespace QuanLyCafe.GUI
                     {
                         throw new Exception("Vui lòng nhập thông tin hợp lệ");
                     }
+                    if (!User_Chk.IsMatch(userName)) { throw new Exception("Trường Username chỉ được bao gồm ký tự chữ không dấu, chữ số từ 0-9 và dấu gạch chân!\nMẫu: Default_User0"); }
+                    if (!CCCD_Chk.IsMatch(cccd)) { throw new Exception("Trường CMND/CCCD chỉ được chứa số!\nMẫu: 009999009999, 3182992347831"); }
+                    if (!CCCD_Chk.IsMatch(phone)) { throw new Exception("Trường SĐT chỉ được chứa số!\nMẫu: 0123456789, 333 555-2384"); }
+                    if (!Name_Chk.IsMatch(firstName) || !Name_Chk.IsMatch(lastName))
+                    { throw new Exception("Các trường tên chỉ được chứa ký tự chữ!"); }
                     if (TaiKhoanHienTai.TaiKhoanHienHanh.QuyenHan < quyenHan)
                     {
                         throw new Exception(

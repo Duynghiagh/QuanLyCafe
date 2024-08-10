@@ -17,6 +17,7 @@ using ReaLTaiizor.Enum.Material;
 using ReaLTaiizor.Colors;
 using QuanLyCafe.DTO;
 using QuanLyCafe.BLL;
+using System.Text.RegularExpressions;
 
 namespace QuanLyCafe.GUI
 {
@@ -24,6 +25,7 @@ namespace QuanLyCafe.GUI
     {
         VoucherBLL voucherBLL = new VoucherBLL();
         Voucher _voucherChon = null;
+        Regex Voch_Chk = new Regex("^[A-Za-z0-9_]*$");
 
         public ChinhSuaVoucherForm()
         {
@@ -209,11 +211,13 @@ namespace QuanLyCafe.GUI
                         || string.IsNullOrEmpty(moTa)
                         || soLuong <= 0
                         || giamGia < 0
-                        || giamGia > 100
+                        || giamGia > 1000
                     )
                     {
                         throw new Exception("Vui lòng nhập thông tin hợp lệ");
                     }
+                    if (!Voch_Chk.IsMatch(ma))
+                    { throw new Exception("Mã Voucher chỉ được có ký tự không dấu, số và dấu gạch chân!"); }
                     ma = ma.ToUpper();
                     Voucher timVoucher = voucherBLL.TimKiemVoucherByMa(ma);
                     if (timVoucher != null)

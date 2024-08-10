@@ -108,7 +108,7 @@ namespace QuanLyCafe.GUI
                 y += 40;
 
                 // Khởi tạo và vẽ bảng chi tiết đơn hàng
-                float[] columnWidths = { 50f, 100f, 300f, 150f, 100f, 100f }; // Chiều rộng từng cột
+                float[] columnWidths = { 50f, 100f, 330f, 100f, 100f, 120f }; // Chiều rộng từng cột
                 string[] headers = { "STT", "Số lượng", "Tên sản phẩm", "Đơn giá", "Giảm giá", "Thành tiền" };
 
                 // Vẽ tiêu đề bảng

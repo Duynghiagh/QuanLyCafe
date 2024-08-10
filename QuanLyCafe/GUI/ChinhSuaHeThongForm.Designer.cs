@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChinhSuaHeThongForm));
             this.pnlForm = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.pnlChinhSuaHeThong = new System.Windows.Forms.Panel();
@@ -47,18 +46,20 @@
             // 
             this.pnlForm.Controls.Add(this.label15);
             this.pnlForm.Controls.Add(this.pnlChinhSuaHeThong);
-            this.pnlForm.Location = new System.Drawing.Point(37, 86);
+            this.pnlForm.Location = new System.Drawing.Point(28, 70);
+            this.pnlForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(728, 628);
+            this.pnlForm.Size = new System.Drawing.Size(546, 510);
             this.pnlForm.TabIndex = 0;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(16, 19);
+            this.label15.Location = new System.Drawing.Point(12, 15);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(247, 27);
+            this.label15.Size = new System.Drawing.Size(203, 22);
             this.label15.TabIndex = 75;
             this.label15.Text = "Chỉnh Sửa Hệ Thống";
             // 
@@ -72,9 +73,10 @@
             this.pnlChinhSuaHeThong.Controls.Add(this.label10);
             this.pnlChinhSuaHeThong.Controls.Add(this.label9);
             this.pnlChinhSuaHeThong.Controls.Add(this.label8);
-            this.pnlChinhSuaHeThong.Location = new System.Drawing.Point(94, 82);
+            this.pnlChinhSuaHeThong.Location = new System.Drawing.Point(70, 67);
+            this.pnlChinhSuaHeThong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlChinhSuaHeThong.Name = "pnlChinhSuaHeThong";
-            this.pnlChinhSuaHeThong.Size = new System.Drawing.Size(557, 517);
+            this.pnlChinhSuaHeThong.Size = new System.Drawing.Size(418, 420);
             this.pnlChinhSuaHeThong.TabIndex = 74;
             // 
             // btnLuu
@@ -91,14 +93,14 @@
             this.btnLuu.HighEmphasis = true;
             this.btnLuu.Icon = null;
             this.btnLuu.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnLuu.Location = new System.Drawing.Point(30, 333);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnLuu.Location = new System.Drawing.Point(22, 271);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnLuu.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnLuu.Size = new System.Drawing.Size(504, 44);
+            this.btnLuu.Size = new System.Drawing.Size(378, 36);
             this.btnLuu.TabIndex = 74;
-            this.btnLuu.Text = "Save changes";
+            this.btnLuu.Text = "Lưu";
             this.btnLuu.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLuu.UseAccentColor = false;
             this.btnLuu.UseVisualStyleBackColor = false;
@@ -116,8 +118,7 @@
             this.txtLuongPartTime.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.txtLuongPartTime.HideSelection = true;
             this.txtLuongPartTime.LeadingIcon = null;
-            this.txtLuongPartTime.Location = new System.Drawing.Point(28, 267);
-            this.txtLuongPartTime.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLuongPartTime.Location = new System.Drawing.Point(21, 217);
             this.txtLuongPartTime.MaxLength = 50;
             this.txtLuongPartTime.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtLuongPartTime.Name = "txtLuongPartTime";
@@ -129,7 +130,7 @@
             this.txtLuongPartTime.SelectionLength = 0;
             this.txtLuongPartTime.SelectionStart = 0;
             this.txtLuongPartTime.ShortcutsEnabled = true;
-            this.txtLuongPartTime.Size = new System.Drawing.Size(505, 36);
+            this.txtLuongPartTime.Size = new System.Drawing.Size(379, 36);
             this.txtLuongPartTime.TabIndex = 73;
             this.txtLuongPartTime.TabStop = false;
             this.txtLuongPartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -150,8 +151,7 @@
             this.txtDiaChiCuaHang.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.txtDiaChiCuaHang.HideSelection = true;
             this.txtDiaChiCuaHang.LeadingIcon = null;
-            this.txtDiaChiCuaHang.Location = new System.Drawing.Point(28, 179);
-            this.txtDiaChiCuaHang.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDiaChiCuaHang.Location = new System.Drawing.Point(21, 145);
             this.txtDiaChiCuaHang.MaxLength = 50;
             this.txtDiaChiCuaHang.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtDiaChiCuaHang.Name = "txtDiaChiCuaHang";
@@ -163,7 +163,7 @@
             this.txtDiaChiCuaHang.SelectionLength = 0;
             this.txtDiaChiCuaHang.SelectionStart = 0;
             this.txtDiaChiCuaHang.ShortcutsEnabled = true;
-            this.txtDiaChiCuaHang.Size = new System.Drawing.Size(505, 36);
+            this.txtDiaChiCuaHang.Size = new System.Drawing.Size(379, 36);
             this.txtDiaChiCuaHang.TabIndex = 73;
             this.txtDiaChiCuaHang.TabStop = false;
             this.txtDiaChiCuaHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -183,8 +183,7 @@
             this.txtTenCuaHang.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.txtTenCuaHang.HideSelection = true;
             this.txtTenCuaHang.LeadingIcon = null;
-            this.txtTenCuaHang.Location = new System.Drawing.Point(28, 104);
-            this.txtTenCuaHang.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenCuaHang.Location = new System.Drawing.Point(21, 84);
             this.txtTenCuaHang.MaxLength = 50;
             this.txtTenCuaHang.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtTenCuaHang.Name = "txtTenCuaHang";
@@ -196,7 +195,7 @@
             this.txtTenCuaHang.SelectionLength = 0;
             this.txtTenCuaHang.SelectionStart = 0;
             this.txtTenCuaHang.ShortcutsEnabled = true;
-            this.txtTenCuaHang.Size = new System.Drawing.Size(505, 36);
+            this.txtTenCuaHang.Size = new System.Drawing.Size(379, 36);
             this.txtTenCuaHang.TabIndex = 73;
             this.txtTenCuaHang.TabStop = false;
             this.txtTenCuaHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -208,9 +207,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(25, 231);
+            this.label10.Location = new System.Drawing.Point(19, 188);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(152, 21);
+            this.label10.Size = new System.Drawing.Size(123, 18);
             this.label10.TabIndex = 71;
             this.label10.Text = "Lương part time";
             // 
@@ -218,9 +218,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(24, 153);
+            this.label9.Location = new System.Drawing.Point(18, 124);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(155, 21);
+            this.label9.Size = new System.Drawing.Size(126, 18);
             this.label9.TabIndex = 71;
             this.label9.Text = "Địa chỉ cửa hàng";
             // 
@@ -228,20 +229,22 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(24, 78);
+            this.label8.Location = new System.Drawing.Point(18, 63);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(128, 21);
+            this.label8.Size = new System.Drawing.Size(106, 18);
             this.label8.TabIndex = 71;
             this.label8.Text = "Tên cửa hàng";
             // 
             // ChinhSuaHeThongForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 766);
+            this.ClientSize = new System.Drawing.Size(600, 622);
             this.Controls.Add(this.pnlForm);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ChinhSuaHeThongForm";
+            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.ChinhSuaHeThongForm_Load);
             this.pnlForm.ResumeLayout(false);

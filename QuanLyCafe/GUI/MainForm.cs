@@ -36,6 +36,7 @@ namespace QuanLyCafe.GUI
         bool _isClickBanDaDat = false;
         int _ketQuaTimThaySanPham = 0;
         int _ketQuaTimThayBan = 0;
+        bool LoggingOut = false;
 
         Timer _timerThoiGianHienTai;
 
@@ -1438,6 +1439,7 @@ namespace QuanLyCafe.GUI
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            string Message;
             try
             {
                 DateTime thoiGianHienTai = DateTime.Now;
@@ -1447,10 +1449,17 @@ namespace QuanLyCafe.GUI
                 {
                     throw new Exception("Bạn đang trong ca làm, vui lòng kết thúc ca");
                 }
-                if (!ControlForm.ConfirmForm("Xác nhận thoát chương trình"))
+                if (LoggingOut == true)
+                {
+                    Message = "Bạn có muốn đăng xuất?";
+                }
+                else Message = "Xác nhận thoát chương trình";
+                if (!ControlForm.ConfirmForm(Message))
                 {
                     e.Cancel = true;
+                    LoggingOut = false;
                 }
+                else Hide();
             }
             catch (Exception err)
             {
@@ -1487,9 +1496,8 @@ namespace QuanLyCafe.GUI
 
         private void picLogOut_Click(object sender, EventArgs e)
         {
-          
+            LoggingOut = true;
             this.Close();
-           
         }
 
         #endregion
@@ -1559,6 +1567,15 @@ namespace QuanLyCafe.GUI
         private void pictureBox13_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (LoggingOut == true)
+            {
+                GUI.LoginForm Login = new GUI.LoginForm();
+                Login.ShowDialog();
+            }
         }
     }
 }

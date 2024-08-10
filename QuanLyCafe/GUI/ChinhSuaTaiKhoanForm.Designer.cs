@@ -112,12 +112,13 @@
             // 
             // cboQuyenHanThem
             // 
+            this.cboQuyenHanThem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboQuyenHanThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.cboQuyenHanThem.FormattingEnabled = true;
             this.cboQuyenHanThem.Location = new System.Drawing.Point(186, 447);
             this.cboQuyenHanThem.Name = "cboQuyenHanThem";
             this.cboQuyenHanThem.Size = new System.Drawing.Size(204, 24);
-            this.cboQuyenHanThem.TabIndex = 13;
+            this.cboQuyenHanThem.TabIndex = 108;
             // 
             // txtPhoneThem
             // 
@@ -125,7 +126,7 @@
             this.txtPhoneThem.Location = new System.Drawing.Point(186, 345);
             this.txtPhoneThem.Name = "txtPhoneThem";
             this.txtPhoneThem.Size = new System.Drawing.Size(204, 24);
-            this.txtPhoneThem.TabIndex = 11;
+            this.txtPhoneThem.TabIndex = 105;
             // 
             // txtLastNameThem
             // 
@@ -133,7 +134,7 @@
             this.txtLastNameThem.Location = new System.Drawing.Point(186, 308);
             this.txtLastNameThem.Name = "txtLastNameThem";
             this.txtLastNameThem.Size = new System.Drawing.Size(204, 24);
-            this.txtLastNameThem.TabIndex = 11;
+            this.txtLastNameThem.TabIndex = 104;
             // 
             // txtFirstNameThem
             // 
@@ -141,7 +142,7 @@
             this.txtFirstNameThem.Location = new System.Drawing.Point(186, 271);
             this.txtFirstNameThem.Name = "txtFirstNameThem";
             this.txtFirstNameThem.Size = new System.Drawing.Size(204, 24);
-            this.txtFirstNameThem.TabIndex = 11;
+            this.txtFirstNameThem.TabIndex = 103;
             // 
             // txtPasswordThem
             // 
@@ -149,7 +150,7 @@
             this.txtPasswordThem.Location = new System.Drawing.Point(186, 233);
             this.txtPasswordThem.Name = "txtPasswordThem";
             this.txtPasswordThem.Size = new System.Drawing.Size(204, 24);
-            this.txtPasswordThem.TabIndex = 11;
+            this.txtPasswordThem.TabIndex = 102;
             // 
             // txtUsernameThem
             // 
@@ -157,7 +158,7 @@
             this.txtUsernameThem.Location = new System.Drawing.Point(186, 200);
             this.txtUsernameThem.Name = "txtUsernameThem";
             this.txtUsernameThem.Size = new System.Drawing.Size(204, 24);
-            this.txtUsernameThem.TabIndex = 11;
+            this.txtUsernameThem.TabIndex = 101;
             // 
             // picTaiKhoanThem
             // 
@@ -221,7 +222,7 @@
             this.btnThem.Name = "btnThem";
             this.btnThem.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnThem.Size = new System.Drawing.Size(362, 44);
-            this.btnThem.TabIndex = 9;
+            this.btnThem.TabIndex = 109;
             this.btnThem.Text = "Thêm";
             this.btnThem.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnThem.UseAccentColor = false;
@@ -316,7 +317,7 @@
             this.txtAddressThem.Location = new System.Drawing.Point(186, 413);
             this.txtAddressThem.Name = "txtAddressThem";
             this.txtAddressThem.Size = new System.Drawing.Size(204, 24);
-            this.txtAddressThem.TabIndex = 11;
+            this.txtAddressThem.TabIndex = 107;
             // 
             // txtCCCDThem
             // 
@@ -324,7 +325,7 @@
             this.txtCCCDThem.Location = new System.Drawing.Point(186, 379);
             this.txtCCCDThem.Name = "txtCCCDThem";
             this.txtCCCDThem.Size = new System.Drawing.Size(204, 24);
-            this.txtCCCDThem.TabIndex = 11;
+            this.txtCCCDThem.TabIndex = 106;
             // 
             // label16
             // 
@@ -422,7 +423,7 @@
             this.dtpDenNgay.Location = new System.Drawing.Point(249, 107);
             this.dtpDenNgay.Name = "dtpDenNgay";
             this.dtpDenNgay.Size = new System.Drawing.Size(230, 24);
-            this.dtpDenNgay.TabIndex = 19;
+            this.dtpDenNgay.TabIndex = 23;
             // 
             // dtpTuNgay
             // 
@@ -431,7 +432,7 @@
             this.dtpTuNgay.Location = new System.Drawing.Point(249, 59);
             this.dtpTuNgay.Name = "dtpTuNgay";
             this.dtpTuNgay.Size = new System.Drawing.Size(230, 24);
-            this.dtpTuNgay.TabIndex = 20;
+            this.dtpTuNgay.TabIndex = 22;
             // 
             // label24
             // 
@@ -472,7 +473,7 @@
             this.btnBaoCaoCaLam.Name = "btnBaoCaoCaLam";
             this.btnBaoCaoCaLam.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBaoCaoCaLam.Size = new System.Drawing.Size(146, 44);
-            this.btnBaoCaoCaLam.TabIndex = 9;
+            this.btnBaoCaoCaLam.TabIndex = 24;
             this.btnBaoCaoCaLam.Text = "Ca Làm";
             this.btnBaoCaoCaLam.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnBaoCaoCaLam.UseAccentColor = false;
@@ -496,7 +497,7 @@
             this.btnBaoCaoDoanhThu.Name = "btnBaoCaoDoanhThu";
             this.btnBaoCaoDoanhThu.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBaoCaoDoanhThu.Size = new System.Drawing.Size(138, 44);
-            this.btnBaoCaoDoanhThu.TabIndex = 9;
+            this.btnBaoCaoDoanhThu.TabIndex = 25;
             this.btnBaoCaoDoanhThu.Text = "Doanh Thu";
             this.btnBaoCaoDoanhThu.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnBaoCaoDoanhThu.UseAccentColor = false;
@@ -620,7 +621,7 @@
             this.btnAn.Name = "btnAn";
             this.btnAn.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAn.Size = new System.Drawing.Size(56, 44);
-            this.btnAn.TabIndex = 16;
+            this.btnAn.TabIndex = 19;
             this.btnAn.Text = "Khóa";
             this.btnAn.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAn.UseAccentColor = false;
@@ -629,12 +630,13 @@
             // 
             // cboQuyenHan
             // 
+            this.cboQuyenHan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboQuyenHan.Font = new System.Drawing.Font("Arial", 10.8F);
             this.cboQuyenHan.FormattingEnabled = true;
             this.cboQuyenHan.Location = new System.Drawing.Point(156, 395);
             this.cboQuyenHan.Name = "cboQuyenHan";
             this.cboQuyenHan.Size = new System.Drawing.Size(204, 24);
-            this.cboQuyenHan.TabIndex = 15;
+            this.cboQuyenHan.TabIndex = 17;
             // 
             // label1
             // 
@@ -653,7 +655,7 @@
             this.txtPassword.Location = new System.Drawing.Point(158, 549);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(206, 24);
-            this.txtPassword.TabIndex = 11;
+            this.txtPassword.TabIndex = 20;
             // 
             // txtAddress
             // 
@@ -661,7 +663,7 @@
             this.txtAddress.Location = new System.Drawing.Point(154, 352);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(206, 24);
-            this.txtAddress.TabIndex = 11;
+            this.txtAddress.TabIndex = 16;
             // 
             // txtCCCD
             // 
@@ -669,7 +671,7 @@
             this.txtCCCD.Location = new System.Drawing.Point(154, 317);
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.Size = new System.Drawing.Size(206, 24);
-            this.txtCCCD.TabIndex = 11;
+            this.txtCCCD.TabIndex = 15;
             // 
             // txtPhone
             // 
@@ -677,7 +679,7 @@
             this.txtPhone.Location = new System.Drawing.Point(156, 283);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(206, 24);
-            this.txtPhone.TabIndex = 11;
+            this.txtPhone.TabIndex = 14;
             // 
             // txtLastName
             // 
@@ -685,7 +687,7 @@
             this.txtLastName.Location = new System.Drawing.Point(156, 246);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(206, 24);
-            this.txtLastName.TabIndex = 11;
+            this.txtLastName.TabIndex = 13;
             // 
             // txtFirstName
             // 
@@ -693,7 +695,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(156, 209);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(206, 24);
-            this.txtFirstName.TabIndex = 11;
+            this.txtFirstName.TabIndex = 12;
             // 
             // txtUserName
             // 
@@ -788,7 +790,7 @@
             this.btnCapNhatMatKhau.Name = "btnCapNhatMatKhau";
             this.btnCapNhatMatKhau.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnCapNhatMatKhau.Size = new System.Drawing.Size(334, 44);
-            this.btnCapNhatMatKhau.TabIndex = 9;
+            this.btnCapNhatMatKhau.TabIndex = 21;
             this.btnCapNhatMatKhau.Text = "Cập nhật mật khẩu";
             this.btnCapNhatMatKhau.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnCapNhatMatKhau.UseAccentColor = false;
@@ -812,7 +814,7 @@
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnLuu.Size = new System.Drawing.Size(53, 44);
-            this.btnLuu.TabIndex = 9;
+            this.btnLuu.TabIndex = 18;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLuu.UseAccentColor = false;
@@ -881,7 +883,7 @@
             this.dgvDanhSachTaiKhoan.RowHeadersWidth = 51;
             this.dgvDanhSachTaiKhoan.RowTemplate.Height = 24;
             this.dgvDanhSachTaiKhoan.Size = new System.Drawing.Size(590, 316);
-            this.dgvDanhSachTaiKhoan.TabIndex = 5;
+            this.dgvDanhSachTaiKhoan.TabIndex = 99;
             this.dgvDanhSachTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachTaiKhoan_CellClick);
             // 
             // USERNAME

@@ -95,7 +95,7 @@
             this.materialTabSelector1.Name = "materialTabSelector1";
             this.materialTabSelector1.SelectorHideTabName = new string[0];
             this.materialTabSelector1.SelectorNonClickTabPage = new System.Windows.Forms.TabPage[0];
-            this.materialTabSelector1.Size = new System.Drawing.Size(1442, 47);
+            this.materialTabSelector1.Size = new System.Drawing.Size(1458, 47);
             this.materialTabSelector1.TabIndex = 29;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
@@ -183,8 +183,8 @@
             this.txtMoTa.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtMoTa.Location = new System.Drawing.Point(160, 271);
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(230, 27);
-            this.txtMoTa.TabIndex = 11;
+            this.txtMoTa.Size = new System.Drawing.Size(230, 24);
+            this.txtMoTa.TabIndex = 13;
             // 
             // txtLuotNhap
             // 
@@ -192,16 +192,16 @@
             this.txtLuotNhap.Location = new System.Drawing.Point(160, 350);
             this.txtLuotNhap.Name = "txtLuotNhap";
             this.txtLuotNhap.ReadOnly = true;
-            this.txtLuotNhap.Size = new System.Drawing.Size(230, 27);
-            this.txtLuotNhap.TabIndex = 11;
+            this.txtLuotNhap.Size = new System.Drawing.Size(230, 24);
+            this.txtLuotNhap.TabIndex = 15;
             // 
             // txtSoLuong
             // 
             this.txtSoLuong.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtSoLuong.Location = new System.Drawing.Point(160, 311);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(230, 27);
-            this.txtSoLuong.TabIndex = 11;
+            this.txtSoLuong.Size = new System.Drawing.Size(230, 24);
+            this.txtSoLuong.TabIndex = 14;
             this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
             // 
             // txtGiamGia
@@ -209,8 +209,8 @@
             this.txtGiamGia.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtGiamGia.Location = new System.Drawing.Point(160, 233);
             this.txtGiamGia.Name = "txtGiamGia";
-            this.txtGiamGia.Size = new System.Drawing.Size(230, 27);
-            this.txtGiamGia.TabIndex = 11;
+            this.txtGiamGia.Size = new System.Drawing.Size(230, 24);
+            this.txtGiamGia.TabIndex = 12;
             this.txtGiamGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiamGia_KeyPress);
             // 
             // txtMa
@@ -219,7 +219,7 @@
             this.txtMa.Location = new System.Drawing.Point(160, 200);
             this.txtMa.Name = "txtMa";
             this.txtMa.ReadOnly = true;
-            this.txtMa.Size = new System.Drawing.Size(230, 27);
+            this.txtMa.Size = new System.Drawing.Size(230, 24);
             this.txtMa.TabIndex = 11;
             // 
             // picVoucher
@@ -250,7 +250,7 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnXoa.Size = new System.Drawing.Size(162, 44);
-            this.btnXoa.TabIndex = 9;
+            this.btnXoa.TabIndex = 17;
             this.btnXoa.Text = "Ẩn";
             this.btnXoa.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnXoa.UseAccentColor = false;
@@ -274,7 +274,7 @@
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnLuu.Size = new System.Drawing.Size(162, 44);
-            this.btnLuu.TabIndex = 9;
+            this.btnLuu.TabIndex = 16;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLuu.UseAccentColor = false;
@@ -288,7 +288,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label4.Location = new System.Drawing.Point(24, 350);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 21);
+            this.label4.Size = new System.Drawing.Size(87, 18);
             this.label4.TabIndex = 2;
             this.label4.Text = "Lượt nhập:";
             // 
@@ -299,7 +299,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label2.Location = new System.Drawing.Point(24, 271);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 21);
+            this.label2.Size = new System.Drawing.Size(51, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mô tả:";
             // 
@@ -310,7 +310,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label3.Location = new System.Drawing.Point(24, 311);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 21);
+            this.label3.Size = new System.Drawing.Size(79, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Số lượng:";
             // 
@@ -320,7 +320,7 @@
             this.lblTitle.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblTitle.Location = new System.Drawing.Point(23, 17);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(137, 27);
+            this.lblTitle.Size = new System.Drawing.Size(114, 22);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Tổng Quan";
             // 
@@ -331,7 +331,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label1.Location = new System.Drawing.Point(24, 233);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 21);
+            this.label1.Size = new System.Drawing.Size(100, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "Giảm giá (%):";
             // 
@@ -342,7 +342,7 @@
             this.label233.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label233.Location = new System.Drawing.Point(24, 200);
             this.label233.Name = "label233";
-            this.label233.Size = new System.Drawing.Size(42, 21);
+            this.label233.Size = new System.Drawing.Size(33, 18);
             this.label233.TabIndex = 2;
             this.label233.Text = "Mã:";
             // 
@@ -385,7 +385,7 @@
             this.label9.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(19, 23);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(230, 27);
+            this.label9.Size = new System.Drawing.Size(191, 22);
             this.label9.TabIndex = 31;
             this.label9.Text = "Chỉnh Sửa Voucher";
             // 
@@ -405,7 +405,7 @@
             this.dgvDanhSachVoucher.RowHeadersWidth = 51;
             this.dgvDanhSachVoucher.RowTemplate.Height = 24;
             this.dgvDanhSachVoucher.Size = new System.Drawing.Size(726, 379);
-            this.dgvDanhSachVoucher.TabIndex = 5;
+            this.dgvDanhSachVoucher.TabIndex = 99;
             this.dgvDanhSachVoucher.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachVoucher_CellClick);
             // 
             // MA
@@ -490,7 +490,7 @@
             this.label10.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.label10.Location = new System.Drawing.Point(22, 12);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(172, 27);
+            this.label10.Size = new System.Drawing.Size(146, 22);
             this.label10.TabIndex = 21;
             this.label10.Text = "Thêm Voucher";
             // 
@@ -499,25 +499,27 @@
             this.txtMoTaThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtMoTaThem.Location = new System.Drawing.Point(159, 277);
             this.txtMoTaThem.Name = "txtMoTaThem";
-            this.txtMoTaThem.Size = new System.Drawing.Size(230, 27);
-            this.txtMoTaThem.TabIndex = 17;
+            this.txtMoTaThem.Size = new System.Drawing.Size(230, 24);
+            this.txtMoTaThem.TabIndex = 103;
             // 
             // txtSoLuongThem
             // 
             this.txtSoLuongThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtSoLuongThem.Location = new System.Drawing.Point(159, 317);
+            this.txtSoLuongThem.MaxLength = 10;
             this.txtSoLuongThem.Name = "txtSoLuongThem";
-            this.txtSoLuongThem.Size = new System.Drawing.Size(230, 27);
-            this.txtSoLuongThem.TabIndex = 18;
+            this.txtSoLuongThem.Size = new System.Drawing.Size(230, 24);
+            this.txtSoLuongThem.TabIndex = 104;
             this.txtSoLuongThem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuongThem_KeyPress);
             // 
             // txtGiamGiaThem
             // 
             this.txtGiamGiaThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtGiamGiaThem.Location = new System.Drawing.Point(159, 239);
+            this.txtGiamGiaThem.MaxLength = 3;
             this.txtGiamGiaThem.Name = "txtGiamGiaThem";
-            this.txtGiamGiaThem.Size = new System.Drawing.Size(230, 27);
-            this.txtGiamGiaThem.TabIndex = 19;
+            this.txtGiamGiaThem.Size = new System.Drawing.Size(230, 24);
+            this.txtGiamGiaThem.TabIndex = 102;
             this.txtGiamGiaThem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiamGiaThem_KeyPress);
             // 
             // txtMaThem
@@ -525,8 +527,8 @@
             this.txtMaThem.Font = new System.Drawing.Font("Arial", 10.8F);
             this.txtMaThem.Location = new System.Drawing.Point(159, 206);
             this.txtMaThem.Name = "txtMaThem";
-            this.txtMaThem.Size = new System.Drawing.Size(230, 27);
-            this.txtMaThem.TabIndex = 20;
+            this.txtMaThem.Size = new System.Drawing.Size(230, 24);
+            this.txtMaThem.TabIndex = 101;
             this.txtMaThem.Leave += new System.EventHandler(this.txtMaThem_Leave);
             // 
             // label5
@@ -536,7 +538,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label5.Location = new System.Drawing.Point(23, 277);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 21);
+            this.label5.Size = new System.Drawing.Size(51, 18);
             this.label5.TabIndex = 13;
             this.label5.Text = "Mô tả:";
             // 
@@ -547,7 +549,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label6.Location = new System.Drawing.Point(23, 317);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 21);
+            this.label6.Size = new System.Drawing.Size(79, 18);
             this.label6.TabIndex = 14;
             this.label6.Text = "Số lượng:";
             // 
@@ -558,7 +560,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label7.Location = new System.Drawing.Point(23, 239);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(128, 21);
+            this.label7.Size = new System.Drawing.Size(100, 18);
             this.label7.TabIndex = 15;
             this.label7.Text = "Giảm giá (%):";
             // 
@@ -569,7 +571,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label8.Location = new System.Drawing.Point(23, 206);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 21);
+            this.label8.Size = new System.Drawing.Size(33, 18);
             this.label8.TabIndex = 16;
             this.label8.Text = "Mã:";
             // 
@@ -601,7 +603,7 @@
             this.btnThemVoucher.Name = "btnThemVoucher";
             this.btnThemVoucher.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnThemVoucher.Size = new System.Drawing.Size(362, 44);
-            this.btnThemVoucher.TabIndex = 9;
+            this.btnThemVoucher.TabIndex = 105;
             this.btnThemVoucher.Text = "Thêm";
             this.btnThemVoucher.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnThemVoucher.UseAccentColor = false;
@@ -621,7 +623,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1448, 1078);
+            this.ClientSize = new System.Drawing.Size(1464, 1100);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.materialTabSelector1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

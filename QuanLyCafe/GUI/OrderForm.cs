@@ -189,9 +189,9 @@ namespace QuanLyCafe.GUI
             try
             {
                 int soLuong = int.Parse(txtSoLuongSanPham.Text);
-                if (soLuong <= 0 || soLuong >= 100)
+                if (soLuong <= 0 || soLuong > 100)
                 {
-                    MessageBox.Show("Số lượng sản phẩm phải lớn hơn 0 và nhỏ hơn 100.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Số lượng sản phẩm phải lớn hơn 0 và không vượt quá 100.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtSoLuongSanPham.Text = "1";
                     soLuong = 1;
                 }
@@ -518,7 +518,7 @@ namespace QuanLyCafe.GUI
             try
             {
                 int soLuong;
-                if (!int.TryParse(txtSoLuongSanPham.Text, out soLuong) || soLuong <= 0 || soLuong >= 100)
+                if (!int.TryParse(txtSoLuongSanPham.Text, out soLuong) || soLuong <= 0 || soLuong > 100)
                 {
                     soLuong = 1;
                     txtSoLuongSanPham.Text = "1";

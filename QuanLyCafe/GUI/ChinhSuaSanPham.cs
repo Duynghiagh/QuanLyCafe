@@ -18,6 +18,7 @@ using ReaLTaiizor.Colors;
 using System.IO;
 using QuanLyCafe.DTO;
 using QuanLyCafe.BLL;
+using System.Text.RegularExpressions;
 
 namespace QuanLyCafe.GUI
 {
@@ -26,6 +27,8 @@ namespace QuanLyCafe.GUI
         SanPhamBLL sanPhamBLL = new SanPhamBLL();
         SuKienBLL suKienBLL = new SuKienBLL();
         SanPham _sanPhamChon = null;
+
+        Regex FileName = new Regex("^[\\w,\\s-]+\\.[A-Za-z]*$");
 
         public ChinhSuaSanPham()
         {
@@ -212,7 +215,7 @@ namespace QuanLyCafe.GUI
                     return;
                 }
                 OpenFileDialog fileOpen = new OpenFileDialog();
-                fileOpen.Title = "Open Image file";
+                fileOpen.Title = "Mở tệp ảnh";
                 fileOpen.Filter = "Files|*.jpg;*.jpeg;*.png";
 
                 if (fileOpen.ShowDialog() == DialogResult.OK)
@@ -253,6 +256,7 @@ namespace QuanLyCafe.GUI
                         string.IsNullOrEmpty(tenSanPham)
                         || string.IsNullOrEmpty(moTa)
                         || string.IsNullOrEmpty(imagePath)
+                        || FileName.IsMatch(imagePath)
                     )
                     {
                         throw new Exception("Vui lòng nhập thông tin hợp lệ");
@@ -290,7 +294,7 @@ namespace QuanLyCafe.GUI
             try
             {
                 OpenFileDialog fileOpenThem = new OpenFileDialog();
-                fileOpenThem.Title = "Open Image file";
+                fileOpenThem.Title = "Mở tệp ảnh";
                 fileOpenThem.Filter = "Files|*.jpg;*.jpeg;*.png";
 
                 if (fileOpenThem.ShowDialog() == DialogResult.OK)
@@ -330,6 +334,7 @@ namespace QuanLyCafe.GUI
                         || string.IsNullOrEmpty(moTa)
                         || string.IsNullOrEmpty(imagePath)
                         || string.IsNullOrEmpty(IDSanPham)
+                        || FileName.IsMatch(imagePath)
                     )
                     {
                         throw new Exception("Vui lòng nhập thông tin hợp lệ");
